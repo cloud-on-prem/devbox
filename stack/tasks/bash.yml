@@ -1,0 +1,8 @@
+- name: Download Bash It
+  git: repo=https://github.com/Bash-it/bash-it.git dest=~/.bash_it depth=1
+
+- name: Install Bash It
+  shell: ~/.bash_it/install.sh creates=~/.bash_it/plugins/enabled/
+
+- name: Set up Bashrc
+  copy: src=../templates/bashrc.bash dest=~/.bashrc

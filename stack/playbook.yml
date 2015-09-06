@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become_user: vagrant
+  vars:
+    ruby_version: 2.2.0
+  tasks:
+    - include: ./tasks/basics.yml
+    - include: ./tasks/bash.yml
+    - include: ./tasks/vim.yml
+    - include: ./tasks/ruby.yml

@@ -1,0 +1,10 @@
+- name: Install Ruby-Install
+  sudo_user: root
+  script: ../scripts/install_ruby_install.sh creates=/usr/local/bin/ruby-install
+
+- name: Install Chruby
+  sudo_user: root
+  script: ../scripts/install_chruby.sh creates=/usr/local/bin/chruby-exec
+
+- name: Install Latest Ruby
+  command: ruby-install ruby {{ ruby_version }} --no-reinstall

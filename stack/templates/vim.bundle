@@ -1,0 +1,57 @@
+NeoBundle 'premjg/vim-colorschemes'
+NeoBundle 'vim-scripts/tComment'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'compactcode/open.vim'
+NeoBundle 'compactcode/alternate.vim'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'tpope/vim-fugitive', { 'augroup' : 'fugitive'}
+NeoBundle 'benmills/vimux'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'edkolev/tmuxline.vim'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'fatih/vim-go'
+NeoBundle 'AndrewRadev/splitjoin.vim'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'tpope/vim-surround.git'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'nelstrom/vim-textobj-rubyblock'
+NeoBundle 'Keithbsmiley/tmux.vim'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'premjg/vim-webdevicons'
+NeoBundle 'wellle/targets.vim'
+NeoBundle 'tmux-plugins/vim-tmux-focus-events'
+NeoBundle 'dag/vim-fish'
+NeoBundle 'rking/ag.vim'
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+
+NeoBundle 'tsukkee/unite-tag'
+NeoBundle 'Shougo/echodoc.vim'
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/vimfiler.vim'
+
+NeoBundle 'eagletmt/neco-ghc'
+NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'Twinside/vim-hoogle'
+NeoBundle 'neovimhaskell/haskell-vim' " Mostly for better syntax highlighting and auto-indentations
+NeoBundle 'vim-scripts/Haskell-Conceal'
+
+NeoBundle 'derekwyatt/vim-scala'
