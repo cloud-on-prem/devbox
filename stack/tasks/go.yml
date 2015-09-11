@@ -1,0 +1,12 @@
+- name: Install Go
+  sudo_user: root
+  script: ../scripts/install_go.sh creates=/usr/local/go
+
+- name: Set up Go src directory
+  file: path=~/projects/go/src state=directory recurse=yes
+
+- name: set up go bin directory
+  file: path=~/projects/go/bin state=directory recurse=yes
+
+- name: set up go pkg directory
+  file: path=~/projects/go/pkg state=directory recurse=yes
