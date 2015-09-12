@@ -1,0 +1,9 @@
+- name: Install Tmux
+  sudo_user: root
+  apt: name=tmux state=latest
+
+- name: Install Tmuxinator
+  sudo_user: root
+  gem:
+    name: tmuxinator
+    user_install: no

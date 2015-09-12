@@ -13,3 +13,4 @@
     - include: ./tasks/ruby.yml
     - include: ./tasks/go.yml
     - include: ./tasks/nodejs.yml
+    - include: ./tasks/toolbelt.yml
