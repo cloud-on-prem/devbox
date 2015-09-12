@@ -12,7 +12,3 @@
 
 - name: Set up Tools Directory
   file: path=~/.tools state=directory
-
-- name: Set up Projects Directory
-  file: path=~/projects state=directory
-

@@ -6,3 +6,6 @@
 
 - name: Set up Bashrc
   copy: src=../templates/bashrc.bash dest=~/.bashrc
+
+- name: Set up Bash Aliases
+  copy: src=../templates/bash_aliases.bash dest=~/.bash_aliases

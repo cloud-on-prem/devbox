@@ -20,7 +20,7 @@ fi
 
 #Go
 export PATH="/usr/local/go/bin:$PATH"
-export GOPATH="$HOME/projects/go"
+export GOPATH="/code/go"
 export PATH=$PATH:$GOPATH/bin
 
 #Haskell

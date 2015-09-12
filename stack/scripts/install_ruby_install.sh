@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION=0.5.0
+VERSION=$1
 cd /tmp
 wget -O ruby-install-${VERSION}.tar.gz \
     https://github.com/postmodern/ruby-install/archive/v${VERSION}.tar.gz
