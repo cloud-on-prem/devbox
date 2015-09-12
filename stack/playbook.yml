@@ -12,3 +12,4 @@
     - include: ./tasks/vim.yml
     - include: ./tasks/ruby.yml
     - include: ./tasks/go.yml
+    - include: ./tasks/nodejs.yml
