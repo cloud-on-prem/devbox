@@ -1,13 +1,25 @@
 - name: Install Go
   sudo_user: root
-  tags: test
   script: ../scripts/install_go.sh {{ go_version }} creates=/usr/local/go
 
-- name: Set up Go src directory
+- name: Set up Go src Directory
   file: path=/code/go/src state=directory recurse=yes
 
-- name: set up go bin directory
+- name: Set up Go bin Directory
   file: path=/code/go/bin state=directory recurse=yes
 
-- name: set up go pkg directory
+- name: Set up Go pkg Directory
   file: path=/code/go/pkg state=directory recurse=yes
+
+- name: Set up Go Essentials
+  tags: test
+  command: go get -u -v {{ item.address }} creates=/code/go/bin/{{ item.name }}
+  with_items:
+    - { name: 'gocode', address: 'github.com/nsf/gocode'}
+    - { name: 'goimports', address: 'golang.org/x/tools/cmd/goimports'}
+    - { name: 'godef', address: 'github.com/rogpeppe/godef'}
+    - { name: 'oracle', address: 'golang.org/x/tools/cmd/oracle'}
+    - { name: 'gorename', address: 'golang.org/x/tools/cmd/gorename'}
+    - { name: 'golint', address: 'github.com/golang/lint/golint'}
+    - { name: 'errcheck', address: 'github.com/kisielk/errcheck'}
+    - { name: 'gotags', address: 'github.com/jstemmer/gotags'}
