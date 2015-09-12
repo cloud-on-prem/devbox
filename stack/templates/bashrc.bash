@@ -1,3 +1,4 @@
+export TERM=xterm-256color
 export BASH_IT="$HOME/.bash_it"
 export BASH_IT_THEME='minimal'
 
@@ -9,6 +10,9 @@ export PATH="$HOME/bin:$PATH"
 
 export LC_ALL="en_AU.UTF-8"
 export LC_CTYPE="en_AU.UTF-8"
+
+# Pretty Dircolors
+eval `dircolors ~/.dircolors`
 
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases

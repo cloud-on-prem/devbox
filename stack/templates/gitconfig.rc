@@ -1,0 +1,41 @@
+[user]
+	name = ☀ Prem Pillai (@premjg)
+	email = prem.pillai@gmail.com
+[color]
+	ui = true
+[alias]
+    ctags = !~/.git/hooks/ctags
+    st = status -s
+    sb = status -s -b
+    #############
+    d = diff
+    dc = diff --cached
+    dk = diff --check
+    dck = diff --cached --check
+    #############
+    ls = log --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --graph --decorate
+    lg = log --oneline --graph --decorate
+    #############
+    human = name-rev --name-only --refs=refs/heads/*
+    co = checkout
+    ci = commit -v
+    cia = commit -v --amend
+    ad = add -p
+    p = push --follow-tags
+    oops = reset --soft HEAD^1
+    wip = !git add -A && git commit -m "WIP"
+    unwip = reset HEAD~
+[core]
+	filemode = false
+  editor = vim
+[init]
+  templatedir = ~/.git
+[rerere]
+	enabled = true
+[merge]
+    tool = vimdiff
+    defaultToUpstream = true
+[push]
+    default = tracking
+[branch]
+	autosetuprebase = always

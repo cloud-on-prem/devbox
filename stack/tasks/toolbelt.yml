@@ -7,3 +7,30 @@
   gem:
     name: tmuxinator
     user_install: no
+
+- name: Install Peco
+  tags: test
+  script: ../scripts/install_peco.sh {{ peco_version }} creates=/usr/local/bin/peco
+
+- name: Set up Peco Config Dir
+  file: path=~/.peco state=directory
+
+- name: Set up Peco Config
+  copy: src=../templates/peco.json dest=~/.peco/config.json
+
+- name: Set up Ag
+  sudo_user: root
+  apt: name=silversearcher-ag state=latest
+
+- name: Common Config Files
+  copy: src=../templates/{{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: 'ack.rc', dest: '~/.ackrc' }
+    - { src: 'gem.rc', dest: '~/.gemrc' }
+    - { src: 'gitconfig.rc', dest: '~/.gitconfig' }
+    - { src: 'ssh-tmux.rc', dest: '~/ssh-tmux.rc' }
+    - { src: 'tmux.rc', dest: '~/.tmux.conf' }
+    - { src: 'top.rc', dest: '~/.toprc' }
+    - { src: 'rspec.rc', dest: '~/.rspec' }
+    - { src: 'ctags.rc', dest: '~/.ctags' }
+    - { src: 'ghci.rc', dest: '~/.ghci' }

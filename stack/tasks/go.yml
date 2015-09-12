@@ -2,17 +2,14 @@
   sudo_user: root
   script: ../scripts/install_go.sh {{ go_version }} creates=/usr/local/go
 
-- name: Set up Go src Directory
-  file: path=/code/go/src state=directory recurse=yes
-
-- name: Set up Go bin Directory
-  file: path=/code/go/bin state=directory recurse=yes
-
-- name: Set up Go pkg Directory
-  file: path=/code/go/pkg state=directory recurse=yes
+- name: Set up Go Directories
+  file: path=/code/go/{{ item.name }} state=directory recurse=yes
+  with_items:
+    - { name: 'src' }
+    - { name: 'pkg' }
+    - { name: 'bin' }
 
 - name: Set up Go Essentials
-  tags: test
   command: go get -u -v {{ item.address }} creates=/code/go/bin/{{ item.name }}
   with_items:
     - { name: 'gocode', address: 'github.com/nsf/gocode'}

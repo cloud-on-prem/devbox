@@ -1,6 +1,6 @@
 - name: Adds Tmux Repo
   sudo_user: root
-  command: add-apt-repository -y ppa:pi-rho/dev
+  command: add-apt-repository -y ppa:pi-rho/dev creates=/etc/apt/sources.list.d/pi-rho-dev-trusty.list
 
 - name: Update Apt Cache
   sudo_user: root

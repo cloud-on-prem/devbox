@@ -9,3 +9,6 @@
 
 - name: Set up Bash Aliases
   copy: src=../templates/bash_aliases.bash dest=~/.bash_aliases
+
+- name: Set up Dircolors
+  copy: src=../templates/dircolors.bash dest=~/.dircolors
