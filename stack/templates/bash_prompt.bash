@@ -1,10 +1,11 @@
-SCM_THEME_PROMPT_PREFIX="${cyan}(${green}"
+SCM_THEME_PROMPT_PREFIX="${cyan}(${blue}"
 SCM_THEME_PROMPT_SUFFIX="${cyan})"
-SCM_THEME_PROMPT_DIRTY=" ${red}"
-SCM_THEME_PROMPT_CLEAN=" ${green}●"
+SCM_THEME_PROMPT_DIRTY="${red}"
+SCM_THEME_PROMPT_CLEAN="${green}●"
+PREFIX="${red}${reset_color}"
 
 prompt() {
-  PS1="$(scm_prompt_info)${reset_color} ${cyan}\W${reset_color} ${green}→${reset_color} "
+  PS1="${PREFIX}$(scm_prompt_info)${reset_color} ${cyan}\W${reset_color} ${green}→${reset_color} "
 }
 
 PROMPT_COMMAND=prompt

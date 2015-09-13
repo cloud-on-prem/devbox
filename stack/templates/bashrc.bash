@@ -1,7 +1,6 @@
 EDITOR=vim # Of course
 export TERM=xterm-256color
 export BASH_IT="$HOME/.bash_it"
-export BASH_IT_THEME='minimal'
 export EDITOR
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
