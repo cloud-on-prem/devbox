@@ -6,9 +6,17 @@
   sudo_user: root
   apt: update_cache=yes cache_valid_time=86400
 
-- name: Install git
+- name: Install Essentials
   sudo_user: root
-  apt: name=git state=latest
+  apt: name={{ item.name }} state=latest
+  with_items:
+    - { name: 'git' }
+    - { name: 'build-essential' }
+    - { name: 'python-dev' }
+    - { name: 'python-pip' }
+    - { name: 'python3-dev' }
+    - { name: 'python3-pip' }
+    - { name: 'cmake' }
 
 - name: Install Build Essentials
   sudo_user: root

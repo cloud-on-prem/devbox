@@ -10,5 +10,11 @@
 - name: Set up Bash Aliases
   copy: src=../templates/bash_aliases.bash dest=~/.bash_aliases
 
+- name: Set up Bash Functions
+  copy: src=../templates/bash_functions.bash dest=~/.bash_functions
+
+- name: Set up Bash Prompt
+  copy: src=../templates/bash_prompt.bash dest=~/.bash_prompt
+
 - name: Set up Dircolors
   copy: src=../templates/dircolors.bash dest=~/.dircolors

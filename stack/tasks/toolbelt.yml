@@ -2,6 +2,9 @@
   sudo_user: root
   apt: name=tmux state=latest
 
+- name: Install Tmux Plugin Manager
+  git: repo=https://github.com/tmux-plugins/tpm dest=~/.tmux/plugins/tpm
+
 - name: Install Tmuxinator
   sudo_user: root
   gem:
