@@ -1,6 +1,9 @@
-- name: Adds Tmux Repo
+- name: Add PPAs
   sudo_user: root
-  command: add-apt-repository -y ppa:pi-rho/dev creates=/etc/apt/sources.list.d/pi-rho-dev-trusty.list
+  command: add-apt-repository -y ppa:{{ item.name }} creates=/etc/apt/sources.list.d/{{ item.name }}-trusty.list
+  with_items:
+    - {name: 'neovim-ppa/unstable'}
+    - {name: 'pi-rho/dev'}
 
 - name: Update Apt Cache
   sudo_user: root

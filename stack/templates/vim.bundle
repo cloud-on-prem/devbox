@@ -1,5 +1,4 @@
 NeoBundle 'premjg/vim-colorschemes'
-NeoBundle 'vim-scripts/tComment'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'tpope/vim-rails'
@@ -15,7 +14,6 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'edkolev/tmuxline.vim'
-NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'Raimondi/delimitMate'
@@ -29,7 +27,6 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'premjg/vim-webdevicons'
 NeoBundle 'wellle/targets.vim'
 NeoBundle 'tmux-plugins/vim-tmux-focus-events'
-NeoBundle 'dag/vim-fish'
 NeoBundle 'rking/ag.vim'
 
 NeoBundle 'Shougo/unite.vim'
@@ -54,4 +51,9 @@ NeoBundle 'Twinside/vim-hoogle'
 NeoBundle 'neovimhaskell/haskell-vim' " Mostly for better syntax highlighting and auto-indentations
 NeoBundle 'vim-scripts/Haskell-Conceal'
 
-NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'Valloric/YouCompleteMe', {
+  \ 'build': {
+  \   'linux': './install.sh --clang-completer --system-libclang --gocode-completer',
+  \   'unix': './install.sh --clang-completer --system-libclang --gocode-completer'
+  \ }
+\ }

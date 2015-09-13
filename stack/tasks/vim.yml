@@ -1,6 +1,6 @@
-- name: Install vim with Ruby/Lua/Python
+- name: Install Neovim
   sudo_user: root
-  apt: name=vim-nox state=latest
+  apt: name=neovim state=latest
 
 - name: Set up Vim Bundle Directory
   file: path=~/.vim/bundle/ recurse=true state=directory
@@ -8,8 +8,8 @@
 - name: Install Neobundle
   git: repo=https://github.com/Shougo/neobundle.vim dest=~/.vim/bundle/neobundle.vim
 
-- name: Set up Vimrc
-  template: src=./../templates/vimrc.vim dest=~/.vimrc
+- name: Set up NVimrc
+  template: src=./../templates/vimrc.vim dest=~/.nvimrc
 
 - name: Set up Vim Bundle
   template: src=./../templates/vim.bundle dest=~/.vim.bundle
