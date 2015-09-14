@@ -25,15 +25,3 @@
   sudo_user: root
   apt: name=silversearcher-ag state=latest
 
-- name: Common Config Files
-  copy: src=../templates/{{ item.src }} dest={{ item.dest }}
-  with_items:
-    - { src: 'ack.rc', dest: '~/.ackrc' }
-    - { src: 'gem.rc', dest: '~/.gemrc' }
-    - { src: 'gitconfig.rc', dest: '~/.gitconfig' }
-    - { src: 'ssh-tmux.rc', dest: '~/.ssh-tmux.rc' }
-    - { src: 'tmux.rc', dest: '~/.tmux.conf' }
-    - { src: 'top.rc', dest: '~/.toprc' }
-    - { src: 'rspec.rc', dest: '~/.rspec' }
-    - { src: 'ctags.rc', dest: '~/.ctags' }
-    - { src: 'ghci.rc', dest: '~/.ghci' }

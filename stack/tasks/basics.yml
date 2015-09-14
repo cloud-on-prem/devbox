@@ -11,15 +11,28 @@
 
 - name: Install Essentials
   sudo_user: root
-  apt: name={{ item.name }} state=latest
+  apt: name={{ item }} state=latest
   with_items:
-    - { name: 'git' }
-    - { name: 'build-essential' }
-    - { name: 'python-dev' }
-    - { name: 'python-pip' }
-    - { name: 'python3-dev' }
-    - { name: 'python3-pip' }
-    - { name: 'cmake' }
+    - git
+    - build-essential
+    - python-dev
+    - python-pip
+    - python3-dev
+    - python3-pip
+    - cmake
 
 - name: Set up Tools Directory
   file: path=~/.tools state=directory
+
+- name: Common Config Files
+  copy: src=../templates/{{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: 'ack.rc', dest: '~/.ackrc' }
+    - { src: 'gem.rc', dest: '~/.gemrc' }
+    - { src: 'gitconfig.rc', dest: '~/.gitconfig' }
+    - { src: 'ssh-tmux.rc', dest: '~/.ssh-tmux.rc' }
+    - { src: 'tmux.rc', dest: '~/.tmux.conf' }
+    - { src: 'top.rc', dest: '~/.toprc' }
+    - { src: 'rspec.rc', dest: '~/.rspec' }
+    - { src: 'ctags.rc', dest: '~/.ctags' }
+    - { src: 'ghci.rc', dest: '~/.ghci' }

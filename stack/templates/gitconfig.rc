@@ -39,5 +39,3 @@
     default = tracking
 [branch]
 	autosetuprebase = always
-[url "https://github.com/"]
-        insteadOf = git://github.com/
