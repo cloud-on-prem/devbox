@@ -1,3 +1,7 @@
+- name: Set up correct Timezone
+  sudo_user: root
+  shell: echo "Australia/Melbourne" | sudo tee /etc/timezone
+
 - name: Add PPAs
   sudo_user: root
   command: add-apt-repository -y ppa:{{ item.name }} creates=/etc/apt/sources.list.d/{{ item.filename }}-trusty.list
@@ -13,6 +17,7 @@
   sudo_user: root
   apt: name={{ item }} state=latest
   with_items:
+    - ntp
     - git
     - build-essential
     - python-dev
