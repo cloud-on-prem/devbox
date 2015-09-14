@@ -7,7 +7,7 @@
   script: ../scripts/install_chruby.sh {{ chruby_version }} creates=/usr/local/bin/chruby-exec
 
 - name: Install Latest Ruby
-  command: ruby-install ruby {{ ruby_version }} --no-reinstall creates=/home/vagrant/.rubies/ruby-2.2.0
+  command: cd /tmp && ruby-install ruby {{ ruby_version }} --no-reinstall creates=/home/vagrant/.rubies/ruby-2.2.0
 
 - name: Install Bundler for latest Ruby
   command: chruby-exec ruby-{{ ruby_version }} -- gem install bundler creates=~/.rubies/ruby-2.2.0/lib/ruby/gems/2.2.0/gems/bundler*

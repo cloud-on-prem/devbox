@@ -31,7 +31,7 @@
     - { src: 'ack.rc', dest: '~/.ackrc' }
     - { src: 'gem.rc', dest: '~/.gemrc' }
     - { src: 'gitconfig.rc', dest: '~/.gitconfig' }
-    - { src: 'ssh-tmux.rc', dest: '~/ssh-tmux.rc' }
+    - { src: 'ssh-tmux.rc', dest: '~/.ssh-tmux.rc' }
     - { src: 'tmux.rc', dest: '~/.tmux.conf' }
     - { src: 'top.rc', dest: '~/.toprc' }
     - { src: 'rspec.rc', dest: '~/.rspec' }
