@@ -15,6 +15,6 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "./stack/playbook.yml"
+    ansible.playbook = "./stack/ubuntu.yml"
   end
 end

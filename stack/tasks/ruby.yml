@@ -7,7 +7,7 @@
   script: ../scripts/install_chruby.sh {{ chruby_version }} creates=/usr/local/bin/chruby-exec
 
 - name: Install Latest Ruby
-  shell: cd /tmp && ruby-install ruby {{ ruby_version }} --no-reinstall creates=/home/vagrant/.rubies/ruby-2.2.0
+  shell: cd /tmp && ruby-install ruby {{ ruby_version }} --no-reinstall creates=~/.rubies/ruby-2.2.0
 
 - name: Install Bundler system wide
   sudo_user: root

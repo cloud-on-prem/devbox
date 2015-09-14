@@ -1,2 +1,0 @@
-- name: Set up Liquid Prompt
-  copy: src=../templates/liquidpromptrc.bash dest=~/.liquidpromptrc

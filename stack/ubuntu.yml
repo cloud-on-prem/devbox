@@ -2,6 +2,7 @@
 - hosts: all
   become_user: vagrant
   vars:
+    user_name: vagrant
     ruby_version: 2.2.0
     ruby_install_version: 0.5.0
     chruby_version: 0.3.9
@@ -10,6 +11,7 @@
   tasks:
     - include: ./tasks/basics.yml
     - include: ./tasks/bash.yml
+    - include: ./tasks/docker.yml
     - include: ./tasks/vim.yml
     - include: ./tasks/ruby.yml
     - include: ./tasks/go.yml
