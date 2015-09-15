@@ -3,6 +3,7 @@
   become_user: vagrant
   vars:
     user_name: vagrant
+    workspace_dir: /work-space/
     ruby_version: 2.2.0
     ruby_install_version: 0.5.0
     chruby_version: 0.3.9

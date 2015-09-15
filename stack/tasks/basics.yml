@@ -30,7 +30,7 @@
   file: path=~/.tools state=directory
 
 - name: Common Config Files
-  copy: src=../templates/{{ item.src }} dest={{ item.dest }}
+  template: src=../templates/{{ item.src }} dest={{ item.dest }}
   with_items:
     - { src: 'ack.rc', dest: '~/.ackrc' }
     - { src: 'gem.rc', dest: '~/.gemrc' }

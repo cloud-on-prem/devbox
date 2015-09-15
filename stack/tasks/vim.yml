@@ -23,7 +23,7 @@
   template: src=../templates/vimrc.bundleonly dest=~/.nvimrc
 
 - name: Install Vim Plugins
-  script: ../scripts/install_vim_plugins.sh creates=~/.vim/bundle/vimproc.vim
+  shell: nvim --headless -c 'NeoBundleUpdate | qall!' creates=~/.vim/bundle/vimproc.vim
 
 - name: Compile YCM
   command: ~/.vim/bundle/YouCompleteMe/install.sh creates=~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so

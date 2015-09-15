@@ -19,7 +19,7 @@
   file: path=~/.peco state=directory
 
 - name: Set up Peco Config
-  copy: src=../templates/peco.json dest=~/.peco/config.json
+  template: src=../templates/peco.json dest=~/.peco/config.json
 
 - name: Set up Ag
   sudo_user: root
