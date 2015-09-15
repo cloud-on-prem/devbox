@@ -2,6 +2,10 @@
   sudo_user: root
   apt: name=tmux state=latest
 
+- name: Set up Tmux SSH config
+  sudo_user: vagrant
+  template: src=../templates/ssh-tmux.rc dest=~/.ssh/rc
+
 - name: Install Tmux Plugin Manager
   git: repo=https://github.com/tmux-plugins/tpm dest=~/.tmux/plugins/tpm
 

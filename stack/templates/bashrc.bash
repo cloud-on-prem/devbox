@@ -1,4 +1,4 @@
-EDITOR=vim # Of course
+EDITOR=nvim # Of course
 export TERM=xterm-256color
 export BASH_IT="$HOME/.bash_it"
 export EDITOR

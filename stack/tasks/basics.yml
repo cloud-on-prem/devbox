@@ -1,7 +1,3 @@
-- name: Set up correct Timezone
-  sudo_user: root
-  shell: echo "Australia/Melbourne" | sudo tee /etc/timezone
-
 - name: Add PPAs
   sudo_user: root
   command: add-apt-repository -y ppa:{{ item.name }} creates=/etc/apt/sources.list.d/{{ item.filename }}-trusty.list
@@ -18,6 +14,7 @@
   apt: name={{ item }} state=latest
   with_items:
     - ntp
+    - language-pack-en
     - git
     - build-essential
     - python-dev
@@ -41,3 +38,10 @@
     - { src: 'rspec.rc', dest: '~/.rspec' }
     - { src: 'ctags.rc', dest: '~/.ctags' }
     - { src: 'ghci.rc', dest: '~/.ghci' }
+
+- name: Set up Timezone
+  sudo_user: root
+  command: "{{ item }}"
+  with_items:
+    - sudo timedatectl set-timezone {{ timezone }}
+    - ln -sf /usr/share/zoneinfo/{{ timezone }} /etc/localtime

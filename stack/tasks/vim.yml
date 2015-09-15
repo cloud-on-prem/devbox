@@ -30,3 +30,11 @@
 
 - name: Set up NVimrc
   template: src=./../templates/vimrc.vim dest=~/.nvimrc
+
+- name: Set up Neovim as Default
+  sudo_user: root
+  alternatives: name={{ item }} link=/usr/bin/{{ item }} path=/usr/bin/nvim
+  with_items:
+    - vi
+    - vim
+    - editor
