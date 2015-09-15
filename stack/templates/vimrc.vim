@@ -22,10 +22,6 @@ set t_Co=256               " enable 256-color mode.
 " set term=screen-256color
 let mapleader = ";" "set the leader key to ';' (easy to type)
 
-if &shell =~# 'fish$'
-  set shell=sh
-endif
-
 " Mouse for scrolling etc in console.
 set mouse=a
 
@@ -38,16 +34,6 @@ set tabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
-
-
-" Some Linux distributions set filetype in /etc/vimrc.
-" Clear filetype flags before changing runtimepath to force Vim to reload them.
-syntax enable
-filetype off
-filetype plugin indent off
-set runtimepath+=/usr/local/go/misc/vim
-filetype plugin indent on
-syntax on
 
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
@@ -64,6 +50,14 @@ source ~/.vim.bundle
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
+
+" Some Linux distributions set filetype in /etc/vimrc.
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+syntax enable
+filetype off
+filetype plugin indent off
+filetype plugin indent on
+syntax on
 
 set rtp+=~/.fzf
 runtime macros/matchit.vim
@@ -255,8 +249,10 @@ let g:neocomplete#sources#omni#input_pattern.go = '[^.[:digit:] *\t]\.\w*'
 " End Neocomplete
 
 " ----------- Unite
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
+if filereadable( expand("$HOME/.vim/bundle/unite.vim/plugin/unite.vim") )
+  call unite#filters#matcher_default#use(['matcher_fuzzy'])
+  call unite#filters#sorter_default#use(['sorter_rank'])
+endif
 nnoremap <C-p> :Unite file file_rec/git file_mru -start-insert -no-split<cr>
 let g:unite_source_history_yank_enable = 1
 nnoremap <Leader>' :Unite history/yank<cr>
@@ -283,9 +279,11 @@ nnoremap <C-f> :VimFilerBufferDir<cr>
 let g:vimfiler_as_default_explorer = 1
 " Enable file operation commands.
 " Edit file by tabedit.
-call vimfiler#custom#profile('default', 'context', {
-     \ 'safe' : 0
-     \ })
+if filereadable( expand("$HOME/.vim/bundle/vimfiler.vim/plugin/vimfiler.vim") )
+  call vimfiler#custom#profile('default', 'context', {
+      \ 'safe' : 0
+      \ })
+endif
 " Like Textmate icons.
 let g:vimfiler_tree_leaf_icon = ''
 let g:vimfiler_tree_opened_icon = '▷'

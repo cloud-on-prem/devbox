@@ -16,14 +16,17 @@
 - name: Install Neobundle
   git: repo=https://github.com/Shougo/neobundle.vim dest=~/.vim/bundle/neobundle.vim
 
-- name: Set up NVimrc
-  template: src=./../templates/vimrc.vim dest=~/.nvimrc
-
 - name: Set up Vim Bundle
   template: src=./../templates/vim.bundle dest=~/.vim.bundle
+
+- name: Set up Minimal Bundle Vimrc
+  template: src=../templates/vimrc.bundleonly dest=~/.nvimrc
 
 - name: Install Vim Plugins
   script: ../scripts/install_vim_plugins.sh creates=~/.vim/bundle/vimproc.vim
 
 - name: Compile YCM
   command: ~/.vim/bundle/YouCompleteMe/install.sh creates=~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so
+
+- name: Set up NVimrc
+  template: src=./../templates/vimrc.vim dest=~/.nvimrc
