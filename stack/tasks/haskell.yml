@@ -1,0 +1,20 @@
+- name: Install Haskell
+  sudo_user: root
+  apt: name=haskell-platform state=latest
+
+- name: Set up GHCI color
+  git: repo=https://github.com/premjg/ghci-color.git dest=~/.ghci-color
+
+- name: Refresh Cabal
+  shell: cabal update
+
+- name: Set up Essential Haskell Packages
+  shell: cabal install {{ item }} --force-reinstalls creates=~/.cabal/bin/{{ item }}
+  with_items:
+  - hdevtools
+  - ghc-mod
+  - hlint
+
+- name: Correct File Permissions for .ghci
+  sudo_user: "{{ user_name }}"
+  file: path=~/.ghci mode="g-w"

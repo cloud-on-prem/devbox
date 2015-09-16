@@ -4,6 +4,7 @@ export BASH_IT="$HOME/.bash_it"
 export EDITOR
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.cabal/bin:$PATH"
 export LC_ALL="en_AU.UTF-8"
 export LC_CTYPE="en_AU.UTF-8"
 

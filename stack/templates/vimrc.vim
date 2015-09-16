@@ -298,6 +298,8 @@ autocmd FileType vimfiler nmap <buffer> m
       \ <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_move_file)
 autocmd FileType vimfiler nmap <buffer> d
       \ <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_delete_file)
+autocmd FileType vimfiler nmap <buffer> <TAB>
+      \ <Plug>(vimfiler_choose_action)
 
 " Haskell
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
