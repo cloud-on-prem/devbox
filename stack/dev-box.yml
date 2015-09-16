@@ -19,3 +19,4 @@
     - include: ./tasks/go.yml
     - include: ./tasks/nodejs.yml
     - include: ./tasks/toolbelt.yml
+    - include: ./tasks/fzf.yml

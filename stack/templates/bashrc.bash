@@ -22,10 +22,11 @@ export PATH="$PATH:$HOME/.cabal/bin"
 source /usr/local/share/chruby/chruby.sh 2> /dev/null
 source /usr/local/share/chruby/auto.sh 2> /dev/null
 
-# Bash Profile
+# Load stuff without moaning
 source ~/.bash_profile 2> /dev/null
 source ~/.bash_functions 2> /dev/null
 source ~/.bash_aliases 2> /dev/null
 source ~/.bin/tmuxinator.bash 2> /dev/null
+source ~/.fzf.bash 2> /dev/null
 source $BASH_IT/bash_it.sh
 source ~/.bash_prompt 2> /dev/null
