@@ -38,6 +38,7 @@
     - { src: 'rspec.rc', dest: '~/.rspec' }
     - { src: 'ctags.rc', dest: '~/.ctags' }
     - { src: 'ghci.rc', dest: '~/.ghci' }
+    - { src: 'inputrc.bash', dest: '~/.inputrc' }
 
 - name: Set up Timezone
   sudo_user: root
