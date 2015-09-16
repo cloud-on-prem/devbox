@@ -4,7 +4,7 @@ alias restartnet="sudo nohup sh -c 'invoke-rc.d networking stop; date; echo slee
 
 alias lss='ls -lAh'
 
-alias v='vim'
+alias v='nvim'
 
 alias vu='vagrant up'
 alias vh='vagrant halt'
@@ -18,7 +18,6 @@ alias tmk='tmux kill-session -t '
 alias tmls='tmux ls'
 
 alias gfr="git fetch && git rebase"
-alias gco='git branch | cut -c 3- | selecta | xargs git checkout && clear'
 alias grb='git branch --merged master | grep -v "\* master" | xargs -n 0 git branch -d'
 alias gti='git'
 alias gset='git push --set-upstream origin `git symbolic-ref --short -q HEAD`'
@@ -27,3 +26,5 @@ alias groom='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 alias bx='bundle exec'
 alias fs='foreman start'
+
+alias wk='cd /work-space/'
