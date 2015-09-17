@@ -6,6 +6,15 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 
+NeoBundle 'Valloric/YouCompleteMe', {
+  \ 'build': {
+  \   'install_process_timeout': 1500,
+  \   'build_commands' : ['cmake', 'make'],
+  \   'linux': './install.py --clang-completer --system-libclang --gocode-completer',
+  \   'unix': './install.py --clang-completer --system-libclang --gocode-completer'
+  \ }
+\ }
+
 NeoBundle 'premjg/vim-colorschemes'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
@@ -50,10 +59,3 @@ NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'Twinside/vim-hoogle'
 NeoBundle 'neovimhaskell/haskell-vim' " Mostly for better syntax highlighting and auto-indentations
 NeoBundle 'vim-scripts/Haskell-Conceal'
-
-NeoBundle 'Valloric/YouCompleteMe', {
-  \ 'build': {
-  \   'linux': './install.sh --clang-completer --system-libclang --gocode-completer',
-  \   'unix': './install.sh --clang-completer --system-libclang --gocode-completer'
-  \ }
-\ }

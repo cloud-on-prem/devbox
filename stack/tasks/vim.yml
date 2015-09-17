@@ -26,7 +26,7 @@
   shell: nvim --headless -c 'NeoBundleUpdate | qall!' creates=~/.vim/bundle/vimproc.vim
 
 - name: Compile YCM
-  command: ~/.vim/bundle/YouCompleteMe/install.sh creates=~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so
+  script: ../scripts/compile_ycm.sh creates=~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so
 
 - name: Set up NVimrc
   template: src=./../templates/vimrc.vim dest=~/.nvimrc
