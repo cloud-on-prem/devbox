@@ -30,4 +30,5 @@ source ~/.bash_aliases 2> /dev/null
 source ~/.bin/tmuxinator.bash 2> /dev/null
 source ~/.fzf.bash 2> /dev/null
 source $BASH_IT/bash_it.sh
+source ~/.context_bashrc 2> /dev/null
 source ~/.bash_prompt 2> /dev/null
