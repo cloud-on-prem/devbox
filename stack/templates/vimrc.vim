@@ -104,6 +104,9 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" Burn <Esc>
+:imap jj <Esc>
+
 
 " Tabs
 nnoremap <C-t> :tabnew<CR>
