@@ -19,3 +19,11 @@
   sudo_user: root
   apt: name=silversearcher-ag state=latest
 
+- name: Set up Jq
+  sudo_user: root
+  apt: name=jq state=latest
+
+- name: Set up AWS CLI
+  sudo_user: root
+  pip: name=awscli state=latest
+
