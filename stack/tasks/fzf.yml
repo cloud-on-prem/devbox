@@ -1,9 +1,14 @@
 - name: Download FZF
   git: repo=https://github.com/junegunn/fzf.git dest=~/.fzf
 
+- name: Check for FZF Binary
+  action: stat path=~/.fzf/bin/fzf
+  register: fzf_file
+
 - name: Install FZF Binary
   sudo_user: "{{ user_name }}"
-  script: ../scripts/install_fzf.sh creates=~/.fzf/bin/fzf
+  script: ../scripts/install_fzf.sh {{ fzf_version }}
+  when: fzf_file.stat.exists == False
 
 - name: Copy FZF bash
   template: src=./../templates/fzf.bash dest=~/.fzf.bash
