@@ -1,6 +1,7 @@
 set -g update-environment "DISPLAY SSH_ASKPASS SSH_AGENT_PID SSH_CONNECTION WINDOWID XAUTHORITY"
 set-environment -g 'SSH_AUTH_SOCK' ~/.ssh/ssh_auth_sock
 
+set -sg escape-time 0
 set -g mode-mouse on
 set -g mouse-resize-pane on
 set -g mouse-select-pane on
@@ -8,6 +9,16 @@ set -g mouse-select-window on
 set -g default-terminal "screen-256color"
 set -g history-limit 50000
 set -g focus-events on
+
+# Use vim keybindings in copy mode
+setw -g mode-keys vi
+bind p paste-buffer
+
+# in copy mode
+bind -t vi-copy v begin-selection # `v` begins a selection. (movement keys to select the desired bits)
+bind -t vi-copy y copy-selection # `y` copies the current selection to one of tmux's "paste buffers"
+bind -t vi-copy V rectangle-toggle # `V` changes between line- and columnwise selection
+bind -t vi-copy Y copy-end-of-line
 
 # reload config without killing server
 bind R source-file ~/.tmux.conf \; display-message "  Config reloaded..."
