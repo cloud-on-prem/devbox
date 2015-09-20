@@ -17,7 +17,7 @@
 
 - name: Set up Ag
   sudo_user: root
-  apt: name=silversearcher-ag state=latest
+  script: ../scripts/install_ag.sh creates=/usr/bin/ag
 
 - name: Set up Jq
   sudo_user: root
