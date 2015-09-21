@@ -30,9 +30,6 @@
     - zlib1g-dev
     - liblzma-dev
 
-- name: Set up Tools Directory
-  file: path=~/.tools state=directory
-
 - name: Common Config Files
   template: src=../templates/{{ item.src }} dest={{ item.dest }}
   with_items:
