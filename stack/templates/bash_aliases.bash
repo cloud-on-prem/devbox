@@ -27,4 +27,4 @@ alias groom='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias bx='bundle exec'
 alias fs='foreman start'
 
-alias wk='cd /work-space/'
+alias wk='cd {{ workspace_dir }}'

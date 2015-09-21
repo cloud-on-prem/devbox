@@ -1,1 +1,1 @@
-default ansible_ssh_host=192.168.33.20
+default ansible_ssh_host=192.168.33.20 user_name=vagrant workspace_dir=/work-space logo=

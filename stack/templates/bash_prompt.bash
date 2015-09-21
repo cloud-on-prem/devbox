@@ -1,16 +1,8 @@
-os_logo(){
-  if [[ $OSTYPE == darwin* ]]; then
-    echo ""
-  else
-    echo ""
-  fi
-}
-
 SCM_THEME_PROMPT_PREFIX="${cyan}(${blue}"
 SCM_THEME_PROMPT_SUFFIX="${cyan})"
 SCM_THEME_PROMPT_DIRTY="${red}"
 SCM_THEME_PROMPT_CLEAN="${green}●"
-LOGO="$(os_logo)"
+LOGO="{{ logo }}"
 LOGO_PREFIX="${orange}${LOGO}${reset_color} "
 
 prompt() {
