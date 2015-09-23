@@ -41,7 +41,6 @@ NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
 NeoBundle 'Keithbsmiley/tmux.vim'
 NeoBundle 'godlygeek/tabular'
-NeoBundle 'premjg/vim-webdevicons'
 NeoBundle 'wellle/targets.vim'
 NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 NeoBundle 'rking/ag.vim'
@@ -59,3 +58,6 @@ NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'Twinside/vim-hoogle'
 NeoBundle 'neovimhaskell/haskell-vim' " Mostly for better syntax highlighting and auto-indentations
 NeoBundle 'vim-scripts/Haskell-Conceal'
+
+
+NeoBundle 'ryanoasis/vim-devicons' " Load Icons at the end.
