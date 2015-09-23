@@ -1,8 +1,11 @@
+- name: Prime apt to download latest Nodejs
+  sudo_user: root
+  script: ../scripts/prime_apt_nodejs.sh creates=/etc/apt/sources.list.d/nodesource.list
+
 - name: Set up Nodejs
   sudo_user: root
   apt: name=nodejs state=latest
 
-- name: Set up NPM
+- name: Latest NPM
   sudo_user: root
-  apt: name=npm state=latest
-
+  npm: name=npm state=latest global=true
