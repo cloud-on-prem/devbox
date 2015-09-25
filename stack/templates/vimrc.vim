@@ -134,9 +134,9 @@ au FileType ruby call SetUpRubySpecs()
 
 function! SetUpRubySpecs()
   if g:specType == "rspec"
-    nnoremap <leader>r :w\|:call VimuxRunCommand("clear & bundle exec rspec --format documentation ". bufname("%") . ":" . line("."))<CR>
+    nnoremap <leader>r :w\|:call VimuxRunCommand("clear && bundle exec rspec --format documentation ". bufname("%") . ":" . line("."))<CR>
   elseif g:specType == "minitest"
-    nnoremap <leader>r :w\|:call VimuxRunCommand("clear & ruby -Ilib:test ". bufname("%"))<CR>
+    nnoremap <leader>r :w\|:call VimuxRunCommand("clear && ruby -Ilib:test ". bufname("%"))<CR>
   endif
 endfunction
 
