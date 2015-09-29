@@ -29,6 +29,7 @@
     - libpcre3-dev
     - zlib1g-dev
     - liblzma-dev
+    - ruby-dev
 
 - name: Common Config Files
   template: src=../templates/{{ item.src }} dest={{ item.dest }}
