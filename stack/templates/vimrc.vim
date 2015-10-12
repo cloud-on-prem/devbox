@@ -106,6 +106,7 @@ noremap <Right> <NOP>
 
 " Burn <Esc>
 :imap jj <Esc>
+:imap ;; <Esc>
 
 
 " Tabs
