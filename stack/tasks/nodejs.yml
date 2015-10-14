@@ -9,3 +9,7 @@
 - name: Latest NPM
   sudo_user: root
   npm: name=npm state=latest global=true
+
+- name: Install JsHint
+  sudo_user: root
+  npm: name=jshint state=latest global=true
