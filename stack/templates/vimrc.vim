@@ -202,10 +202,6 @@ vnoremap <Space> za
 "Ag
 let g:ag_working_path_mode="r"
 
-" golang fix
-let g:neocomplete#sources#omni#input_pattern.go = '[^.[:digit:] *\t]\.\w*'
-" End Neocomplete
-
 " ----------- Unite
 if filereadable( expand("$HOME/.vim/bundle/unite.vim/plugin/unite.vim") )
   call unite#filters#matcher_default#use(['matcher_fuzzy'])
