@@ -7,6 +7,9 @@
 - name: Set up Bashrc
   template: src=../templates/bashrc.bash dest=~/.bashrc
 
+- name: Set up Bash Profile
+  template: src=../templates/bash_profile.bash dest=~/.bash_profile
+
 - name: Set up Bash Aliases
   template: src=../templates/bash_aliases.bash dest=~/.bash_aliases
 

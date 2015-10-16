@@ -1,0 +1,5 @@
+---
+  - include: ./basics.yml
+  - include: ./../../dev-box/tasks/bash.yml
+  - include: ./vim.yml
+  - include: ./../../dev-box/tasks/vim-setup.yml
