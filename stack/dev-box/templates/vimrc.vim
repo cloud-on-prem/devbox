@@ -43,10 +43,10 @@ set secure          " disable unsafe commands in local .vimrc files
 
 " Neobundle
 set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.config/nvim/bundle/'))
 let g:neobundle#types#git#default_protocol="git"
 NeoBundleFetch 'Shougo/neobundle.vim'
-source ~/.vim.bundle
+source ~/.config/nvim/.bundle
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck

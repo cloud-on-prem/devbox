@@ -30,6 +30,8 @@
     - zlib1g-dev
     - liblzma-dev
     - ruby-dev
+    - libxslt-dev
+    - libxml2-dev
 
 - name: Common Config Files
   template: src=../templates/{{ item.src }} dest={{ item.dest }}

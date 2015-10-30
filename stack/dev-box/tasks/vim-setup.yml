@@ -3,22 +3,22 @@
   pip: name=neovim state=latest
 
 - name: Set up Vim Bundle Directory
-  file: path=~/.vim/bundle/ recurse=true state=directory
+  file: path=~/.config/nvim/bundle/ recurse=true state=directory
 
 - name: Install Neobundle
-  git: repo=https://github.com/Shougo/neobundle.vim dest=~/.vim/bundle/neobundle.vim
+  git: repo=https://github.com/Shougo/neobundle.vim dest=~/.config/nvim/bundle/neobundle.vim
 
 - name: Set up Vim Bundle
-  template: src=./../templates/vim.bundle dest=~/.vim.bundle
+  template: src=./../templates/vim.bundle dest=~/.config/nvim/.bundle
 
 - name: Set up Minimal Bundle Vimrc
-  template: src=../templates/vimrc.bundleonly dest=~/.nvimrc
+  template: src=../templates/vimrc.bundleonly dest=~/.config/nvim/init.vim
 
 - name: Install Vim Plugins
-  shell: nvim --headless -c 'NeoBundleUpdate | qall!' creates=~/.vim/bundle/vimproc.vim
+  shell: nvim --headless -c 'NeoBundleUpdate | qall!' creates=~/.config/nvim/bundle/vimproc.vim
 
 - name: Compile YCM
-  script: ../scripts/compile_ycm.sh creates=~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so
+  script: ../scripts/compile_ycm.sh creates=~/.config/nvim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so
 
 - name: Set up NVimrc
-  template: src=./../templates/vimrc.vim dest=~/.nvimrc
+  template: src=./../templates/vimrc.vim dest=~/.config/nvim/init.vim
