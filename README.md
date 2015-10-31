@@ -1,8 +1,9 @@
 # Immutable Dev Environment #
 
 This is a repo that I personally use to automate my dev environemnts.
-The set up is powered by [Ansible](http://docs.ansible.com/ansible)
-It has support for setting up stuff on my local mac, a vagrant-powered Ubuntu vitualbox (which is my primary dev environment) and also support for setting up a dev environment in the cloud.
+The set up is powered by [Ansible](http://docs.ansible.com/ansible).
+
+It has support for setting up stuff on my local mac, a vagrant-powered Ubuntu vitualbox (which is my primary dev environment) and also support for setting up a dev environment in the cloud (WIP).
 
 The basic idea is that the tools and infrastructure contained in the dev environment are cleanly separated from the actual workspace (where your actual code lives).
 You should be able to safely destroy the environment/ rebuild it/upgrade it without losing any of your work.
@@ -13,8 +14,8 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
 * Clone this repo
 * Edit the `inventory` file under the `[mac]` section if required
 * Take a look at the `stack/mac.yml`
-* Add/edit relevant `tasks`, `scripts`, `templates` under `stack/roles/mac/`
-* Hint: This is what kicks off all the tasks: `stack/roles/mac/tasks/main.yml`
+* Add/edit relevant `tasks`, `scripts`, `templates` under `stack/mac/`
+* Hint: This is what kicks off all the tasks: `stack/mac/tasks/main.yml`
 * Run
 
     ```sh
@@ -29,8 +30,8 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
 * Inspect the `Vagrantfile` and see if it makes sense.
 * Edit the `inventory` file under the `[dev-box]` section if required
 * Take a look at the `stack/dev-box.yml`
-* Add/edit relevant `tasks`, `scripts`, `templates` under `stack/roles/dev-box/`
-* Hint: This is what kicks off all the tasks: `stack/roles/dev-box/tasks/main.yml`
+* Add/edit relevant `tasks`, `scripts`, `templates` under `stack/dev-box/`
+* Hint: This is what kicks off all the tasks: `stack/dev-box/tasks/main.yml`
 * Run `vagrant up`
 * Run
 
@@ -46,8 +47,8 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
 * Clone this repo
 * Edit the `inventory` file under the `[cloud-box]` section
 * Take a look at the `stack/cloud-box.yml`
-* Add/edit relevant `tasks`, `scripts`, `templates` under `stack/roles/cloud-box/`
-* Hint: This is what kicks off all the tasks: `stack/roles/cloud-box/tasks/main.yml` 
+* Add/edit relevant `tasks`, `scripts`, `templates` under `stack/cloud-box/`
+* Hint: This is what kicks off all the tasks: `stack/cloud-box/tasks/main.yml` 
 * Run
 
     ```sh
