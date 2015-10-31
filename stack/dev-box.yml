@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: dev-box
   become_user: "{{ user_name }}"
   vars:
     timezone: Australia/Melbourne
@@ -9,13 +9,14 @@
     go_version: 1.5
     fzf_version: 0.10.5
   tasks:
-    - include: ./tasks/basics.yml
-    - include: ./tasks/bash.yml
-    - include: ./tasks/docker.yml
-    - include: ./tasks/vim.yml
-    - include: ./tasks/ruby.yml
-    - include: ./tasks/go.yml
-    - include: ./tasks/haskell.yml
-    - include: ./tasks/nodejs.yml
-    - include: ./tasks/toolbelt.yml
-    - include: ./tasks/fzf.yml
+    - include: ./dev-box/tasks/basics.yml
+    - include: ./dev-box/tasks/bash.yml
+    - include: ./dev-box/tasks/docker.yml
+    - include: ./dev-box/tasks/vim.yml
+    - include: ./dev-box/tasks/vim-setup.yml
+    - include: ./dev-box/tasks/ruby.yml
+    - include: ./dev-box/tasks/go.yml
+    - include: ./dev-box/tasks/haskell.yml
+    - include: ./dev-box/tasks/nodejs.yml
+    - include: ./dev-box/tasks/toolbelt.yml
+    - include: ./dev-box/tasks/fzf.yml

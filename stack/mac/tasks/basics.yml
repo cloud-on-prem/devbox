@@ -1,0 +1,8 @@
+- name: Install Virtualbox
+  homebrew_cask: name=virtualbox state=present
+
+- name: Install Vagrant
+  homebrew_cask: name=vagrant state=present
+
+- name: Set up Workspace
+  command: mkdir -p ~/work-space

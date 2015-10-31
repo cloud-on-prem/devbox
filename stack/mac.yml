@@ -1,0 +1,8 @@
+---
+- hosts: mac
+  roles:
+    - mac
+  become_user: "{{ user_name }}"
+  vars:
+    timezone: Australia/Melbourne
+    fzf_version: 0.10.5

@@ -1,8 +1,8 @@
 " This is a minimal no-plugin starter rc file for Bundling purposes.
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#begin(expand('~/.vim/bundle/'))
+set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
+call neobundle#begin(expand('~/.config/nvim/bundle/'))
 let g:neobundle#types#git#default_protocol="git"
 NeoBundleFetch 'Shougo/neobundle.vim'
-source ~/.vim.bundle
+source ~/.config/nvim/.bundle
 call neobundle#end()
 NeoBundleCheck

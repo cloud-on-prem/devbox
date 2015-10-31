@@ -24,7 +24,6 @@ source /usr/local/share/chruby/chruby.sh 2> /dev/null
 source /usr/local/share/chruby/auto.sh 2> /dev/null
 
 # Load stuff without moaning
-source ~/.bash_profile 2> /dev/null
 source ~/.bash_functions 2> /dev/null
 source ~/.bash_aliases 2> /dev/null
 source ~/.bin/tmuxinator.bash 2> /dev/null

@@ -14,9 +14,4 @@ Vagrant.configure(2) do |config|
     vb.cpus = 2
     vb.name = "devbox"
   end
-
-  config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "./stack/dev-box.yml"
-    ansible.inventory_path = "./inventory"
-  end
 end

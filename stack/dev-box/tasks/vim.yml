@@ -1,0 +1,15 @@
+- name: Uninstall Stock Vim
+  sudo_user: root
+  apt: name=vim state=absent
+
+- name: Install Neovim
+  sudo_user: root
+  apt: name=neovim state=latest
+
+- name: Set up Neovim as Default
+  sudo_user: root
+  alternatives: name={{ item }} link=/usr/bin/{{ item }} path=/usr/bin/nvim
+  with_items:
+    - vi
+    - vim
+    - editor
