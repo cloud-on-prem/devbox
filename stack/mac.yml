@@ -6,3 +6,5 @@
   vars:
     timezone: Australia/Melbourne
     fzf_version: 0.10.5
+    git_name: "☀ Prem Pillai (@premjg)"
+    git_email: "prem.pillai@gmail.com"

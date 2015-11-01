@@ -42,7 +42,7 @@ set exrc            " enable per-directory .vimrc files
 set secure          " disable unsafe commands in local .vimrc files
 
 " Neobundle
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.config/nvim/bundle/'))
 let g:neobundle#types#git#default_protocol="git"
 NeoBundleFetch 'Shougo/neobundle.vim'

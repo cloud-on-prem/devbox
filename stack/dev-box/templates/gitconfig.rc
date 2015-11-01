@@ -1,6 +1,6 @@
 [user]
-	name = ☀ Prem Pillai (@premjg)
-	email = prem.pillai@gmail.com
+	name = {{ git_name }}
+	email = {{ git_email }}
 [color]
 	ui = true
 [alias]

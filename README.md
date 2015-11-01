@@ -48,7 +48,7 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
 * Edit the `inventory` file under the `[cloud-box]` section
 * Take a look at the `stack/cloud-box.yml`
 * Add/edit relevant `tasks`, `scripts`, `templates` under `stack/cloud-box/`
-* Hint: This is what kicks off all the tasks: `stack/cloud-box/tasks/main.yml` 
+* Hint: This is what kicks off all the tasks: `stack/cloud-box/tasks/main.yml`
 * Run
 
     ```sh
