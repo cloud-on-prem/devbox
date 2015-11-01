@@ -1,6 +1,7 @@
 - name: Install Go
-  sudo_user: root
-  script: ../scripts/install_go.sh {{ go_version }} creates=/usr/local/go
+  become: yes
+  become_user: root
+  script: ./dev-box/scripts/install_go.sh {{ go_version }} creates=/usr/local/go
 
 - name: Set up Go Directories
   file: path={{ workspace_dir }}/go/{{ item.name }} state=directory recurse=yes

@@ -5,19 +5,19 @@
   shell: ~/.bash_it/install.sh creates=~/.bash_it/plugins/enabled/
 
 - name: Set up Bashrc
-  template: src=../templates/bashrc.bash dest=~/.bashrc
+  template: src=./dev-box/templates/bashrc.bash dest=~/.bashrc
 
 - name: Set up Bash Profile
-  template: src=../templates/bash_profile.bash dest=~/.bash_profile
+  template: src=./dev-box/templates/bash_profile.bash dest=~/.bash_profile
 
 - name: Set up Bash Aliases
-  template: src=../templates/bash_aliases.bash dest=~/.bash_aliases
+  template: src=./dev-box/templates/bash_aliases.bash dest=~/.bash_aliases
 
 - name: Set up Bash Functions
-  template: src=../templates/bash_functions.bash dest=~/.bash_functions
+  template: src=./dev-box/templates/bash_functions.bash dest=~/.bash_functions
 
 - name: Set up Bash Prompt
-  template: src=../templates/bash_prompt.bash dest=~/.bash_prompt
+  template: src=./dev-box/templates/bash_prompt.bash dest=~/.bash_prompt
 
 - name: Set up Dircolors
-  template: src=../templates/dircolors.bash dest=~/.dircolors
+  template: src=./dev-box/templates/dircolors.bash dest=~/.dircolors

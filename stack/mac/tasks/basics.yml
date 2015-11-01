@@ -8,7 +8,7 @@
   command: mkdir -p ~/work-space
 
 - name: Common Config Files
-  template: src=../../dev-box/templates/{{ item.src }} dest={{ item.dest }}
+  template: src=./dev-box/templates/{{ item.src }} dest={{ item.dest }}
   with_items:
     - { src: 'ack.rc', dest: '~/.ackrc' }
     - { src: 'gem.rc', dest: '~/.gemrc' }

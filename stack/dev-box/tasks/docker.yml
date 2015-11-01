@@ -1,11 +1,14 @@
 - name: Install Docker
-  sudo_user: root
-  script: ../scripts/install_docker.sh creates=/usr/bin/docker
+  become: yes
+  become_user: root
+  script: ./dev-box/scripts/install_docker.sh creates=/usr/bin/docker
 
 - name: Set up Docker Group
-  sudo_user: root
-  command: sudo usermod -aG docker {{ user_name }}
+  become: yes
+  become_user: root
+  command: usermod -aG docker {{ user_name }}
 
 - name: Install Docker Compose
-  sudo_user: root
+  become: yes
+  become_user: root
   pip: name=docker-compose state=latest

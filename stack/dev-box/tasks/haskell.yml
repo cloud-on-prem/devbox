@@ -1,5 +1,6 @@
 - name: Install Haskell
-  sudo_user: root
+  become: yes
+  become_user: root
   apt: name=haskell-platform state=latest
 
 - name: Set up GHCI color
@@ -16,5 +17,6 @@
   - hlint
 
 - name: Correct File Permissions for .ghci
-  sudo_user: "{{ user_name }}"
+  become: yes
+  become_user: "{{ user_name }}"
   file: path=~/.ghci mode="g-w"

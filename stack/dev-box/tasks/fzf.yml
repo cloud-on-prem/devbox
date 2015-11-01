@@ -6,10 +6,11 @@
   register: fzf_file
 
 - name: Install FZF Binary
-  sudo_user: "{{ user_name }}"
-  script: ../scripts/install_fzf.sh {{ fzf_version }}
+  become: yes
+  become_user: "{{ user_name }}"
+  script: ./dev-box/scripts/install_fzf.sh {{ fzf_version }}
   when: fzf_file.stat.exists == False
 
 - name: Copy FZF bash
-  template: src=./../templates/fzf.bash dest=~/.fzf.bash
+  template: src=./dev-box/templates/fzf.bash dest=~/.fzf.bash
 

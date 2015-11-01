@@ -1,16 +1,19 @@
 - name: Add PPAs
-  sudo_user: root
-  command: add-apt-repository -y ppa:{{ item.name }} creates=/etc/apt/sources.list.d/{{ item.filename }}-trusty.list
+  become: yes
+  become_user: root
+  command: sudo add-apt-repository -y ppa:{{ item.name }} creates=/etc/apt/sources.list.d/{{ item.filename }}-wily.list
   with_items:
-    - {name: 'neovim-ppa/unstable', filename: 'neovim-ppa-unstable'}
-    - {name: 'pi-rho/dev', filename: 'pi-rho-dev' }
+    - {name: 'neovim-ppa/unstable', filename: 'neovim-ppa-ubuntu-unstable'}
+    - {name: 'pi-rho/dev', filename: 'pi-rho-ubuntu-dev' }
 
 - name: Update Apt Cache
-  sudo_user: root
+  become: yes
+  become_user: root
   apt: update_cache=yes cache_valid_time=86400
 
 - name: Install Essentials
-  sudo_user: root
+  become: yes
+  become_user: root
   apt: name={{ item }} state=latest
   with_items:
     - ntp
@@ -18,7 +21,6 @@
     - git
     - build-essential
     - python-dev
-    - python-pip
     - python3-dev
     - python3-pip
     - default-jre
@@ -33,8 +35,18 @@
     - libxslt-dev
     - libxml2-dev
 
+- name: Install correct Pip
+  become: yes
+  become_user: root
+  easy_install: name=pip state=latest
+
+- name: Install Python Virtualenv
+  become: yes
+  become_user: root
+  pip: name=virtualenv state=latest
+
 - name: Common Config Files
-  template: src=../templates/{{ item.src }} dest={{ item.dest }}
+  template: src=./dev-box/templates/{{ item.src }} dest={{ item.dest }}
   with_items:
     - { src: 'ack.rc', dest: '~/.ackrc' }
     - { src: 'gem.rc', dest: '~/.gemrc' }
@@ -48,7 +60,8 @@
     - { src: 'inputrc.bash', dest: '~/.inputrc' }
 
 - name: Set up Timezone
-  sudo_user: root
+  become: yes
+  become_user: root
   command: "{{ item }}"
   with_items:
     - sudo timedatectl set-timezone {{ timezone }}

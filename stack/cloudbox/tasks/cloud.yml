@@ -1,8 +1,10 @@
 - name: Set up work space directory
-  sudo_user: root
+  become: yes
+  become_user: root
   file: path={{ workspace_dir }} state=directory
 
 - name: Mount work space directory
-  sudo_user: root
+  become: yes
+  become_user: root
   shell: mount {{ workspace_dev }} {{ workspace_dir }}
 

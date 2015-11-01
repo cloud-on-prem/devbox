@@ -2,6 +2,7 @@
 - hosts: mac
   roles:
     - mac
+  become: yes
   become_user: "{{ user_name }}"
   vars:
     timezone: Australia/Melbourne
