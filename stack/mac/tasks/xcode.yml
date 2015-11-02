@@ -1,0 +1,4 @@
+- name: Install Alcatraz
+  become: yes
+  become_user: "{{ user_name }}"
+  script: ./mac/scripts/install_alcatraz.sh creates=~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin/Contents/Info.plist
