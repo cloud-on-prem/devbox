@@ -35,6 +35,7 @@
     - libxslt-dev
     - libxml2-dev
     - upower
+    - mercurial
 
 - name: Install correct Pip
   become: yes
