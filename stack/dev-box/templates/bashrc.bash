@@ -15,6 +15,7 @@ eval `dircolors ~/.dircolors`
 export PATH="/usr/local/go/bin:$PATH"
 export GOPATH="{{ workspace_dir }}/go"
 export PATH=$PATH:$GOPATH/bin
+export GO15VENDOREXPERIMENT=1
 
 #Haskell
 export PATH="$PATH:$HOME/.cabal/bin"
