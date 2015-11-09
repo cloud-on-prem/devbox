@@ -83,7 +83,7 @@ au FileType xml setlocal foldmethod=syntax
 
 " Look and Feel
 set background=dark
-if filereadable( expand("$HOME/.vim/bundle/vim-colorschemes/colors/gruvbox.vim") )
+if filereadable( expand("$HOME/.config/nvim/bundle/vim-colorschemes/colors/gruvbox.vim") )
   " colorscheme gruvbox
   " colorscheme molokai
   colorscheme solarized
