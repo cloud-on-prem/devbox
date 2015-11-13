@@ -33,3 +33,8 @@
   become_user: root
   pip: name=awscli state=latest
 
+- name: Set up Bash My AWS
+  become: yes
+  become_user: root
+  git: repo=https://github.com/realestate-com-au/bash-my-aws.git dest=~/.bash-my-aws
+
