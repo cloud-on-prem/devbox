@@ -59,5 +59,7 @@ NeoBundle 'Twinside/vim-hoogle'
 NeoBundle 'neovimhaskell/haskell-vim' " Mostly for better syntax highlighting and auto-indentations
 NeoBundle 'vim-scripts/Haskell-Conceal'
 
+NeoBundle 'lambdatoast/elm.vim'
+
 
 NeoBundle 'ryanoasis/vim-devicons' " Load Icons at the end.
