@@ -18,5 +18,7 @@
   become_user: root
   npm: name={{ item }} state=latest global=true
   with_items:
+    - elm
+    - gulp
     - jshint
     - jsonlint
