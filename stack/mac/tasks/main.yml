@@ -6,3 +6,4 @@
   - include: ./../../dev-box/tasks/ruby.yml
   - include: ./vim.yml
   - include: ./../../dev-box/tasks/vim-setup.yml
+  - include: ./extras.yml

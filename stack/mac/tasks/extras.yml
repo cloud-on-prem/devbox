@@ -1,0 +1,2 @@
+- name: Install Highlight
+  homebrew: name=highlight state=latest
