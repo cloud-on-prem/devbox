@@ -12,11 +12,11 @@
 
   <replacementdef>
     <replacementname>VIM_EMU_IGNORE_APPS</replacementname>
-    <replacementvalue>TERMINAL, ITERM, VI, CATHODE, PASSWORD, GOOGLE_CHROME, EMACS, DASHLANE, SUBLIMETEXT</replacementvalue>
+    <replacementvalue>TERMINAL, ITERM, VI, CATHODE, PASSWORD, EMACS, DASHLANE, SUBLIMETEXT</replacementvalue>
   </replacementdef>
 
   <item>
-    <name>Ignores Terminals, passwords, browsers etc.</name>
+    <name>Ignores Terminals, passwords etc.</name>
   </item>
 
 </root>
