@@ -58,7 +58,6 @@ filetype plugin indent off
 filetype plugin indent on
 syntax on
 
-set rtp+=~/.fzf
 runtime macros/matchit.vim
 
 " Set up syntaxes
