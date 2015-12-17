@@ -258,6 +258,8 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd FileType haskell nnoremap <buffer> <Leader>t :GhcModType<CR>
 autocmd FileType haskell nnoremap <buffer> <Leader>c :GhcModTypeClear<CR>
 autocmd FileType haskell nnoremap <buffer> <Leader>i :GhcModInfo<CR>
+autocmd FileType haskell nnoremap <buffer> <Leader>r :VimuxRunCommand(":load " . bufname("%") . "\n")<CR>
+autocmd FileType haskell nnoremap <buffer> <Leader>o :VimuxRunCommand("ghc -o /tmp/haskell-play " . bufname("%") . "&& /tmp/haskell-play" . "\n")<CR>
 
 let g:airline#extensions#tmuxline#enabled = 0
 
