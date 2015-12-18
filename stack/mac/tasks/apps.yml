@@ -6,3 +6,6 @@
 
 - name: Set up Karabiner settings
   template: src=./mac/templates/private.xml dest="~/Library/Application Support/Karabiner/private.xml"
+
+- name: Set up Psequel
+  homebrew_cask: name=psequel state=present
