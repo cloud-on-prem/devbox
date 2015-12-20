@@ -207,7 +207,6 @@ if filereadable( expand("$HOME/.vim/bundle/unite.vim/plugin/unite.vim") )
   call unite#filters#sorter_default#use(['sorter_rank'])
 endif
 nnoremap <C-p> :Unite file file_rec/git file_mru -start-insert -no-split<cr>
-let g:unite_source_history_yank_enable = 1
 nnoremap <Leader>' :Unite history/yank<cr>
 nnoremap <Leader>b :Unite buffer<cr>
 let g:neomru#file_mru_limit = 5
