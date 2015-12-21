@@ -3,21 +3,6 @@
   become_user: root
   apt: name=tmux state=latest
 
-- name: Set up Tmux SSH config
-  become: yes
-  become_user: "{{ user_name }}"
-  template: src=./dev-box/templates/ssh-tmux.rc dest=~/.ssh/rc
-
-- name: Install Tmux Plugin Manager
-  git: repo=https://github.com/tmux-plugins/tpm dest=~/.tmux/plugins/tpm
-
-- name: Install Tmuxinator
-  become: yes
-  become_user: root
-  gem:
-    name: tmuxinator
-    user_install: no
-
 - name: Set up Ag
   become: yes
   become_user: root

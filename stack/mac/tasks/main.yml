@@ -2,6 +2,7 @@
   - include: ./basics.yml
   - include: ./apps.yml
   - include: ./xcode.yml
+  - include: ./../../dev-box/tasks/tmux_plus.yml
   - include: ./../../dev-box/tasks/bash.yml
   - include: ./../../dev-box/tasks/ruby.yml
   - include: ./vim.yml

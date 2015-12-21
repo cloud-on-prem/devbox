@@ -36,13 +36,15 @@ set -g status on
 set -g status-utf8 on
 set -g status-interval 10
 
-set-option -g @batt_charged_icon ""
-set-option -g @batt_charging_icon ""
-set-option -g @batt_discharging_icon ""
-set-option -g @batt_attached_icon ""
-set-option -g @cpu_icon " "
-set -g @online_icon "#[fg=color31]"
-set -g @offline_icon "#[fg=color31]"
+set-option -g @batt_charged_icon " "
+set-option -g @batt_charging_icon ""
+set-option -g @batt_discharging_icon " "
+set-option -g @batt_attached_icon ""
+set-option -g @cpu_icon ""
+set-option -g @online_icon " "
+set-option -g @offline_icon " "
+set-option -g @calendar_icon " "
+set-option -g @clock_icon " "
 
 set -g status-bg "colour234"
 set -g message-command-fg "colour231"
@@ -75,7 +77,7 @@ set -g status-right "#[fg=colour236,bg=colour234,nobold,nounderscore,noitalics]�
 #[fg=colour252,bg=colour236,nobold,nounderscore,noitalics]\
 #[fg=colour235,bg=colour252] #{cpu_icon} #{cpu_percentage} \
 #[fg=colour235,bg=colour252] #{online_status} \
-#[fg=colour235,bg=colour252] #{battery_icon} #{battery_percentage}  "
+#[fg=colour235,bg=colour252] #{battery_icon} #{battery_percentage}"
 
 setw -g window-status-format "#[fg=colour244,bg=colour234] #I #[fg=colour250,bg=colour234] #W "
 
