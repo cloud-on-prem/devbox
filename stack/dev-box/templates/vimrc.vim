@@ -269,5 +269,8 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 
 "Startify
+let g:startify_list_order = ['files', 'bookmarks', 'sessions']
 let g:startify_custom_header =
       \ map(split(system('cat ~/.vim.header.txt'), '\n'), '"   ". v:val') + ['','']
+let g:startify_bookmarks = [ {'v': '~/.config/nvim/init.vim'} ]
+let g:startify_files_number = 5
