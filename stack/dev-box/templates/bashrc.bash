@@ -1,4 +1,5 @@
 EDITOR=nvim # Of course
+set -o vi
 export TERM=xterm-256color
 export BASH_IT="$HOME/.bash_it"
 export EDITOR
@@ -10,7 +11,11 @@ export LC_CTYPE="en_AU.UTF-8"
 export PATH="/usr/local/sbin:$PATH"
 
 # Pretty Dircolors
-eval `dircolors ~/.dircolors`
+eval `dircolors ~/.dircolors` 2> /dev/null
+
+# FZF
+FZF_TMUX=0
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #Go
 export PATH="/usr/local/go/bin:$PATH"
