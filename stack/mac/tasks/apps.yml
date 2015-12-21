@@ -1,0 +1,8 @@
+- name: Install Macdown
+  homebrew_cask: name=macdown state=present
+
+- name: Install Karabiner
+  homebrew_cask: name=karabiner state=present
+
+- name: Set up Karabiner settings
+  template: src=./mac/templates/karabiner.xml dest="~/Library/Application Support/Karabiner/private.xml"
