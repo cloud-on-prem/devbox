@@ -23,3 +23,6 @@
 
 - name: Set up NVimrc
   template: src=./dev-box/templates/vimrc.vim dest=~/.config/nvim/init.vim
+
+- name: Set up Vim Startify Header
+  template: src=./dev-box/templates/vim.header.txt dest=~/.vim.header.txt
