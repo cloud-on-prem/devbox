@@ -92,6 +92,8 @@ hi Normal ctermfg=252 ctermbg=none
 " Airline conf
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled = 0
 
 if has('gui_running')
   set guifont=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 11
