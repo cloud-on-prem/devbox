@@ -10,9 +10,6 @@ export LC_ALL="en_AU.UTF-8"
 export LC_CTYPE="en_AU.UTF-8"
 export PATH="/usr/local/sbin:$PATH"
 
-# Pretty Dircolors
-eval `dircolors ~/.dircolors` 2> /dev/null
-
 # FZF
 FZF_TMUX=0
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
