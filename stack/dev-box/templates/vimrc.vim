@@ -16,7 +16,7 @@ set noswapfile " No swp files
 set cursorline             " Highlight the current line
 set eol " force blank lines at end of file
 set scrolloff=3
-set encoding=utf-8
+" set encoding=utf-8
 set fileencodings=utf-8
 set t_Co=256               " enable 256-color mode.
 " set term=screen-256color
@@ -228,11 +228,11 @@ nnoremap <Leader>o :Unite process -start-insert<cr>
 " End Unite
 "
 "Vimfiler
-nnoremap <C-n> :VimFiler<cr>
-nnoremap <C-f> :VimFilerBufferDir<cr>
+let g:extra_whitespace_ignored_filetypes = ['unite', 'vimfiler']
+nnoremap <C-f> :VimFiler -explorer -find -force-hide -explorer-columns=devicons<cr>
 let g:vimfiler_as_default_explorer = 1
-" Enable file operation commands.
-" Edit file by tabedit.
+let g:vimfiler_safe_mode_by_default = 0
+let g:WebDevIconsUnicodeDecorateFolderNodes = 0
 if filereadable( expand("$HOME/.vim/bundle/vimfiler.vim/plugin/vimfiler.vim") )
   call vimfiler#custom#profile('default', 'context', {
       \ 'safe' : 0
@@ -240,9 +240,9 @@ if filereadable( expand("$HOME/.vim/bundle/vimfiler.vim/plugin/vimfiler.vim") )
 endif
 " Like Textmate icons.
 let g:vimfiler_tree_leaf_icon = ''
-let g:vimfiler_tree_opened_icon = ''
-let g:vimfiler_tree_closed_icon = ''
-let g:vimfiler_marked_file_icon = ''
+let g:vimfiler_tree_closed_icon = ''
+let g:vimfiler_tree_opened_icon = ''
+let g:vimfiler_marked_file_icon = ''
 let g:vimfiler_tree_indentation = 2
 
 autocmd FileType vimfiler nmap <buffer> c
