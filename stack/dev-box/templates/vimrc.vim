@@ -61,9 +61,7 @@ syntax on
 runtime macros/matchit.vim
 
 " Set up syntaxes
-let g:syntastic_check_on_open=1
-let g:syntastic_shell = "/bin/sh"
-let g:syntastic_javascript_checkers = ['jshint', 'jsonlint']
+autocmd! BufRead,BufWritePost * Neomake
 au BufRead,BufNewFile *.rabl set filetype=ruby
 au BufRead,BufNewFile *.json set filetype=json
 au BufRead,BufNewFile *.json set conceallevel=0
