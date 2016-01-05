@@ -60,18 +60,22 @@ syntax on
 
 runtime macros/matchit.vim
 
+func OnEnter()
+  Unite file_mru file_rec/git file_mru -start-insert
+endfunc
 
-if filereadable( expand("$HOME/.config/nvim/bundle/vimfiler.vim/plugin/vimfiler.vim") )
-  autocmd VimEnter * if !argc() | VimFiler | endif
+if neobundle#tap('unite.vim')
+  autocmd VimEnter * if !argc() | call OnEnter() | endif
 endif
 
 " Set up syntaxes
 " Neomake
-if filereadable( expand("$HOME/.config/nvim/bundle/neomake/plugin/neomake.vim") )
-  let g:neomake_warning_sign={'text': ''}
-  let g:neomake_error_sign={'text': ''}
-  let g:neomake_informational_sign={'text': ''}
-  let g:neomake_message_sign={'text': ''}
+let g:neomake_warning_sign={'text': ''}
+let g:neomake_error_sign={'text': ''}
+let g:neomake_informational_sign={'text': ''}
+let g:neomake_message_sign={'text': ''}
+
+if neobundle#tap('neomake')
   autocmd! BufRead,BufWritePost * Neomake
 endif
 
@@ -91,7 +95,7 @@ au FileType xml setlocal foldmethod=syntax
 
 " Look and Feel
 set background=dark
-if filereadable( expand("$HOME/.config/nvim/bundle/vim-colorschemes/colors/gruvbox.vim") )
+if neobundle#tap('vim-colorschemes')
   " colorscheme gruvbox
   " colorscheme molokai
   colorscheme solarized
@@ -214,14 +218,14 @@ vnoremap <Space> za
 let g:ag_working_path_mode="r"
 
 " ----------- Unite
-if filereadable( expand("$HOME/.vim/bundle/unite.vim/plugin/unite.vim") )
+if neobundle#tap('unite.vim')
   call unite#filters#matcher_default#use(['matcher_fuzzy'])
   call unite#filters#sorter_default#use(['sorter_rank'])
 endif
 nnoremap <C-p> :Unite file file_rec/git file_mru -start-insert -no-split<cr>
 nnoremap <Leader>' :Unite history/yank<cr>
 nnoremap <Leader>b :Unite buffer<cr>
-let g:neomru#file_mru_limit = 5
+let g:neomru#file_mru_limit = 10
 " Search
 let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts =
@@ -243,7 +247,7 @@ nnoremap <C-f> :VimFiler -explorer -find -force-hide -explorer-columns=devicons<
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
 let g:WebDevIconsUnicodeDecorateFolderNodes = 0
-if filereadable( expand("$HOME/.vim/bundle/vimfiler.vim/plugin/vimfiler.vim") )
+if neobundle#tap('vimfiler.vim')
   call vimfiler#custom#profile('default', 'context', {
       \ 'safe' : 0
       \ })
@@ -278,11 +282,3 @@ let g:airline#extensions#tmuxline#enabled = 0
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-
-"Startify
-let g:startify_list_order = ['files', 'bookmarks', 'sessions']
-let g:startify_custom_header =
-      \ map(split(system('cat ~/.vim.header.txt'), '\n'), '"   ". v:val') + ['','']
-let g:startify_bookmarks = [ {'v': '~/.config/nvim/init.vim'} ]
-let g:startify_files_number = 5

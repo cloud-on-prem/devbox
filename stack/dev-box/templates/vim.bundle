@@ -45,14 +45,13 @@ NeoBundle 'wellle/targets.vim'
 NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 NeoBundle 'rking/ag.vim'
 
-NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite.vim', {'augroup': 'unite'}
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neoyank.vim'
 
 NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'Shougo/echodoc.vim'
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'Shougo/vimfiler.vim', {'augroup': 'vimfiler'}
 
 NeoBundle 'eagletmt/neco-ghc'
 NeoBundle 'eagletmt/ghcmod-vim'
