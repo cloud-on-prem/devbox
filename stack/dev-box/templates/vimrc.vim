@@ -60,6 +60,11 @@ syntax on
 
 runtime macros/matchit.vim
 
+
+if filereadable( expand("$HOME/.config/nvim/bundle/vimfiler.vim/plugin/vimfiler.vim") )
+  autocmd VimEnter * if !argc() | VimFiler | endif
+endif
+
 " Set up syntaxes
 " Neomake
 if filereadable( expand("$HOME/.config/nvim/bundle/neomake/plugin/neomake.vim") )

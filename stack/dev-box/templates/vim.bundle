@@ -15,7 +15,6 @@ NeoBundle 'Valloric/YouCompleteMe', {
   \ }
 \ }
 
-NeoBundle 'mhinz/vim-startify'
 NeoBundle 'premjg/vim-colorschemes'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
