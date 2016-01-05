@@ -61,13 +61,20 @@ syntax on
 runtime macros/matchit.vim
 
 " Set up syntaxes
-autocmd! BufRead,BufWritePost * Neomake
+" Neomake
+if filereadable( expand("$HOME/.config/nvim/bundle/neomake/plugin/neomake.vim") )
+  let g:neomake_warning_sign={'text': ''}
+  let g:neomake_error_sign={'text': ''}
+  let g:neomake_informational_sign={'text': ''}
+  let g:neomake_message_sign={'text': ''}
+  autocmd! BufRead,BufWritePost * Neomake
+endif
+
 au BufRead,BufNewFile *.rabl set filetype=ruby
 au BufRead,BufNewFile *.json set filetype=json
 au BufRead,BufNewFile *.json set conceallevel=0
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.bundle set filetype=vim
-au BufRead,BufNewFile *.fish set filetype=fish
 au BufRead,BufNewFile *.tmux.conf set filetype=tmux
 
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
