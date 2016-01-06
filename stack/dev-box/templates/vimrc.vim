@@ -6,7 +6,6 @@ set ignorecase             " Make searches case-insensitive.
 set ruler                  " Always show info along bottom.
 set autoindent             " auto-indent
 set nowrap                 " don't wrap text
-set nu
 set ttimeoutlen=10         "wait for 10ms after escape
 set hidden                 "Hide the buffers
 set tags=.git/tags,tags;$HOME "Where to find ctags
