@@ -60,7 +60,7 @@ syntax on
 runtime macros/matchit.vim
 
 func OnEnter()
-  Unite file_mru file_rec/git file_mru -start-insert
+  Unite file_mru file_rec/git file_mru -no-split
 endfunc
 
 if neobundle#tap('unite.vim')
@@ -105,8 +105,8 @@ hi Normal ctermfg=252 ctermbg=none
 " Airline conf
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#tmuxline#enabled = 0
 
 if has('gui_running')
   set guifont=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 11
@@ -275,8 +275,6 @@ autocmd FileType haskell nnoremap <buffer> <Leader>c :GhcModTypeClear<CR>
 autocmd FileType haskell nnoremap <buffer> <Leader>i :GhcModInfo<CR>
 autocmd FileType haskell nnoremap <buffer> <Leader>r :VimuxRunCommand(":load " . bufname("%") . "\n")<CR>
 autocmd FileType haskell nnoremap <buffer> <Leader>o :VimuxRunCommand("ghc -o /tmp/haskell-play " . bufname("%") . "&& /tmp/haskell-play" . "\n")<CR>
-
-let g:airline#extensions#tmuxline#enabled = 0
 
 "Snippets
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
