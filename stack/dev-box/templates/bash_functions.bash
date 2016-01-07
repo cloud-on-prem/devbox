@@ -5,3 +5,7 @@ clean-docker(){
 hask(){
   ~/.ghci-color/ghci-color
 }
+
+retry(){
+  until !!; do :; done
+}
