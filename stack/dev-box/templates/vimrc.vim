@@ -68,14 +68,23 @@ if neobundle#tap('unite.vim')
 endif
 
 " Set up syntaxes
-" Neomake
-let g:neomake_warning_sign={'text': ''}
-let g:neomake_error_sign={'text': ''}
-let g:neomake_informational_sign={'text': ''}
-let g:neomake_message_sign={'text': ''}
+let g:syntastic_error_symbol=''
+let g:syntastic_style_error_symbol=''
+let g:syntastic_warning_symbol=''
+let g:syntastic_style_warning_symbol=''
 
-if neobundle#tap('neomake')
-  autocmd! BufRead,BufWritePost * Neomake
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_javascript_checkers = ['jshint', 'jsonlint']
+
+if neobundle#tap('syntastic.vim')
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
 endif
 
 au BufRead,BufNewFile *.rabl set filetype=ruby
