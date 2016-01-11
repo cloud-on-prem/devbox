@@ -8,4 +8,5 @@
   - include: ./vim.yml
   - include: ./../../dev-box/tasks/vim-setup.yml
   - include: ./../../dev-box/tasks/fzf.yml
+  - include: ./../../dev-box/tasks/git.yml
   - include: ./extras.yml

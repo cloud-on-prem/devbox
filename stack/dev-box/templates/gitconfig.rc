@@ -29,7 +29,7 @@
 	filemode = false
   editor = vim
 [init]
-  templatedir = ~/.git
+  templatedir = ~/.git/template-dir/
 [rerere]
 	enabled = true
 [merge]
