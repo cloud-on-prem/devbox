@@ -60,7 +60,7 @@ syntax on
 runtime macros/matchit.vim
 
 func OnEnter()
-  Unite file_mru file_rec/git file_mru -no-split
+  Unite file_mru file_rec/git -no-split
 endfunc
 
 if neobundle#tap('unite.vim')
@@ -234,6 +234,7 @@ endif
 nnoremap <C-p> :Unite file file_rec/git file_mru -start-insert -no-split<cr>
 nnoremap <Leader>' :Unite history/yank<cr>
 nnoremap <Leader>b :Unite buffer<cr>
+nnoremap <C-h> :Unite file_mru<cr>
 let g:neomru#file_mru_limit = 10
 " Search
 let g:unite_source_grep_command = 'ag'
