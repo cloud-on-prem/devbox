@@ -17,6 +17,4 @@
   template: src=./dev-box/templates/bash_functions.bash dest=~/.bash_functions
 
 - name: Set up Bash Prompt
-  tags:
-    - test
   template: src=./dev-box/templates/bash_prompt.bash dest=~/.bash_prompt

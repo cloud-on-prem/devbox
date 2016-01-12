@@ -1,2 +1,5 @@
 - name: Install Highlight
   homebrew: name=highlight state=latest
+
+- name: Install Ctags
+  homebrew: name=ctags state=latest

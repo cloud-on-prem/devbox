@@ -23,3 +23,7 @@
   become_user: root
   git: repo=https://github.com/realestate-com-au/bash-my-aws.git dest=~/.bash-my-aws
 
+- name: Install Ctags
+  become: yes
+  become_user: root
+  apt: name=ctags state=latest

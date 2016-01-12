@@ -2,10 +2,6 @@
   become: yes
   become_user: root
   gem: name=overcommit state=latest
-  tags:
-    - current
 
 - name: Copy Git dirs
   copy: src=./dev-box/templates/git/ dest=~/.git/
-  tags:
-    - current
