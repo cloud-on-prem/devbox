@@ -1,0 +1,15 @@
+PostCheckout:
+ ALL:
+   quiet: false
+
+ IndexTags:
+   enabled: true
+
+PostRewrite:
+  IndexTags:
+    enabled: true
+
+PostMerge:
+  IndexTags:
+    enabled: true
+
