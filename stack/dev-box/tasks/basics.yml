@@ -1,15 +1,15 @@
 - name: Add PPAs
   become: yes
   become_user: root
-  command: sudo add-apt-repository -y ppa:{{ item.name }} creates=/etc/apt/sources.list.d/{{ item.filename }}-wily.list
+  apt_repository: repo={{ item.name }} update_cache=yes
   with_items:
-    - {name: 'neovim-ppa/unstable', filename: 'neovim-ppa-ubuntu-unstable'}
-    - {name: 'pi-rho/dev', filename: 'pi-rho-ubuntu-dev' }
+    - {name: 'ppa:neovim-ppa/unstable'}
+    - {name: 'ppa:pi-rho/dev'}
 
 - name: Upgrade Apt
   become: yes
   become_user: root
-  when: full_upgrade is defined
+  when: force_full_apt_upgrade is defined
   apt: upgrade=full update_cache=yes install_recommends=yes
 
 - name: Install Essentials
