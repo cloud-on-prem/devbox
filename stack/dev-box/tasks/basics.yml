@@ -6,10 +6,11 @@
     - {name: 'neovim-ppa/unstable', filename: 'neovim-ppa-ubuntu-unstable'}
     - {name: 'pi-rho/dev', filename: 'pi-rho-ubuntu-dev' }
 
-- name: Update Apt Cache
+- name: Upgrade Apt
   become: yes
   become_user: root
-  apt: update_cache=yes cache_valid_time=86400
+  when: full_upgrade is defined
+  apt: upgrade=full update_cache=yes install_recommends=yes
 
 - name: Install Essentials
   become: yes

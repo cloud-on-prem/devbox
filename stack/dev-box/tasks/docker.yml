@@ -1,7 +1,22 @@
+- name: Add Docker GPG
+  become: yes
+  become_user: root
+  apt_key: keyserver=hkp://p80.pool.sks-keyservers.net:80 id=58118E89F3A912897C070ADBF76221572C52609D
+
+- name: Add Docker Apt Source
+  become: yes
+  become_user: root
+  apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-wily main' state=present update_cache=yes
+
+- name: Install Linux Image Generic
+  become: yes
+  become_user: root
+  apt: name=linux-image-extra-{{ ansible_kernel }} state=latest
+
 - name: Install Docker
   become: yes
   become_user: root
-  script: ./dev-box/scripts/install_docker.sh creates=/usr/bin/docker
+  apt: name=docker-engine state=latest
 
 - name: Set up Docker Group
   become: yes
