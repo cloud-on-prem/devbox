@@ -1,7 +1,7 @@
 - name: Add Docker GPG
   become: yes
   become_user: root
-  apt_key: keyserver=hkp://p80.pool.sks-keyservers.net:80 id=58118E89F3A912897C070ADBF76221572C52609D
+  apt_key: keyserver=hkp://keyserver.ubuntu.com:81 id=58118E89F3A912897C070ADBF76221572C52609D
 
 - name: Add Docker Apt Source
   become: yes
