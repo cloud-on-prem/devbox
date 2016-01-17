@@ -104,15 +104,15 @@ au FileType xml setlocal foldmethod=syntax
 " Look and Feel
 set background=dark
 if neobundle#tap('vim-colorschemes')
-  " colorscheme gruvbox
+  colorscheme gruvbox
   " colorscheme molokai
-  colorscheme solarized
+  " colorscheme solarized
   " colorscheme vividchalk
 end
 hi Normal ctermfg=252 ctermbg=none
 
 " Airline conf
-let g:airline_theme='solarized'
+let g:airline_theme='molokai'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tmuxline#enabled = 0
