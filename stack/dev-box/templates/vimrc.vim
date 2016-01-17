@@ -102,6 +102,7 @@ let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 
 " Look and Feel
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
 if neobundle#tap('vim-colorschemes')
   colorscheme gruvbox

@@ -1,6 +1,5 @@
 EDITOR=nvim # Of course
 set -o vi
-export TERM=xterm-256color
 export BASH_IT="$HOME/.bash_it"
 export EDITOR
 export PATH="/usr/local/heroku/bin:$PATH"
