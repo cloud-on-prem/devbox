@@ -21,6 +21,10 @@ set t_Co=256               " enable 256-color mode.
 " set term=screen-256color
 let mapleader = ";" "set the leader key to ';' (easy to type)
 
+" Auto save
+:au InsertLeave <buffer> update
+:au FocusLost * silent! wa
+
 " Mouse for scrolling etc in console.
 set mouse=a
 
@@ -235,7 +239,7 @@ endif
 nnoremap <C-p> :Unite file file_rec/git file_mru -start-insert -no-split<cr>
 nnoremap <Leader>' :Unite history/yank<cr>
 nnoremap <Leader>b :Unite buffer<cr>
-nnoremap <C-h> :Unite file_mru<cr>
+nnoremap <Leader>, :Unite file_mru<cr>
 let g:neomru#file_mru_limit = 10
 " Search
 let g:unite_source_grep_command = 'ag'
