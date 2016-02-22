@@ -120,7 +120,6 @@ hi Normal ctermfg=252 ctermbg=none
 let g:airline_theme='molokai'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled = 0
-let g:airline#extensions#tmuxline#enabled = 0
 
 if has('gui_running')
   set guifont=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 11
