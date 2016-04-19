@@ -27,7 +27,7 @@
     unwip = reset HEAD~
 [core]
 	filemode = false
-  editor = vim
+  editor = nvim
 [init]
   templatedir = ~/.git/template-dir/
 [rerere]
