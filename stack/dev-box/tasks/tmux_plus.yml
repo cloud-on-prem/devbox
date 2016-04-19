@@ -13,3 +13,12 @@
     name: tmuxinator
     user_install: no
 
+- name: Set up Tmuxinator Dir
+  file: path=~/.tmuxinator state=directory recurse=yes
+
+- name: Set up Tmuxinator templates
+  template: src=./dev-box/templates/tmuxinator/{{ item }}.yml dest=~/.tmuxinator/{{ item }}.yml
+  with_items:
+    - haskell
+    - javascript
+    - ruby

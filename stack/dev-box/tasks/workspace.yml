@@ -1,0 +1,9 @@
+- name: Set up Workspace and Playspace
+  file: path={{ workspace_dir }}/play/{{ item }} state=directory recurse=yes
+  with_items:
+    - haskell
+    - ruby
+    - javascript
+  tags:
+    - focus
+

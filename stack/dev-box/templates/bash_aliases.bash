@@ -28,3 +28,4 @@ alias bx='bundle exec'
 alias fs='foreman start'
 
 alias wk='cd {{ workspace_dir }}'
+alias play='cd {{ workspace_dir }}/play'
