@@ -35,6 +35,7 @@
     - ruby-dev
     - libxslt-dev
     - libxml2-dev
+    - libffi-dev
     - upower
     - mercurial
 
