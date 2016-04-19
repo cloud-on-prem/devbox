@@ -12,7 +12,7 @@ set tags=.git/tags,tags;$HOME "Where to find ctags
 set backspace=indent,eol,start
 set autoread
 set noswapfile " No swp files
-set cursorline             " Highlight the current line
+" set cursorline             " Highlight the current line
 set eol " force blank lines at end of file
 set scrolloff=3
 " set encoding=utf-8
