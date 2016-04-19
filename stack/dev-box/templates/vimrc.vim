@@ -112,15 +112,15 @@ au FileType xml setlocal foldmethod=syntax
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
 if neobundle#tap('vim-colorschemes')
-  colorscheme gruvbox
+  colorscheme solarized
+  " colorscheme gruvbox
   " colorscheme molokai
-  " colorscheme solarized
   " colorscheme vividchalk
 end
 hi Normal ctermfg=252 ctermbg=none
 
 " Airline conf
-let g:airline_theme='molokai'
+let g:airline_theme='solarized dark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled = 0
 
