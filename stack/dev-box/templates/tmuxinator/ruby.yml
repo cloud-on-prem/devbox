@@ -18,7 +18,7 @@ root: ~/
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 # startup_window: logs
-pre_window: play
+pre_window: play && cd ruby
 windows:
   - playground:
       layout: 77b0,173x45,0,0{116x45,0,0,0,56x45,117,0,1}
