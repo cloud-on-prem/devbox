@@ -14,4 +14,9 @@
     name: bundler
     user_install: no
 
-
+- name: Install Pry
+  become: yes
+  become_user: root
+  gem:
+    name: pry
+    user_install: no
