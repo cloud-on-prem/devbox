@@ -41,7 +41,7 @@ set-option -g @batt_discharging_icon " "
 set-option -g @batt_attached_icon ""
 set-option -g @cpu_icon ""
 set-option -g @online_icon " "
-set-option -g @offline_icon " "
+set-option -g @offline_icon " "
 
 set -g status-bg "colour234"
 set -g message-command-fg "colour231"
