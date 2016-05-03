@@ -10,6 +10,7 @@
     go_version: 1.5
     git_name: "☀ Prem Pillai (@premjg)"
     git_email: "prem.pillai@gmail.com"
+    hub_version: 2.2.3
   tasks:
     - include: ./dev-box/tasks/workspace.yml
     - include: ./dev-box/tasks/basics.yml
