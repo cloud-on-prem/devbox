@@ -20,3 +20,10 @@
   gem:
     name: pry
     user_install: no
+
+- name: Install Tagfish
+  become: yes
+  become_user: root
+  gem:
+    name: tagfish
+    user_install: no
