@@ -17,8 +17,6 @@ set eol " force blank lines at end of file
 set scrolloff=3
 " set encoding=utf-8
 set fileencodings=utf-8
-set t_Co=256               " enable 256-color mode.
-" set term=screen-256color
 let mapleader = ";" "set the leader key to ';' (easy to type)
 
 " Auto save
@@ -109,6 +107,7 @@ let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 
 " Look and Feel
+set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
 if neobundle#tap('vim-colorschemes')
