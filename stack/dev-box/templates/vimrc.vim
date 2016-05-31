@@ -73,24 +73,21 @@ if neobundle#tap('unite.vim')
 endif
 
 " Set up syntaxes
-let g:syntastic_error_symbol=''
-let g:syntastic_style_error_symbol=''
-let g:syntastic_warning_symbol=''
-let g:syntastic_style_warning_symbol=''
+" Set up syntaxes
+autocmd! BufWritePost,BufEnter * Neomake
+let warning_sign=""
+let error_sign=""
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_javascript_checkers = ['jshint', 'jsonlint']
+let g:neomake_warning_sign = {
+      \ 'text': warning_sign,
+      \ 'texthl': 'WarningMsg',
+      \ }
+let g:neomake_error_sign = {
+      \ 'text': error_sign,
+      \ 'texthl': 'ErrorMsg',
+      \ }
 
-if neobundle#tap('syntastic.vim')
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-endif
+let g:neomake_javascript_enabled_makers = ['jshint', 'jsonlint']
 
 au BufRead,BufNewFile *.rabl set filetype=ruby
 au BufRead,BufNewFile *.json set filetype=json

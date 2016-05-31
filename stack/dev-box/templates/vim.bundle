@@ -28,7 +28,7 @@ NeoBundle 'tpope/vim-fugitive', { 'augroup' : 'fugitive'}
 NeoBundle 'benmills/vimux'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'neomake/neomake'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'fatih/vim-go'
