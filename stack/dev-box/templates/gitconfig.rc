@@ -28,6 +28,7 @@
 [core]
 	filemode = false
   editor = nvim
+  excludesfile = ~/.gitignore_global
 [init]
   templatedir = ~/.git/template-dir/
 [rerere]
