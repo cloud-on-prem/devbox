@@ -15,7 +15,7 @@
 - name: Install Essentials
   become: yes
   become_user: root
-  apt: name={{ item }} state=latest
+  apt: name={{ item }} state=latest force=yes
   with_items:
     - ntp
     - language-pack-en
