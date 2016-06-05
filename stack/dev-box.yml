@@ -11,6 +11,12 @@
     git_name: "☀ Prem Pillai (@premjg)"
     git_email: "prem.pillai@gmail.com"
     hub_version: 2.2.3
+    exercism_version: 2.2.6
+  vars_prompt:
+    - name: "exercism_key"
+      prompt: "Enter the Exercism key, if you have it handy."
+      default: ""
+      private: yes
   tasks:
     - include: ./dev-box/tasks/workspace.yml
     - include: ./dev-box/tasks/basics.yml
@@ -26,3 +32,4 @@
     - include: ./dev-box/tasks/tmux_plus.yml
     - include: ./dev-box/tasks/fzf.yml
     - include: ./dev-box/tasks/git.yml
+    - include: ./dev-box/tasks/learn.yml

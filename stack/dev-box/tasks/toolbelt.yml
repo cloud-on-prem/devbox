@@ -26,4 +26,4 @@
 - name: Install Hub
   become: yes
   become_user: root
-  script: ./dev-box/scripts/install_hub.sh {{ hub_version }} reates=/usr/bin/hub
+  script: ./dev-box/scripts/install_hub.sh {{ hub_version }} creates=/usr/bin/hub
