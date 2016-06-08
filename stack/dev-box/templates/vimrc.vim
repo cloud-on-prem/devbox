@@ -75,16 +75,27 @@ endif
 " Set up syntaxes
 " Set up syntaxes
 autocmd! BufWritePost,BufEnter * Neomake
-let warning_sign=""
+let g:neomake_open_list = 0
 let error_sign=""
+let warning_sign=""
+let message_sign=""
+let info_sign=""
 
-let g:neomake_warning_sign = {
-      \ 'text': warning_sign,
-      \ 'texthl': 'WarningMsg',
-      \ }
 let g:neomake_error_sign = {
       \ 'text': error_sign,
       \ 'texthl': 'ErrorMsg',
+      \ }
+let g:neomake_warning_sign = {
+      \ 'text': warning_sign,
+      \ 'texthl': 'Search',
+      \ }
+let g:neomake_message_sign = {
+      \ 'text': message_sign,
+      \ 'texthl': 'Search',
+      \ }
+let g:neomake_informational_sign = {
+      \ 'text': info_sign,
+      \ 'texthl': 'Question',
       \ }
 
 let g:neomake_javascript_enabled_makers = ['jshint', 'jsonlint']
