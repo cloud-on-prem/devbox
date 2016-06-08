@@ -40,6 +40,6 @@ source ~/.bash_prompt 2> /dev/null
 # Bash My Aws
 BASH_MY_AWS_DIR=~/.bash-my-aws
 if [ -d BASH_MY_AWS_DIR ]; then
-  for f in ~/.bash-my-aws/lib/*-functions; do source $f; done
-  eval "$(~/.bash-my-aws/bin/generate_bash_completion)"
+  for f in $BASH_MY_AWS_DIR/lib/*-functions; do source $f; done
+  source $BASH_MY_AWS_DIR/bash_completion.sh
 fi
