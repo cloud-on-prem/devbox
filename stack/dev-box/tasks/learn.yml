@@ -1,10 +1,11 @@
 - name: Set up exercism
   become: yes
-  script: ./dev-box/scripts/install_exercism.sh {{ exercism_version }} reates=/usr/bin/exercism
+  script: ./dev-box/scripts/install_exercism.sh {{ exercism_version }} creates=/usr/bin/exercism
 
 - name: Add Exercism Key
   become: yes
   command: exercism configure --key={{ exercism_key }}
+  when: exercism_key != ""
 
 - name: Ensure Exercism directory exists
   become: yes
