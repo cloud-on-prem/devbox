@@ -36,9 +36,6 @@ set shiftwidth=2
 set shiftround
 set expandtab
 
-"Close Location Lists like a pro
-noremap <TAB><TAB> :lclose<CR>
-
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 
@@ -99,6 +96,9 @@ let g:neomake_informational_sign = {
       \ }
 
 let g:neomake_javascript_enabled_makers = ['jshint', 'jsonlint']
+
+"Toggle Location Lists like a pro
+let g:lt_location_list_toggle_map = '<TAB><TAB>'
 
 au BufRead,BufNewFile *.rabl set filetype=ruby
 au BufRead,BufNewFile *.json set filetype=json
