@@ -19,7 +19,7 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
 * Run
 
     ```sh
-        ansible-playbook stack/mac.yml -i inventory
+        ansible-playbook stack/mac.yml -i inventory --extra-vars="user_name=<user_name>" --ask-become-pass -K -f 3 [--tags=current]
     ```
 
 ### I :heart: Ubuntu ###
@@ -36,7 +36,7 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
 * Run
 
     ```sh
-        ansible-playbook stack/dev-box.yml -i inventory
+        ansible-playbook stack/devbox.yml -i inventory --extra-vars="user_name=vagrant" --ask-become-pass -K -f 3 [--tags=current]
     ```
 * Grab a cup of coffee and wait while your awesome devbox comes to life.
 * `vagrant ssh` when you want to get into the box.

@@ -5,4 +5,4 @@ dev-box ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222 ansible_ssh_user=vagran
 cloud-box user_name=ubuntu ansible_ssh_host=<remote-machine-ip> ansible_ssh_port=22 ansible_ssh_user=ubuntu workspace_dir=/work-space ansible_ssh_private_key_file=/path/to/private_key workspace_dir=/work-space logo= pipelining=True
 
 [mac]
-mac ansible_connection=local user_name=prem workspace_dir=~/work-space logo= pipelining=True
+mac ansible_connection=local user_name=<user_name> workspace_dir=~/work-space logo= pipelining=True
