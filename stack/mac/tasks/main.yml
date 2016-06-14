@@ -11,3 +11,4 @@
   - include: ./../../dev-box/tasks/fzf.yml
   - include: ./../../dev-box/tasks/git.yml
   - include: ./extras.yml
+  - include: ./iterm.yml
