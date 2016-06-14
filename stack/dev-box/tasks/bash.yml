@@ -4,6 +4,10 @@
 - name: Install Bash It
   shell: ~/.bash_it/install.sh creates=~/.bash_it/plugins/enabled/
 
+- name: Set up hostmachine info
+  shell: netstat -rn | grep eth0 | grep UG | awk '{ print $2 }'
+  register: hostmachine_ip_raw
+
 - name: Set up Bashrc
   template: src=./dev-box/templates/bashrc.bash dest=~/.bashrc
 

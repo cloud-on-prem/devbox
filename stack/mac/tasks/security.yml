@@ -1,0 +1,7 @@
+- name: Copy Devbox Public Key
+  become_user: "{{ user_name }}"
+  authorized_key: user="{{ user_name }}" key="{{ item }}" state=present exclusive=yes
+  with_file:
+    - public_keys/devbox.pub
+  tags:
+    - current
