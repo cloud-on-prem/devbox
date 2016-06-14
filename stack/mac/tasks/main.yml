@@ -2,7 +2,6 @@
   - include: ./../../dev-box/tasks/workspace.yml
   - include: ./basics.yml
   - include: ./apps.yml
-  - include: ./xcode.yml
   - include: ./../../dev-box/tasks/tmux_plus.yml
   - include: ./../../dev-box/tasks/bash.yml
   - include: ./../../dev-box/tasks/ruby.yml
