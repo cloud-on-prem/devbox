@@ -16,3 +16,4 @@ PostMerge:
 PreCommit:
   AnsibleNoCurrentTags:
     enabled: true
+    include: '**/*'
