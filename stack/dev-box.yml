@@ -12,6 +12,7 @@
     git_email: "prem.pillai@gmail.com"
     hub_version: 2.2.3
     exercism_version: 2.2.6
+    guest_machine: true
   vars_prompt:
     - name: "exercism_key"
       prompt: "Enter the Exercism key, if you have it handy."

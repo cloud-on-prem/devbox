@@ -9,8 +9,10 @@ export LC_ALL="en_AU.UTF-8"
 export LC_CTYPE="en_AU.UTF-8"
 export PATH="/usr/local/sbin:$PATH"
 export ANSIBLE_NOCOWS=1
-export HOSTMACHINE_IP="{{ hostmachine_ip_raw.stdout }}"
-export HOSTMACHINE_USER="{{ hostmachine_user }}"
+{% if guest_machine is defined %}
+  export HOSTMACHINE_IP="{{ hostmachine_ip_raw.stdout }}"
+  export HOSTMACHINE_USER="{{ hostmachine_user }}"
+{% endif %}
 
 # FZF
 FZF_TMUX=0
