@@ -27,3 +27,10 @@
   gem:
     name: tagfish
     user_install: no
+
+- name: Install Rubocop
+  become: yes
+  become_user: root
+  gem:
+    name: rubocop
+    user_install: no
