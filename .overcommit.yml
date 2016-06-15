@@ -13,3 +13,6 @@ PostMerge:
   IndexTags:
     enabled: true
 
+PreCommit:
+  AnsibleNoCurrentTags:
+    enabled: true
