@@ -223,13 +223,6 @@ nnoremap <Leader>nu :set nu!<cr>
 "Get rid of annoying white spaces
 command! CleanSpaces :%s/\s\+$//
 
-" Ultisnips
-let g:UltiSnipsEditSplit = 'vertical'
-command! Snip :UltiSnipsEdit
-let g:UltiSnipsExpandTrigger="<C-CR>"
-let g:UltiSnipsJumpForwardTrigger="<C-tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
 nnoremap <Leader>w :set nowrap!<cr>
 
 " ------- Folding
@@ -305,3 +298,7 @@ autocmd FileType haskell nnoremap <buffer> <Leader>o :VimuxRunCommand("ghc -o /t
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.config/nvim/bundle/vim-snippets/snippets'
