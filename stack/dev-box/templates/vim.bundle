@@ -63,5 +63,6 @@ NeoBundle 'vim-scripts/Haskell-Conceal'
 
 NeoBundle 'lambdatoast/elm.vim'
 
-
+NeoBundle 'junegunn/vim-emoji'
+NeoBundle 'rhysd/unite-emoji.vim'
 NeoBundle 'ryanoasis/vim-devicons' " Load Icons at the end.

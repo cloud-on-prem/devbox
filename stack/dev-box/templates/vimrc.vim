@@ -277,6 +277,8 @@ let g:vimfiler_tree_opened_icon = ''
 let g:vimfiler_marked_file_icon = ''
 let g:vimfiler_tree_indentation = 2
 
+nnoremap <Leader>e :Unite emoji -start-insert<cr>
+
 autocmd FileType vimfiler nmap <buffer> c
       \ <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_copy_file)
 autocmd FileType vimfiler nmap <buffer> m
