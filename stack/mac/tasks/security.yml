@@ -16,5 +16,3 @@
 
 - name: Add Reverse proxy for ssh
   lineinfile: dest=~/.ssh/config line="RemoteForward 2702 127.0.0.1:2702" state=present
-  tags:
-    - current
