@@ -4,7 +4,6 @@ export BASH_IT="$HOME/.bash_it"
 export EDITOR
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.cabal/bin:$PATH"
 export WORKSPACE="{{ workspace_dir }}"
 export LC_ALL="en_AU.UTF-8"
 export LC_CTYPE="en_AU.UTF-8"
@@ -28,7 +27,8 @@ export PATH=$PATH:$GOPATH/bin
 export GO15VENDOREXPERIMENT=1
 
 #Haskell
-export PATH="$PATH:$HOME/.cabal/bin"
+export PATH="$HOME/.stack/programs/x86_64-linux/ghc-7.10.3/bin/:$PATH" # Add Haskell path
+export PATH="$HOME/.local/bin:$PATH" # Add Stack bins
 
 # Chruby
 source /usr/local/share/chruby/chruby.sh 2> /dev/null

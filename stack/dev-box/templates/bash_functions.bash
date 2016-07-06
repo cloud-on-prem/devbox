@@ -3,7 +3,7 @@ clean-docker(){
 }
 
 hask(){
-  ~/.ghci-color/ghci-color
+  stack exec ghci
 }
 
 retry(){

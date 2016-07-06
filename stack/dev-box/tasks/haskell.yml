@@ -1,26 +1,3 @@
-- name: Install Haskell
-  become: yes
-  become_user: root
-  apt: name=haskell-platform state=latest
-
-- name: Set up GHCI color
-  git: repo=https://github.com/premjg/ghci-color.git dest=~/.ghci-color
-
-- name: Refresh Cabal
-  shell: cabal update
-
-- name: Set up Essential Haskell Packages
-  shell: cabal install {{ item }} --force-reinstalls creates=~/.cabal/bin/{{ item }}
-  with_items:
-  - hdevtools
-  - ghc-mod
-  - hlint
-
-- name: Correct File Permissions for .ghci
-  become: yes
-  become_user: "{{ user_name }}"
-  file: path=~/.ghci mode="g-w"
-
 - name: Add Stack Haskell GPG
   become: yes
   become_user: root
@@ -32,6 +9,24 @@
   apt_repository: repo='deb http://download.fpcomplete.com/ubuntu wily main' state=present update_cache=yes
 
 - name: Install Stack Haskell
-  become: yes
-  become_user: root
   apt: name=stack state=latest
+
+- name: Stack Global Setup
+  command: stack setup chdir=~/ creates=~/.stack/global-project/stack.yaml
+
+- name: Set up GHCI color
+  git: repo=https://github.com/premjg/ghci-color.git dest=~/.ghci-color
+
+- name: Set up Essential Haskell Packages
+  command: stack install {{ item }} creates=~/.local/bin/{{ item }}
+  with_items:
+  - hdevtools
+  - ghc-mod
+  - hlint
+  - HUnit
+
+- name: Correct File Permissions for .ghci
+  become: yes
+  become_user: "{{ user_name }}"
+  file: path=~/.ghci mode="g-w"
+
