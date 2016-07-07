@@ -38,6 +38,7 @@
     - libffi-dev
     - upower
     - mercurial
+    - libevent-dev # For tmux
 
 - name: Install correct Pip
   become: yes

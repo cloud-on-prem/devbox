@@ -1,3 +1,13 @@
+- name: Uninstall stock Tmux
+  apt: name=tmux state=absent
+  tags:
+    - current
+
+- name: Install Latest Tmux
+  become: yes
+  become_user: root
+  script: ./dev-box/scripts/install_tmux.sh creates=/usr/bin/tmux
+
 - name: Install Tmux Plugin Manager
   git: repo=https://github.com/tmux-plugins/tpm dest=~/.tmux/plugins/tpm
 

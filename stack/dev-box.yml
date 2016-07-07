@@ -31,7 +31,7 @@
     - include: ./dev-box/tasks/haskell.yml
     - include: ./dev-box/tasks/nodejs.yml
     - include: ./dev-box/tasks/toolbelt.yml
-    - include: ./dev-box/tasks/tmux_plus.yml
+    - include: ./dev-box/tasks/tmux.yml
     - include: ./dev-box/tasks/fzf.yml
     - include: ./dev-box/tasks/git.yml
     - include: ./dev-box/tasks/learn.yml
