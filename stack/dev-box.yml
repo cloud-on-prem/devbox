@@ -11,6 +11,7 @@
     git_name: "☀ Prem Pillai (@premjg)"
     git_email: "prem.pillai@gmail.com"
     hub_version: 2.2.3
+    shush_version: 1.3.0
     exercism_version: 2.2.6
     guest_machine: true
   vars_prompt:
