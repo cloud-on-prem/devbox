@@ -2,7 +2,7 @@
   git: repo=https://github.com/Bash-it/bash-it.git dest=~/.bash_it depth=1
 
 - name: Install Bash It
-  shell: ~/.bash_it/install.sh creates=~/.bash_it/plugins/enabled/
+  shell: yes | ~/.bash_it/install.sh creates=~/.bash_it/plugins/enabled/
 
 - name: Set up hostmachine info
   shell: netstat -rn | grep eth0 | grep UG | awk '{ print $2 }'

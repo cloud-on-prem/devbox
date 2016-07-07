@@ -9,6 +9,7 @@
   apt_repository: repo='deb http://download.fpcomplete.com/ubuntu wily main' state=present update_cache=yes
 
 - name: Install Stack Haskell
+  become: yes
   apt: name=stack state=latest
 
 - name: Stack Global Setup
