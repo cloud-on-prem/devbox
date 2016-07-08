@@ -10,8 +10,8 @@ export LC_CTYPE="en_AU.UTF-8"
 export PATH="/usr/local/sbin:$PATH"
 export ANSIBLE_NOCOWS=1
 {% if guest_machine is defined %}
-  export HOSTMACHINE_IP="{{ hostmachine_ip_raw.stdout }}"
-  export HOSTMACHINE_USER="{{ hostmachine_user }}"
+export HOSTMACHINE_IP="{{ hostmachine_ip_raw.stdout }}"
+export HOSTMACHINE_USER="{{ hostmachine_user }}"
 {% endif %}
 
 # FZF
@@ -48,3 +48,5 @@ if [ -d BASH_MY_AWS_DIR ]; then
   for f in $BASH_MY_AWS_DIR/lib/*-functions; do source $f; done
   source $BASH_MY_AWS_DIR/bash_completion.sh
 fi
+
+unalias tree 2> /dev/null # use real tree

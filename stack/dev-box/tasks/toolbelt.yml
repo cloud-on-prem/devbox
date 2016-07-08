@@ -3,6 +3,11 @@
   become_user: root
   script: ./dev-box/scripts/install_ag.sh creates=/usr/bin/ag
 
+- name: Set up tree
+  become: yes
+  become_user: root
+  apt: name=tree state=latest
+
 - name: Set up Jq
   become: yes
   become_user: root
@@ -30,5 +35,3 @@
   become: yes
   become_user: root
   script: ./dev-box/scripts/install_shush.sh {{ shush_version }} creates=/usr/bin/shush
-  tags:
-    - current
