@@ -1,7 +1,7 @@
 - name: Uninstall stock Tmux
+  become: yes
+  become_user: root
   apt: name=tmux state=absent
-  tags:
-    - current
 
 - name: Install Latest Tmux
   become: yes
