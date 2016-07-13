@@ -36,7 +36,7 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
 * Run
 
     ```sh
-        ansible-playbook stack/devbox.yml -i inventory --extra-vars="user_name=vagrant" --ask-become-pass -K -f 3 [--tags=current]
+        ansible-playbook stack/devbox.yml -i inventory --extra-vars="user_name=vagrant" --ask-become-pass --ask-vault-pass -K -f 3 [--tags=current]
     ```
 * Grab a cup of coffee and wait while your awesome devbox comes to life.
 * `vagrant ssh` when you want to get into the box.
@@ -56,6 +56,20 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
     ```
 * Grab a cup of coffee and wait while your awesome cloud dev environment comes to life.
 * `ssh` into your cloud box when ready.
+
+### Using Encrypted Vars
+
+* All sensitive information (api-keys, passwords) etc. are encrypted and stored in `vars/encrypted_vars.yml`
+* To edit the encrypted file:
+
+  ```sh
+    ansible-vault edit stack/dev-box/vars/encrypted_vars.yml
+  ```
+* To view the encrypted file:
+
+  ```sh
+    ansible-vault view stack/dev-box/vars/encrypted_vars.yml
+  ```
 
 * * *
 
