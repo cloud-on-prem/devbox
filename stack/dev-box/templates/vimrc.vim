@@ -95,7 +95,6 @@ let g:neomake_informational_sign = {
       \ 'texthl': 'Question',
       \ }
 
-let g:neomake_javascript_enabled_makers = ['jshint', 'jsonlint']
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 
 "Toggle Location Lists like a pro
