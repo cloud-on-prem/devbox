@@ -13,7 +13,7 @@
   become_user: root
   npm: name=npm state=latest global=true
 
-- name: Install JsHint and JSONLint
+- name: Install essential libraries
   become: yes
   become_user: root
   npm: name={{ item }} state=latest global=true
