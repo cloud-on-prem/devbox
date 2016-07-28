@@ -10,9 +10,11 @@ retry(){
   until !!; do :; done
 }
 
-hostrun(){
-  args="$@"
-  echo ${args} | ssh $HOSTMACHINE_USER@$HOSTMACHINE_IP -T -i ~/.ssh/devbox_rsa
+HOSTRUN=ssh $HOSTMACHINE_USER@$HOSTMACHINE_IP -T -i ~/.ssh/devbox_rsa
+
+clip(){
+  read piped;
+  echo "echo $piped | pbcopy" | ${HOSTRUN}
 }
 
 true_colors(){
