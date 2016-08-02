@@ -20,5 +20,5 @@
   with_items:
     - elm
     - gulp
-    - jshint
+    - eslint
     - jsonlint
