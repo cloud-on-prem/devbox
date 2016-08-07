@@ -32,3 +32,7 @@ true_colors(){
     printf "\n";
   }'
 }
+
+fix-date-sync(){
+  sudo hwclock --systohc --localtime;
+}
