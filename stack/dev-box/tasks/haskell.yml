@@ -10,6 +10,7 @@
 
 - name: Install Stack Haskell
   become: yes
+  become_user: root
   apt: name=stack state=latest
 
 - name: Stack Global Setup
