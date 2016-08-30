@@ -1,6 +1,7 @@
 alias c='clear'
 alias refresh='source ~/.bashrc'
 alias restartnet="sudo nohup sh -c 'invoke-rc.d networking stop; date; echo sleeping; sleep 2; echo waking; date; invoke-rc.d networking start'"
+alias push=pushover
 
 alias lss='ls -lAh'
 

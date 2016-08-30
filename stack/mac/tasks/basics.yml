@@ -10,6 +10,9 @@
 - name: Install Ag
   homebrew: name=ag state=present
 
+- name: Set up .config dir
+  file: path=~/.config recurse=true state=directory
+
 - name: Common Config Files
   template: src=./dev-box/templates/{{ item.src }} dest={{ item.dest }}
   with_items:
@@ -23,3 +26,4 @@
     - { src: 'ctags.rc'                , dest: '~/.ctags' }
     - { src: 'ghci.rc'                 , dest: '~/.ghci' }
     - { src: 'inputrc.bash'            , dest: '~/.inputrc' }
+    - { src: 'pushover.conf'           , dest: '~/.config/pushover.conf' }

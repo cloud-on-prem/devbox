@@ -50,6 +50,9 @@
   become_user: root
   pip: name=virtualenv state=latest
 
+- name: Set up .config dir
+  file: path=~/.config recurse=true state=directory
+
 - name: Common Config Files
   template: src=./dev-box/templates/{{ item.src }} dest={{ item.dest }}
   with_items:
@@ -64,6 +67,7 @@
     - { src: 'ghci.rc'                 , dest: '~/.ghci' }
     - { src: 'haskeline.rc'            , dest: '~/.haskeline' }
     - { src: 'inputrc.bash'            , dest: '~/.inputrc' }
+    - { src: 'pushover.conf'           , dest: '~/.config/pushover.conf' }
 
 - name: Set up Timezone
   become: yes
