@@ -5,7 +5,6 @@
 - name: Add Exercism Key
   become: yes
   command: exercism configure --key={{ exercism_key }}
-  when: exercism_key != ""
 
 - name: Ensure Exercism directory exists
   become: yes

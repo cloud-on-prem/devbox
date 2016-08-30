@@ -3,9 +3,9 @@
   roles:
     - mac
   become_user: "{{ user_name }}"
+  vars_files:
+    - ./dev-box/vars/software_version_vars.yml
+    - ./dev-box/vars/git_vars.yml
+    - ./dev-box/vars/encrypted_vars.yml
   vars:
     timezone: Australia/Melbourne
-    git_name: "☀ Prem Pillai (@premjg)"
-    git_email: "prem.pillai@gmail.com"
-    ruby_install_version: 0.5.0
-    ruby_version: 2.3.0
