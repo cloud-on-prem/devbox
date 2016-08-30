@@ -13,7 +13,7 @@
     dk = diff --check
     dck = diff --cached --check
     #############
-    ls = ! git log --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --graph --decorate --color | emojify | more
+    ls = ! git log --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --graph --decorate --color
     lg = log --oneline --graph --decorate
     #############
     human = name-rev --name-only --refs=refs/heads/*
