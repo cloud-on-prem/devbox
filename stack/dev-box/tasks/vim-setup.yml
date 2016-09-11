@@ -6,6 +6,9 @@
 - name: Set up Vim Bundle Directory
   file: path=~/.config/nvim/bundle/ recurse=true state=directory
 
+- name: Set up Vim Undo Directory
+  file: path=~/.config/nvim/undo/ recurse=true state=directory
+
 - name: Install Neobundle
   git: repo=https://github.com/Shougo/neobundle.vim dest=~/.config/nvim/bundle/neobundle.vim
 

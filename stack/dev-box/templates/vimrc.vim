@@ -19,9 +19,10 @@ set scrolloff=3
 set fileencodings=utf-8
 let mapleader = ";" "set the leader key to ';' (easy to type)
 
-" Auto save
-:au InsertLeave <buffer> update
-:au FocusLost * silent! wa
+" Persistent Undos
+set undodir=~/.config/nvim/undo
+set undofile
+set undolevels=1000
 
 " Mouse for scrolling etc in console.
 set mouse=a
@@ -70,8 +71,9 @@ if neobundle#tap('unite.vim')
 endif
 
 " Set up syntaxes
-" Set up syntaxes
-autocmd! BufWritePost,BufEnter * Neomake
+" Aggressive linting and Auto-saving
+autocmd InsertChange,InsertLeave,TextChanged,BufLeave,FocusLost * update | Neomake
+
 let g:neomake_open_list = 0
 let error_sign=""
 let warning_sign=""
