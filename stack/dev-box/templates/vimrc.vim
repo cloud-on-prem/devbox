@@ -74,6 +74,10 @@ endif
 " Aggressive linting and Auto-saving
 autocmd InsertChange,InsertLeave,TextChanged,BufLeave,FocusLost * update | Neomake
 
+" Run Neomake Commands serially
+let g:neomake_serialize=1
+let g:neomake_serialize_abort_on_error=1
+
 let g:neomake_open_list = 0
 let error_sign=""
 let warning_sign=""
