@@ -1,36 +1,36 @@
 - name: Install Ruby-Install
   become: yes
-  become_user: root
+  become_user: "{{ user_name }}"
   script: ./dev-box/scripts/install_ruby_install.sh {{ ruby_install_version }} creates=/usr/local/bin/ruby-install
 
 - name: Install Latest Ruby
-  become_user: root
+  become_user: "{{ user_name }}"
   script: ./dev-box/scripts/install_ruby.sh {{ ruby_version }} creates=~/.rubies/ruby-{{ ruby_version }}
 
 - name: Install Bundler system wide
   become: yes
-  become_user: root
+  become_user: "{{ user_name }}"
   gem:
     name: bundler
     user_install: no
 
 - name: Install Pry
   become: yes
-  become_user: root
+  become_user: "{{ user_name }}"
   gem:
     name: pry
     user_install: no
 
 - name: Install Tagfish
   become: yes
-  become_user: root
+  become_user: "{{ user_name }}"
   gem:
     name: tagfish
     user_install: no
 
 - name: Install Rubocop
   become: yes
-  become_user: root
+  become_user: "{{ user_name }}"
   gem:
     name: rubocop
     user_install: no

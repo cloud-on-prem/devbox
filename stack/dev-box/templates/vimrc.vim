@@ -43,14 +43,17 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 set exrc            " enable per-directory .vimrc files
 set secure          " disable unsafe commands in local .vimrc files
 
-" Neobundle
-set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
-call neobundle#begin(expand('~/.config/nvim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-source ~/.config/nvim/.bundle
-call neobundle#end()
+" Vimplug
+set runtimepath+=~/.config/nvim/plugs/
+call plug#begin('~/.config/nvim/plugged')
+source ~/.config/nvim/.plugs
+call plug#end()
+
 filetype plugin indent on
-NeoBundleCheck
+autocmd VimEnter *
+  \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall | q
+  \| endif
 
 " Some Linux distributions set filetype in /etc/vimrc.
 " Clear filetype flags before changing runtimepath to force Vim to reload them.
@@ -63,12 +66,10 @@ syntax on
 runtime macros/matchit.vim
 
 func OnEnter()
-  Unite file_mru file_rec/git -no-split
+  Unite file_mru -no-split -auto-preview
 endfunc
 
-if neobundle#tap('unite.vim')
-  autocmd VimEnter * if !argc() | call OnEnter() | endif
-endif
+autocmd VimEnter * if !argc() | call OnEnter() | endif
 
 " Set up syntaxes
 " Aggressive linting and Auto-saving
@@ -125,12 +126,10 @@ au FileType xml setlocal foldmethod=syntax
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
-if neobundle#tap('vim-colorschemes')
-  colorscheme solarized
-  " colorscheme gruvbox
-  " colorscheme molokai
-  " colorscheme vividchalk
-end
+colorscheme solarized
+" colorscheme gruvbox
+" colorscheme molokai
+" colorscheme vividchalk
 hi Normal ctermfg=252 ctermbg=none
 
 " Airline conf
@@ -192,7 +191,7 @@ nnoremap <leader>. :OpenHorizontal(alternate#FindAlternate())<cr>
 nnoremap <leader>gb :gblame<CR>
 
 "Update Ctags
-nnoremap <Leader>ct :!sudo git ctags<CR>
+nnoremap <Leader>ct :!git ctags<CR>
 
 " Search for selected text, forwards or backwards
 vnoremap <silent> * :<C-U>
@@ -241,10 +240,8 @@ vnoremap <Space> za
 let g:ag_working_path_mode="r"
 
 " ----------- Unite
-if neobundle#tap('unite.vim')
-  call unite#filters#matcher_default#use(['matcher_fuzzy'])
-  call unite#filters#sorter_default#use(['sorter_rank'])
-endif
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
 nnoremap <C-p> :Unite file file_rec/git file_mru -start-insert -no-split<cr>
 nnoremap <Leader>' :Unite history/yank<cr>
 nnoremap <Leader>b :Unite buffer<cr>
@@ -256,6 +253,9 @@ let g:unite_source_grep_default_opts =
       \ '--vimgrep --line-numbers --nocolor --nogroup --hidden --ignore ' .
       \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
 let g:unite_source_grep_recursive_opt = ''
+let g:unite_source_tag_show_kind = 0
+let g:unite_source_tag_show_location = 0
+
 nnoremap <Leader>/ :Unite grep:.<cr>
 nnoremap <Leader>t :Unite tag -start-insert -auto-preview<cr>
 nnoremap <Leader>l :Unite line -start-insert<cr>
@@ -271,11 +271,9 @@ nnoremap <C-f> :VimFiler -explorer -find -force-hide -explorer-columns=devicons<
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
 let g:WebDevIconsUnicodeDecorateFolderNodes = 0
-if neobundle#tap('vimfiler.vim')
-  call vimfiler#custom#profile('default', 'context', {
+call vimfiler#custom#profile('default', 'context', {
       \ 'safe' : 0
       \ })
-endif
 " Like Textmate icons.
 let g:vimfiler_tree_leaf_icon = ''
 let g:vimfiler_tree_closed_icon = ''

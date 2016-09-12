@@ -1,4 +1,4 @@
 #!/bin/bash
-cd ~/.config/nvim/bundle/YouCompleteMe/
+cd ~/.config/nvim/plugged/YouCompleteMe/
 git submodule update --init --recursive
-~/.config/nvim/bundle/YouCompleteMe/install.py
+~/.config/nvim/plugged/YouCompleteMe/install.py

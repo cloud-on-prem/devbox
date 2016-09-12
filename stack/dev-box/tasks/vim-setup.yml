@@ -1,31 +1,22 @@
-- name: Install Neovim Python Support
-  become: yes
-  become_user: root
-  pip: name=neovim state=latest
+# - name: Install Neovim Python Support
+#   become: yes
+#   become_user: "{{ user_name }}"
+#   pip: name=neovim state=latest
 
-- name: Set up Vim Bundle Directory
-  file: path=~/.config/nvim/bundle/ recurse=true state=directory
+- name: Set up Vim Autoload Directory
+  file: path=~/.config/nvim/autoload/ recurse=true state=directory
 
 - name: Set up Vim Undo Directory
   file: path=~/.config/nvim/undo/ recurse=true state=directory
 
-- name: Install Neobundle
-  git: repo=https://github.com/Shougo/neobundle.vim dest=~/.config/nvim/bundle/neobundle.vim
-
-- name: Set up Vim Bundle
-  template: src=./dev-box/templates/vim.bundle dest=~/.config/nvim/.bundle
-
-- name: Set up Minimal Bundle Vimrc
-  template: src=./dev-box/templates/vimrc.bundleonly dest=~/.config/nvim/init.vim
-
-- name: Install Vim Plugins
-  shell: nvim --headless -c 'NeoBundleUpdate | qall!' creates=~/.config/nvim/bundle/vimproc.vim
-
-- name: Compile YCM
-  script: ./dev-box/scripts/compile_ycm.sh creates=~/.config/nvim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so
+- name: Install Vimplug
+  get_url: url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim dest=~/.config/nvim/autoload/plug.vim
 
 - name: Set up NVimrc
   template: src=./dev-box/templates/vimrc.vim dest=~/.config/nvim/init.vim
 
-- name: Set up Vim Startify Header
-  template: src=./dev-box/templates/vim.header.txt dest=~/.vim.header.txt
+- name: Set up Vim Plugs
+  template: src=./dev-box/templates/vim.plugs dest=~/.config/nvim/.plugs
+
+- name: Install Vim Plugins
+  shell: nvim --headless -c 'PlugInstall | qall!'

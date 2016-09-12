@@ -23,10 +23,7 @@
 - name: Set up Bash Prompt
   template: src=./dev-box/templates/bash_prompt.bash dest=~/.bash_prompt
 
-- name: Set up Emojify
-  script: ./dev-box/scripts/install_emojify.sh creates=/usr/bin/emojify
-
 - name: Set up Pushover
   become: yes
-  become_user: root
+  become_user: "{{ user_name }}"
   template: src=./dev-box/templates/pushover.sh dest=/usr/local/bin/pushover mode=0755
