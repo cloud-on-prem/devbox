@@ -126,7 +126,8 @@ au FileType xml setlocal foldmethod=syntax
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
-colorscheme solarized
+colorscheme solarized8_dark_high
+" colorscheme solarized
 " colorscheme gruvbox
 " colorscheme molokai
 " colorscheme vividchalk

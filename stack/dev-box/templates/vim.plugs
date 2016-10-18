@@ -1,6 +1,7 @@
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'flazz/vim-colorschemes'
+Plug 'lifepillar/vim-solarized8.git'
 Plug 'tomtom/tcomment_vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tpope/vim-rails'
