@@ -13,6 +13,9 @@
 - name: Set up .config dir
   file: path=~/.config recurse=true state=directory
 
+- name: Set up yamllint config dir
+  file: path=~/.config/yamllint recurse=true state=directory
+
 - name: Common Config Files
   template: src=./dev-box/templates/{{ item.src }} dest={{ item.dest }}
   with_items:
@@ -27,3 +30,4 @@
     - { src: 'ghci.rc'                 , dest: '~/.ghci' }
     - { src: 'inputrc.bash'            , dest: '~/.inputrc' }
     - { src: 'pushover.conf'           , dest: '~/.config/pushover.conf' }
+    - { src: 'yamllint.yaml'           , dest: '~/.config/yamllint/config' }

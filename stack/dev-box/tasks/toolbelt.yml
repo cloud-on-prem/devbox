@@ -35,3 +35,8 @@
   become: yes
   become_user: root
   script: ./dev-box/scripts/install_shush.sh {{ shush_version }} creates=/usr/bin/shush
+
+- name: Install Yamllint
+  become: yes
+  become_user: root
+  pip: name=yamllint state=latest
