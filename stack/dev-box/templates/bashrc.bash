@@ -18,6 +18,7 @@ export HOSTMACHINE_USER="{{ hostmachine_user }}"
 FZF_TMUX=0
 export FZF_DEFAULT_OPTS='--color 16'
 export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #Go
