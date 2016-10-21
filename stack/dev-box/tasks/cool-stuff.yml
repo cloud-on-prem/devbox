@@ -1,0 +1,21 @@
+- name: Set up Proselint
+  become: yes
+  become_user: root
+  pip: name=proselint state=latest
+
+- name: Set up MDL
+  become: yes
+  become_user: root
+  gem: name=mdl state=latest
+
+- name: Install Shellcheck
+  become: yes
+  become_user: root
+  apt: name=shellcheck state=latest
+
+- name: Install IpOnMap
+  become: yes
+  become_user: root
+  npm: name=iponmap global=yes
+  tags:
+    - current

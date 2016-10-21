@@ -25,3 +25,4 @@
     - include: ./dev-box/tasks/fzf.yml
     - include: ./dev-box/tasks/git.yml
     - include: ./dev-box/tasks/learn.yml
+    - include: ./dev-box/tasks/cool-stuff.yml

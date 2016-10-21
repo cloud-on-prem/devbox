@@ -38,3 +38,33 @@ true_colors(){
 fix-date-sync(){
   sudo hwclock --systohc --localtime;
 }
+
+# Fuzzy CD
+cdf() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
+# Fuzzy edit file
+vf() {
+  v $(ag . | fzf | awk -F':' '{print $1}')
+}
+
+# Fuzzy Git Checkout
+gcf() {
+  local branches branch
+  branches=$(git branch --all | grep -v HEAD) &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
+# Get Commit Sha
+gsf() {
+  local commits commit
+  commits=$(git log --color=always --pretty=oneline --abbrev-commit --reverse) &&
+  commit=$(echo "$commits" | fzf --tac +s +m -e --ansi --reverse) &&
+  echo -n $(echo "$commit" | sed "s/ .*//")
+}
