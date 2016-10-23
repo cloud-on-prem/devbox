@@ -25,5 +25,5 @@
 
 - name: Set up Pushover
   become: yes
-  become_user: "{{ user_name }}"
+  become_user: root
   template: src=./dev-box/templates/pushover.sh dest=/usr/local/bin/pushover mode=0755
