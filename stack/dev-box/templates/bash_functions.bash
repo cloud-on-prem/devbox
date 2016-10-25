@@ -49,7 +49,7 @@ cdf() {
 
 # Fuzzy edit file
 vf() {
-  v $(ag . | fzf | awk -F':' '{print $1}')
+  nvim $(ag . | fzf | awk -F':' '{print $1}')
 }
 
 # Fuzzy Git Checkout
