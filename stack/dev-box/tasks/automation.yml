@@ -1,0 +1,5 @@
+---
+- name: Install Phantomjs
+  become: yes
+  become_user: "{{ user_name }}"
+  script: ./dev-box/scripts/install_phantom_js.sh {{ phantom_js_version }} creates=/usr/local/bin/phantomjs
