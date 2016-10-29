@@ -39,6 +39,7 @@
     - upower
     - mercurial
     - libevent-dev # For tmux
+    - sshfs
 
 - name: Install correct Pip
   become: yes
