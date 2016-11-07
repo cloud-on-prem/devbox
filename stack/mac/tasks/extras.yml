@@ -3,3 +3,6 @@
 
 - name: Install Ctags
   homebrew: name=ctags state=latest
+
+- name: Install Expiry Countdown
+  template: src=./mac/templates/expiry_countdown.sh dest=/usr/local/bin/expiry-countdown mode="a+x"

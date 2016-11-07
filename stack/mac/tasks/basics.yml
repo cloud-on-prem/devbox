@@ -7,6 +7,9 @@
 - name: Set up Workspace
   file: path={{ workspace_dir }}/ state=directory recurse=yes
 
+- name: Install Coreutils
+  homebrew: name=coreutils state=present
+
 - name: Install Ag
   homebrew: name=ag state=present
 

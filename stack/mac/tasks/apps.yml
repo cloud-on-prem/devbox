@@ -1,2 +1,5 @@
 - name: Install Macdown
   homebrew_cask: name=macdown state=present
+
+- name: Install Geektool
+  homebrew_cask: name=geektool state=present
