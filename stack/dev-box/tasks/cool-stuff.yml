@@ -17,5 +17,8 @@
   become: yes
   become_user: root
   npm: name=iponmap global=yes
-  tags:
-    - current
+
+- name: Install Saws
+  become: yes
+  become_user: root
+  pip: name=saws state=latest
