@@ -1,25 +1,25 @@
-clean-docker(){
+function clean-docker {
   docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
 }
 
-hask(){
+function hask {
   stack exec ghci
 }
 
-retry(){
+function retry {
   until !!; do :; done
 }
 
-hostrun(){
+function hostrun {
   ssh $HOSTMACHINE_USER@$HOSTMACHINE_IP -T -i ~/.ssh/devbox_rsa
 }
 
-clip(){
+function clip {
   read piped;
   echo "echo $piped | pbcopy" | hostrun
 }
 
-true_colors(){
+function true-colors {
   awk 'BEGIN{
   s="/\\/\\/\\/\\/\\"; s=s s s s s s s s s s s s s s s s s s s s s s s;
   for (colnum = 0; colnum<256; colnum++) {
@@ -35,12 +35,12 @@ true_colors(){
   }'
 }
 
-fix-date-sync(){
+function fix-date-sync {
   sudo hwclock --systohc --localtime;
 }
 
 # Fuzzy CD
-cdf() {
+function cdf {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune \
                   -o -type d -print 2> /dev/null | fzf +m) &&
@@ -48,12 +48,12 @@ cdf() {
 }
 
 # Fuzzy edit file
-vf() {
+function vf {
   nvim $(ag . | fzf | awk -F':' '{print $1}')
 }
 
 # Fuzzy Git Checkout
-gcf() {
+function gcf {
   local branches branch
   branches=$(git branch --all | grep -v HEAD) &&
   branch=$(echo "$branches" |
@@ -62,7 +62,7 @@ gcf() {
 }
 
 # Get Commit Sha
-gsf() {
+function gsf {
   local commits commit
   commits=$(git log --color=always --pretty=oneline --abbrev-commit --reverse) &&
   commit=$(echo "$commits" | fzf --tac +s +m -e --ansi --reverse) &&
