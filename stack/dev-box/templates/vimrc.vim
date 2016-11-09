@@ -18,6 +18,7 @@ set scrolloff=3
 " set encoding=utf-8
 set fileencodings=utf-8
 let mapleader = ";" "set the leader key to ';' (easy to type)
+set inccommand=nosplit
 
 " Persistent Undos
 set undodir=~/.config/nvim/undo
