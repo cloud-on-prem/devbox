@@ -8,6 +8,7 @@ SCM_THEME_PROMPT_CLEAN=" ${green}${SCM_THEME_PROMPT_CLEAN_SYMBOL} "
 LOGO="{{ logo }}"
 LOGO_PREFIX="${orange}${LOGO}${reset_color} "
 LAST_ARROW="→"
+CURRENT_SCM_INFO_FILE="/usr/local/current_scm_info"
 
 exit_status() {
   local EXIT="$?"
@@ -22,11 +23,24 @@ prompt() {
   exit_status
 
   if ! { [ -n "$TMUX" ]; } then
-    PS1="${LOGO_PREFIX}$(scm_prompt_info)${reset_color} ${cyan}\W${reset_color} ${LAST_ARROW} "
+    (update_current_scm_info &) &> /dev/null
+    PS1="${LOGO_PREFIX}${reset_color} ${cyan}\W${reset_color} ${LAST_ARROW} "
   else
     (update_tmux &) &> /dev/null
     PS1="${LOGO_PREFIX}${reset_color} ${cyan}\W${reset_color} ${LAST_ARROW} "
   fi
+}
+
+function update_current_scm_info {
+  {% if guest_machine %}
+  echo "$(write_to_scm)" | hostrun
+  {% else %}
+  $(write_to_scm)
+  {% endif %}
+}
+
+function write_to_scm {
+  echo $(scm_prompt_info) > ${CURRENT_SCM_INFO_FILE}
 }
 
 update_tmux(){

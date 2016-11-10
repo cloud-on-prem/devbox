@@ -22,6 +22,8 @@
 
 - name: Set up Bash Prompt
   template: src=./dev-box/templates/bash_prompt.bash dest=~/.bash_prompt
+  tags:
+    - current
 
 - name: Set up Pushover
   become: yes
