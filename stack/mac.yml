@@ -9,3 +9,4 @@
     - ./dev-box/vars/encrypted_vars.yml
   vars:
     timezone: Australia/Melbourne
+    guest_machine: false
