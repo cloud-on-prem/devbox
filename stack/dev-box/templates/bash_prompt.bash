@@ -1,8 +1,8 @@
 SCM_THEME_PROMPT_DIRTY_SYMBOL=""
 SCM_THEME_PROMPT_CLEAN_SYMBOL=""
 
-SCM_THEME_PROMPT_PREFIX="${cyan}(${blue}"
-SCM_THEME_PROMPT_SUFFIX="${cyan})"
+SCM_THEME_PROMPT_PREFIX="${blue}"
+SCM_THEME_PROMPT_SUFFIX=""
 SCM_THEME_PROMPT_DIRTY=" ${red}${SCM_THEME_PROMPT_DIRTY_SYMBOL} "
 SCM_THEME_PROMPT_CLEAN=" ${green}${SCM_THEME_PROMPT_CLEAN_SYMBOL} "
 LOGO="{{ logo }}"
@@ -21,36 +21,18 @@ exit_status() {
 
 prompt() {
   exit_status
-
-  if ! { [ -n "$TMUX" ]; } then
-    (update_current_scm_info &) &> /dev/null
-    PS1="${LOGO_PREFIX}${reset_color} ${cyan}\W${reset_color} ${LAST_ARROW} "
-  else
-    (update_tmux &) &> /dev/null
-    PS1="${LOGO_PREFIX}${reset_color} ${cyan}\W${reset_color} ${LAST_ARROW} "
-  fi
+  (update_current_scm_info &) &> /dev/null
+  PS1="${LOGO_PREFIX}${reset_color} ${cyan}\W${reset_color} ${LAST_ARROW} "
 }
 
 function update_current_scm_info {
+  info=$(scm_prompt_info)
+
   {% if guest_machine %}
-  echo "$(write_to_scm)" | hostrun
+  echo "/usr/local/bin/gecho -e '$info' > ${CURRENT_SCM_INFO_FILE}" | hostrun
   {% else %}
-  $(write_to_scm)
+  gecho -e $info > ${CURRENT_SCM_INFO_FILE}
   {% endif %}
-}
-
-function write_to_scm {
-  echo $(scm_prompt_info) > ${CURRENT_SCM_INFO_FILE}
-}
-
-update_tmux(){
-  # TMUX has a special prompt
-  SCM_THEME_PROMPT_PREFIX=""
-  SCM_THEME_PROMPT_SUFFIX=""
-  SCM_THEME_PROMPT_DIRTY=" ${SCM_THEME_PROMPT_DIRTY_SYMBOL} "
-  SCM_THEME_PROMPT_CLEAN=" ${SCM_THEME_PROMPT_CLEAN_SYMBOL} "
-  tmux set-option -gq "@scm_info" "$(scm_prompt_info)"
-  tmux refresh-client -S
 }
 
 PROMPT_COMMAND=prompt

@@ -2,10 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BackgroundColor</key>
+	<data>
+	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
+	ZmZmAAAAAIY=
+	</data>
 	<key>Command</key>
-	<string>cat /usr/local/current_scm_info | sed -E 's/\\(\]|\[)//g'</string>
+	<string>cat /usr/local/current_scm_info  | sed -E 's/\\(\]|\[)//g'</string>
 	<key>DisplayID</key>
-	<integer>69524905</integer>
+	<integer>69524906</integer>
 	<key>DropShadow</key>
 	<false/>
 	<key>FailureImage</key>
@@ -102,7 +107,7 @@
 	<key>FontSize</key>
 	<real>24</real>
 	<key>GeekletFrame</key>
-	<string>{{2345, 1395}, {209.40625, 45}}</string>
+	<string>{{2202.65625, 1391.265625}, {352, 45}}</string>
 	<key>HasShadow</key>
 	<false/>
 	<key>Identifier</key>
@@ -115,6 +120,15 @@
 	<integer>1</integer>
 	<key>SetLocale</key>
 	<false/>
+	<key>ShadowBlur</key>
+	<real>10</real>
+	<key>ShadowColor</key>
+	<data>
+	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
+	ZmZmAAAAg6uqqj6G
+	</data>
+	<key>ShadowSize</key>
+	<string>{2.1652171130610912e-16, 3.536067892503536}</string>
 	<key>SuccessImage</key>
 	<data>
 	TU0AKgAABAj///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANAAAAGgAAACAAAAAaAAAA
@@ -209,7 +223,7 @@
 	<key>TextColor</key>
 	<data>
 	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
-	ZmZmAAAAAYY=
+	ZmZmAAEAAYY=
 	</data>
 	<key>TextStrikethrough</key>
 	<integer>0</integer>
