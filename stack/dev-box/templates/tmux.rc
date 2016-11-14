@@ -67,8 +67,7 @@ setw -g window-status-separator ""
 setw -g window-status-bg "colour234"
 
 set -g status-left "#[fg=colour16,bg=colour254,bold]\
-#S  \
-#{scm_info} #[fg=colour254,bg=colour234,nobold,nounderscore,noitalics]"
+#S #[fg=colour254,bg=colour234,nobold,nounderscore,noitalics]"
 
 set -g status-right "#[fg=colour236,bg=colour234,nobold,nounderscore,noitalics]\
 #[fg=colour247,bg=colour236] %a %h-%d  %H:%M \
@@ -95,7 +94,6 @@ set -g @tpm_plugins " \
   tmux-plugins/tmux-online-status \
   tmux-plugins/tmux-resurrect \
   tmux-plugins/tmux-continuum \
-  premjg/tmux-scm \
 "
 
 run-shell '~/.tmux/plugins/tpm/tpm'
