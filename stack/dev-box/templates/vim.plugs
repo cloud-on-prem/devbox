@@ -33,6 +33,7 @@ Plug 'godlygeek/tabular'
 Plug 'wellle/targets.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'rking/ag.vim'
+Plug 'dkprice/vim-easygrep'
 
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/neomru.vim'
