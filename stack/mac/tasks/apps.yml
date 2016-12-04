@@ -3,3 +3,9 @@
 
 - name: Install Geektool
   homebrew_cask: name=geektool state=present
+
+- name: Install Alfred
+  homebrew_cask: name=alfred state=present
+
+- name: Install Google Drive
+  homebrew_cask: name=google-drive state=present

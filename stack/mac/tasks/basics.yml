@@ -10,6 +10,9 @@
 - name: Install Coreutils
   homebrew: name=coreutils state=present
 
+- name: Install Wget
+  homebrew: name=wget state=present
+
 - name: Install Ag
   homebrew: name=ag state=present
 

@@ -1,5 +1,5 @@
 - name: Install iTerm2
-  homebrew_cask: name=iterm2-beta state=present
+  homebrew_cask: name=iterm2 state=present
 
 - name: Install iTerm2 shell integration
   template: src=./mac/templates/iterm2_shell_integration.sh dest=~/.iterm2_shell_integration.sh
