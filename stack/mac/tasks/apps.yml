@@ -1,3 +1,6 @@
+- name: Install Mas
+  homebrew: name=mas state=present
+
 - name: Install Macdown
   homebrew_cask: name=macdown state=present
 
@@ -9,3 +12,13 @@
 
 - name: Install Google Drive
   homebrew_cask: name=google-drive state=present
+
+- name: Install Caffeine
+  homebrew_cask: name=caffeine state=present
+
+- name: Install App Store apps
+  command: mas install {{ item.app_id }} creates=/Applications/{{ item.file }}
+  with_items:
+    - { app_id: '429449079' , file: '/Applications/Patterns.app'}
+    - { app_id: '497799835' , file: '/Applications/Xcode.app'}
+    - { app_id: '419330170' , file: '/Applications/Moom.app'}

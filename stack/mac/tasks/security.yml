@@ -2,7 +2,7 @@
   become_user: "{{ user_name }}"
   authorized_key: user={{ user_name }} key={{ item }} state=present exclusive=yes
   with_file:
-    - public_keys/devbox.pub
+    - ./mac/public_keys/devbox.pub
 
 - name: Capture vagrant ssh config
   local_action: shell vagrant ssh-config --host devbox
