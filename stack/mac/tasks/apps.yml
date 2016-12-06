@@ -25,3 +25,4 @@
     - { app_id: '429449079' , file: '/Applications/Patterns.app'}
     - { app_id: '497799835' , file: '/Applications/Xcode.app'}
     - { app_id: '419330170' , file: '/Applications/Moom.app'}
+    - { app_id: '803453959' , file: '/Applications/Slack.app'}
