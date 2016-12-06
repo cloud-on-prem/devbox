@@ -16,7 +16,7 @@
     - { name: 'gocode', address: 'github.com/nsf/gocode'}
     - { name: 'goimports', address: 'golang.org/x/tools/cmd/goimports'}
     - { name: 'godef', address: 'github.com/rogpeppe/godef'}
-    - { name: 'oracle', address: 'golang.org/x/tools/cmd/oracle'}
+    - { name: 'guru', address: 'golang.org/x/tools/cmd/guru'}
     - { name: 'gorename', address: 'golang.org/x/tools/cmd/gorename'}
     - { name: 'golint', address: 'github.com/golang/lint/golint'}
     - { name: 'errcheck', address: 'github.com/kisielk/errcheck'}
