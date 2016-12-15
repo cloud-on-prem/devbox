@@ -16,6 +16,9 @@
 - name: Install Caffeine
   homebrew_cask: name=caffeine state=present
 
+- name: Install LICECap
+  homebrew_cask: name=licecap state=present
+
 - name: Install App Store apps
   command: mas install {{ item.app_id }} creates=/Applications/{{ item.file }}
   with_items:
