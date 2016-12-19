@@ -40,3 +40,8 @@
   become: yes
   become_user: root
   pip: name=yamllint state=latest
+
+- name: Set up FPP
+  become: yes
+  become_user: root
+  script: ./dev-box/scripts/install_fpp.sh creates=/usr/local/bin/fpp
