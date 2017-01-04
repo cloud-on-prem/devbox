@@ -5,3 +5,6 @@
 
 - name: Copy Git dirs
   copy: src=./dev-box/templates/git/ dest=~/.git/
+
+- name: Install git-repo
+  pip: name=git-repo state=latest executable=pip3

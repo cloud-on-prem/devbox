@@ -25,6 +25,7 @@
     oops = reset --soft HEAD^1
     wip = !git add -A && git commit -m "WIP"
     unwip = reset HEAD~
+    lab = repo lab
 [core]
 	filemode = false
   editor = nvim
@@ -40,3 +41,5 @@
     default = tracking
 [branch]
 	autosetuprebase = always
+[gitrepo "gitlab"]
+  token = {{ gitlab_token }}
