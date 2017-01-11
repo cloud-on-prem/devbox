@@ -35,6 +35,10 @@ export PATH="$HOME/.local/bin:$PATH" # Add Stack bins
 source /usr/local/share/chruby/chruby.sh 2> /dev/null
 source /usr/local/share/chruby/auto.sh 2> /dev/null
 
+# Node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # Load stuff without moaning
 source ~/.bash_functions 2> /dev/null
 source ~/.bash_aliases 2> /dev/null

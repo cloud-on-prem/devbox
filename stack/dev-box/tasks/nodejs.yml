@@ -8,6 +8,11 @@
   become_user: root
   apt: name=nodejs state=latest
 
+- name: Latest NVM
+  become: yes
+  become_user: "{{ user_name }}"
+  git: repo=https://github.com/creationix/nvm.git dest=~/.nvm
+
 - name: Latest NPM
   become: yes
   become_user: root
