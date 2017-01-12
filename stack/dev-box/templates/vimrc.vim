@@ -268,6 +268,11 @@ nnoremap <Leader>o :Unite process -start-insert<cr>
 " End Unite
 "
 "Vimfiler
+set wildignore+=*.o,*.obj
+set wildignore+=.git,.svn
+set wildignore+=*.png,*.jpg,*.jpeg,*.gif,*.mp3
+set wildignore+=*.zip
+let g:vimfiler_ignore_filters = ['matcher_ignore_wildignore']
 let g:extra_whitespace_ignored_filetypes = ['unite', 'vimfiler']
 nnoremap <C-f> :VimFiler -explorer -find -force-hide -explorer-columns=devicons<cr>
 let g:vimfiler_as_default_explorer = 1
