@@ -50,6 +50,7 @@ Plug 'neovimhaskell/haskell-vim' " Mostly for better syntax highlighting and aut
 Plug 'vim-scripts/Haskell-Conceal'
 
 Plug 'lambdatoast/elm.vim'
+Plug 'raichoo/purescript-vim'
 
 Plug 'junegunn/vim-emoji'
 Plug 'rhysd/unite-emoji.vim'

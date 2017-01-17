@@ -27,3 +27,6 @@
     - gulp
     - eslint
     - jsonlint
+    - purescript
+    - pulp
+    - bower
