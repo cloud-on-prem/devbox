@@ -15,11 +15,11 @@ export HOSTMACHINE_USER="{{ hostmachine_user }}"
 {% endif %}
 
 # FZF
-FZF_TMUX=0
+export FZF_TMUX=0
 export FZF_DEFAULT_OPTS='--color 16'
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. ~/.fzf.bash 2> /dev/null
 
 #Go
 export PATH="/usr/local/go/bin:$PATH"
@@ -32,26 +32,26 @@ export PATH="$HOME/.stack/programs/x86_64-linux/ghc-7.10.3/bin/:$PATH" # Add Has
 export PATH="$HOME/.local/bin:$PATH" # Add Stack bins
 
 # Chruby
-source /usr/local/share/chruby/chruby.sh 2> /dev/null
-source /usr/local/share/chruby/auto.sh 2> /dev/null
+. /usr/local/share/chruby/chruby.sh 2> /dev/null
+. /usr/local/share/chruby/auto.sh 2> /dev/null
 
 # Node
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+. "$NVM_DIR/nvm.sh" 2> /dev/null
 
 # Load stuff without moaning
-source ~/.bash_functions 2> /dev/null
-source ~/.bash_aliases 2> /dev/null
-source ~/.bin/tmuxinator.bash 2> /dev/null
-source $BASH_IT/bash_it.sh
-source ~/.context_bashrc 2> /dev/null
-source ~/.bash_prompt 2> /dev/null
+. ~/.bash_functions 2> /dev/null
+. ~/.bash_aliases 2> /dev/null
+. ~/.bin/tmuxinator.bash 2> /dev/null
+. "$BASH_IT/bash_it.sh"
+. ~/.context_bashrc 2> /dev/null
+. ~/.bash_prompt 2> /dev/null
 
 # Bash My Aws
 BASH_MY_AWS_DIR=~/.bash-my-aws
 if [ -d BASH_MY_AWS_DIR ]; then
-  for f in $BASH_MY_AWS_DIR/lib/*-functions; do source $f; done
-  source $BASH_MY_AWS_DIR/bash_completion.sh
+  for f in $BASH_MY_AWS_DIR/lib/*-functions; do . $f; done
+  . $BASH_MY_AWS_DIR/bash_completion.sh
 fi
 
 unalias tree 2> /dev/null # use real tree
