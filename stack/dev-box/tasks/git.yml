@@ -7,4 +7,6 @@
   copy: src=./dev-box/templates/git/ dest=~/.git/
 
 - name: Install git-repo
+  become: yes
+  become_user: root
   pip: name=git-repo state=latest executable=pip3
