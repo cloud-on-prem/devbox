@@ -49,7 +49,7 @@ function cdf {
 
 # Fuzzy edit file
 function vf {
-  nvim $(ag . | fzf | awk -F':' '{print $1}')
+  nvim $(fzf --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null' | awk -F':' '{print $1}')
 }
 
 # Fuzzy Git Checkout
