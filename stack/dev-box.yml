@@ -1,7 +1,9 @@
 ---
 - hosts: dev-box
   become: yes
-  become_user: "{{ user_name }}"
+  roles:
+    - dev-box
+    - nvm
   vars:
     timezone: Australia/Melbourne
     guest_machine: true
@@ -9,20 +11,4 @@
     - ./dev-box/vars/software_version_vars.yml
     - ./dev-box/vars/git_vars.yml
     - ./dev-box/vars/encrypted_vars.yml
-  tasks:
-    - include: ./dev-box/tasks/workspace.yml
-    - include: ./dev-box/tasks/basics.yml
-    - include: ./dev-box/tasks/bash.yml
-    - include: ./dev-box/tasks/docker.yml
-    - include: ./dev-box/tasks/vim.yml
-    - include: ./dev-box/tasks/vim-setup.yml
-    - include: ./dev-box/tasks/ruby.yml
-    - include: ./dev-box/tasks/go.yml
-    - include: ./dev-box/tasks/haskell.yml
-    - include: ./dev-box/tasks/nodejs.yml
-    - include: ./dev-box/tasks/toolbelt.yml
-    - include: ./dev-box/tasks/tmux.yml
-    - include: ./dev-box/tasks/fzf.yml
-    - include: ./dev-box/tasks/git.yml
-    - include: ./dev-box/tasks/learn.yml
-    - include: ./dev-box/tasks/cool-stuff.yml
+    - ./dev-box/vars/nvm.yml

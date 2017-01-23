@@ -1,0 +1,16 @@
+---
+  - include: ./workspace.yml
+  - include: ./basics.yml
+  - include: ./bash.yml
+  - include: ./docker.yml
+  - include: ./vim.yml
+  - include: ./vim-setup.yml
+  - include: ./ruby.yml
+  - include: ./go.yml
+  - include: ./haskell.yml
+  - include: ./toolbelt.yml
+  - include: ./tmux.yml
+  - include: ./fzf.yml
+  - include: ./git.yml
+  - include: ./learn.yml
+  - include: ./cool-stuff.yml

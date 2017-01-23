@@ -1,0 +1,19 @@
+---
+nvm_env: user
+nvm_users:
+  - vagrant
+nvm_version: v0.33.0
+nvm_default_node_version: 6.2.1
+nvm_node_versions:
+  - 6.2.1
+nvm_global_packages:
+  - gulp
+  - eslint
+  - jsonlint
+  - elm
+  - purescript
+  - pulp
+  - bower
+  - ionic
+  - cordova
+
