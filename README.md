@@ -19,6 +19,7 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
 * Run
 
     ```sh
+        ansible-galaxy install --roles-path plugins/ -r plugins.yml
         ansible-playbook stack/mac.yml -i inventory --extra-vars="user_name=<user_name>" --ask-become-pass -K -f 3 [--tags=current]
     ```
 
@@ -36,6 +37,7 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
 * Run
 
     ```sh
+        ansible-galaxy install --roles-path plugins/ -r plugins.yml
         ansible-playbook stack/devbox.yml -i inventory --extra-vars="user_name=vagrant" --ask-become-pass --ask-vault-pass -K -f 3 [--tags=current]
     ```
 * Grab a cup of coffee and wait while your awesome devbox comes to life.
@@ -52,6 +54,7 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
 * Run
 
     ```sh
+        ansible-galaxy install --roles-path plugins/ -r plugins.yml
         ansible-playbook stack/cloud-box.yml -i inventory
     ```
 * Grab a cup of coffee and wait while your awesome cloud dev environment comes to life.
