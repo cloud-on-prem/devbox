@@ -10,10 +10,9 @@ nvm_global_packages:
   - gulp
   - eslint
   - jsonlint
-  - elm
   - purescript
   - pulp
   - bower
-  - ionic
-  - cordova
-
+  - nativescript
+  - typescript
+  - babel-cli
