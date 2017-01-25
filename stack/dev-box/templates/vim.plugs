@@ -49,8 +49,10 @@ Plug 'Twinside/vim-hoogle'
 Plug 'neovimhaskell/haskell-vim' " Mostly for better syntax highlighting and auto-indentations
 Plug 'vim-scripts/Haskell-Conceal'
 
-Plug 'lambdatoast/elm.vim'
 Plug 'raichoo/purescript-vim'
+
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
 
 Plug 'junegunn/vim-emoji'
 Plug 'rhysd/unite-emoji.vim'
