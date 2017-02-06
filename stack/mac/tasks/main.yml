@@ -10,4 +10,5 @@
   - include: ./../../dev-box/tasks/git.yml
   - include: ./extras.yml
   - include: ./iterm.yml
+  - include: ./../../dev-box/tasks/evernote.yml
   - include: ./security.yml

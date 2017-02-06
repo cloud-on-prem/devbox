@@ -68,3 +68,9 @@ function gsf {
   commit=$(echo "$commits" | fzf --tac +s +m -e --ansi --reverse) &&
   echo -n $(echo "$commit" | sed "s/ .*//")
 }
+
+# Cool Evernote Lookup
+function ens {
+  term=$1
+  geeknote find $term | fzf | awk '{system("geeknote show "$1)}' | more
+}

@@ -13,4 +13,5 @@
   - include: ./fzf.yml
   - include: ./git.yml
   - include: ./learn.yml
+  - include: ./evernote.yml
   - include: ./cool-stuff.yml
