@@ -67,7 +67,7 @@ syntax on
 runtime macros/matchit.vim
 
 func OnEnter()
-  Unite file_mru -no-split -auto-preview
+  Unite file_mru file directory_mru -no-split
 endfunc
 
 autocmd VimEnter * if !argc() | call OnEnter() | endif
