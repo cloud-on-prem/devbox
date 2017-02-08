@@ -74,7 +74,8 @@ autocmd VimEnter * if !argc() | call OnEnter() | endif
 
 " Set up syntaxes
 " Aggressive linting and Auto-saving
-autocmd InsertChange,InsertLeave,TextChanged,BufLeave,FocusLost * update | Neomake
+autocmd InsertChange,InsertLeave,TextChanged,BufLeave,FocusLost * update
+autocmd InsertChange,InsertLeave,TextChanged * Neomake
 
 " Run Neomake Commands serially
 let g:neomake_serialize=1
