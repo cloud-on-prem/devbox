@@ -1,5 +1,11 @@
 EDITOR=nvim # Of course
 set -o vi
+
+# History
+export HISTIGNORE="c:clear:ls" # Ignore common commands
+export HISTSIZE=
+export HISTFILESIZE=
+
 export BASH_IT="$HOME/.bash_it"
 export EDITOR
 export PATH="/usr/local/heroku/bin:$PATH"
