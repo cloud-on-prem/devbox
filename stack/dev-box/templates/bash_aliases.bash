@@ -14,7 +14,6 @@ alias vr='vagrant resume'
 alias vsp='vagrant suspend'
 
 alias tma='tmux a -t '
-alias tmn='tmux new -s '
 alias tmk='tmux kill-session -t '
 alias tmls='tmux ls'
 

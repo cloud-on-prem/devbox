@@ -74,3 +74,9 @@ function ens {
   term=$1
   geeknote find $term | fzf | awk '{system("geeknote show "$1)}' | more
 }
+
+function tmn {
+  default_name="Project-$(( ( RANDOM % 1000 )  + 1 ))"
+  session_name="${1:-$default_name}"
+  tmux new -s "$session_name"
+}
