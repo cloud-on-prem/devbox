@@ -1,0 +1,153 @@
+#cVim-link-container, .cVim-link-hint, #cVim-command-bar, #cVim-command-bar-mode, #cVim-command-bar-input, #cVim-command-bar-search-results, .cVim-completion-item, .cVim-completion-item .cVim-full, .cVim-completion-item .cVim-left, .cVim-completion-item .cVim-right, #cVim-hud, #cVim-status-bar {
+  font-family: Helvetica, Helvetica Neue, Neue, sans-serif, Arial;
+  font-size: 14pt !important;
+  -webkit-font-smoothing: antialiased !important;
+  border-radius: 6px!important;
+}
+
+#cVim-link-container {
+  position: absolute;
+  pointer-events: none;
+  width: 100%; left: 0;
+  height: 100%; top: 0;
+  z-index: 2147483647;
+  border-radius: 6px!important;
+}
+
+.cVim-link-hint {
+  border-radius: 2px;
+  color: #ddd;
+  padding: 2px !important;
+  font-size: 20pt !important;
+  font-weight: 100 !important;
+  display: inline-block !important;
+  border: 1px solid #ccc;
+  vertical-align: middle !important;
+  text-align: center !important;
+  position: absolute !important;
+  transition: opacity 0.2s ease-out, background 0.2s ease-out;
+  background: linear-gradient(to bottom, #636363 0%,#3f3f3f 39%,#3f3f3f 39%,#000000 100%);
+}
+
+.cVim-link-hint_match {
+  color: #888;
+}
+
+#cVim-command-bar {
+  position: fixed !important;
+  z-index: 2147483646 !important;
+  background-color: #F0F0F0 !important;
+  color: #586366 !important;
+  display: none;
+  box-sizing: content-box !important;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.4);
+  width: 60%!important; left: 50%!important;
+  height: 400px!important; top: 50%!important;
+  margin-top: -200px!important;
+  margin-left: -30%!important;
+  border-radius: 4px!important;
+}
+
+#cVim-command-bar-mode {
+  font-size: 18px!important;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box !important;
+  padding: 5px !important;
+  height: 100% !important;
+  width: 10px !important;
+  color: #586366 !important;
+  padding-top: 10px!important;
+}
+
+#cVim-command-bar-input {
+  font-size: 28px!important;
+  background-color: #F0F0F0!important;
+  color: #586366 !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: calc(100% - 15px)!important;
+  position: absolute !important;
+  padding-left: 2px!important;
+  outline: none!important;
+  border: none!important;
+}
+
+#cVim-command-bar-search-results {
+  position: fixed;
+  width: 100% !important;
+  overflow: auto;
+  z-index: 2147483647 !important;
+  /*left: 0;*/
+  background-color: #F0F0F0;
+  width: 60%!important;
+  left: 50%!important;
+  top: 50%!important;
+  height: 350px!important;
+  display: none;
+  margin-top: -150px!important;
+  margin-left: -30%!important;
+}
+
+.cVim-completion-item, .cVim-completion-item .cVim-full, .cVim-completion-item .cVim-left, .cVim-completion-item .cVim-right {
+  text-overflow: ellipsis;
+  padding: 1px;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cVim-completion-item:nth-child(even) {
+  background-color: #F0F0F0;
+}
+
+.cVim-completion-item {
+  width: 100%;
+  left: 0;
+  color: #babdb6;
+  padding: 10px 5px;
+  border-bottom: 1px solid #E8E8E8!important;
+
+}
+
+.cVim-completion-item .cVim-left {
+  color: #586366;
+  width: 50%;
+  font-size: 18px!important;
+}
+
+.cVim-completion-item .cVim-right {
+  display: block;
+  color: #687e9b;
+  width: 100%;
+  font-size: 14px!important;
+}
+
+#cVim-hud {
+  background-color: rgba(28,28,28,0.9);
+  position: fixed !important;
+  transition: right 0.2s ease-out;
+  z-index: 24724289;
+}
+
+#cVim-hud span {
+  padding: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: #8f8f8f;
+  font-size: 10pt;
+}
+
+#cVim-frames-outline {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 9999999999;
+  box-sizing: border-box;
+  border: 3px solid yellow;
+}
