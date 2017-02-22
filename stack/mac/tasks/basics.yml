@@ -16,6 +16,9 @@
 - name: Install Ag
   homebrew: name=ag state=present
 
+- name: Install Fzf
+  homebrew: name=fzf state=latest
+
 - name: Set up .config dir
   file: path=~/.config recurse=true state=directory
 
