@@ -6,6 +6,8 @@
   - include: ./../../dev-box/tasks/ruby.yml
   - include: ./vim.yml
   - include: ./../../dev-box/tasks/vim-setup.yml
+  - include: ./../../dev-box/tasks/spacemacs.yml
+  - include: ./emacs.yml
   - include: ./../../dev-box/tasks/git.yml
   - include: ./extras.yml
   - include: ./iterm.yml

@@ -1,0 +1,9 @@
+- name: Install Emacs
+  become: yes
+  become_user: root
+  apt: name=emacs24 state=latest
+
+- name: Cron for Emacs Server
+  become: yes
+  become_user: "{{ user_name }}"
+  cron: special_time=reboot job="emacs --daemon" name="emacs_daemon"

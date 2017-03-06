@@ -1,0 +1,12 @@
+- name: Install Emacs
+  homebrew: name=emacs state=head
+
+- name: Set up Emacs Server LaunchAgent
+  become: yes
+  become_user: "{{ user_name }}"
+  template: src=./mac/templates/emacs.launchagent.xml dest=~/Library/LaunchAgents/gnu.emacs.daemon.plist
+
+- name: Load Emacs LaunchAgent
+  become: yes
+  become_user: "{{ user_name }}"
+  command: "launchctl load -w ~/Library/LaunchAgents/gnu.emacs.daemon.plist"
