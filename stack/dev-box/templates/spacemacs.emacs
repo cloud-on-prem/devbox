@@ -36,13 +36,11 @@ values."
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t)
      markdown
-     json
      javascript
      yaml
      ruby
      haskell
      typescript
-     css
      html
      shell
      ;; ----------------------------------------------------------------

@@ -16,3 +16,4 @@ nvm_global_packages:
   - nativescript
   - typescript
   - babel-cli
+  - tern
