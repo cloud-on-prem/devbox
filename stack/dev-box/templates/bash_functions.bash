@@ -80,3 +80,15 @@ function tmn {
   session_name="${1:-$default_name}"
   tmux new -s "$session_name"
 }
+
+function restart_emacs {
+{% if ansible_os_family == 'Darwin' %}
+  pkill emacs
+  launchctl start gnu.emacs.daemon
+  echo "Restarted Emacs"
+{% else %}
+  pkill emacs
+  emacs --daemon
+  echo "Restarted Emacs"
+{% endif %}
+}
