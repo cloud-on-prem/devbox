@@ -81,14 +81,8 @@ function tmn {
   tmux new -s "$session_name"
 }
 
-function restart_emacs {
-{% if ansible_os_family == 'Darwin' %}
-  pkill emacs
-  launchctl start gnu.emacs.daemon
-  echo "Restarted Emacs"
-{% else %}
+function remacs {
   pkill emacs
   emacs --daemon
   echo "Restarted Emacs"
-{% endif %}
 }
