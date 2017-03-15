@@ -1,6 +1,5 @@
 ---
 - hosts: dev-box
-  become: yes
   roles:
     - dev-box
     - nvm

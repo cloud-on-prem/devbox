@@ -1,7 +1,7 @@
 ---
 nvm_env: user
 nvm_users:
-  - vagrant
+  - ubuntu
 nvm_version: v0.33.0
 nvm_default_node_version: 6.2.1
 nvm_node_versions:

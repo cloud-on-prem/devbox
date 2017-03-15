@@ -52,12 +52,18 @@
   pip: name=virtualenv state=latest
 
 - name: Set up .config dir
+  become: yes
+  become_user: "{{ user_name }}"
   file: path=~/.config recurse=true state=directory
 
 - name: Set up yamllint config dir
+  become: yes
+  become_user: "{{ user_name }}"
   file: path=~/.config/yamllint recurse=true state=directory
 
 - name: Common Config Files
+  become: yes
+  become_user: "{{ user_name }}"
   template: src=./dev-box/templates/{{ item.src }} dest={{ item.dest }}
   with_items:
     - { src: 'ack.rc'                  , dest: '~/.ackrc' }

@@ -4,6 +4,8 @@
   script: ./dev-box/scripts/install_go.sh {{ go_version }} creates=/usr/local/go
 
 - name: Set up Go Directories
+  become: yes
+  become_user: "{{ user_name }}"
   file: path={{ workspace_dir }}/go/{{ item.name }} state=directory recurse=yes
   with_items:
     - { name: 'src' }
@@ -11,6 +13,8 @@
     - { name: 'bin' }
 
 - name: Set up Go Essentials
+  become: yes
+  become_user: "{{ user_name }}"
   command: go get -u -v {{ item.address }} creates={{ workspace_dir }}/go/bin/{{ item.name }}
   with_items:
     - { name: 'gocode', address: 'github.com/nsf/gocode'}
