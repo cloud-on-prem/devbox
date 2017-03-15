@@ -3,8 +3,6 @@
   - include: ./basics.yml
   - include: ./bash.yml
   - include: ./docker.yml
-  - include: ./vim.yml
-  - include: ./vim-setup.yml
   - include: ./emacs.yml
   - include: ./spacemacs.yml
   - include: ./ruby.yml

@@ -1,4 +1,4 @@
-EDITOR=nvim # Of course
+EDITOR="emacsclient -t" # Of course
 set -o vi
 
 # History
