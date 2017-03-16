@@ -1,22 +1,10 @@
-- name: Uninstall stock Tmux
-  become: yes
-  become_user: root
-  apt: name=tmux state=absent
-
 - name: Install Latest Tmux
   become: yes
   become_user: root
-  script: ./dev-box/scripts/install_tmux.sh creates=/usr/bin/tmux
+  dnf: name=tmux state=latest
 
 - name: Install Tmux Plugin Manager
   git: repo=https://github.com/tmux-plugins/tpm dest=~/.tmux/plugins/tpm
-
-- name: Install Tmuxinator
-  become: yes
-  become_user: root
-  gem:
-    name: tmuxinator
-    user_install: no
 
 - name: Set up Tmuxinator Dir
   file: path=~/.tmuxinator state=directory recurse=yes

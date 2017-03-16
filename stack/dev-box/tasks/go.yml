@@ -1,7 +1,7 @@
 - name: Install Go
   become: yes
   become_user: root
-  script: ./dev-box/scripts/install_go.sh {{ go_version }} creates=/usr/local/go
+  dnf: name=golang state=latest
 
 - name: Set up Go Directories
   become: yes

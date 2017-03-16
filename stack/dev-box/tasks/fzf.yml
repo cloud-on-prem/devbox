@@ -1,9 +1,5 @@
 - name: Download FZF
-  become: yes
-  become_user: "{{ user_name }}"
   git: repo=https://github.com/junegunn/fzf.git dest=~/.fzf
 
 - name: Install FZF
-  become: yes
-  become_user: "{{ user_name }}"
-  command: ~/.fzf/install --all creates=/~/.fzf/bin/fzf
+  command: ~/.fzf/install --all creates=~/.fzf/bin/fzf

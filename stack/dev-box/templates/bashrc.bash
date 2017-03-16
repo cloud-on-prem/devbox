@@ -38,6 +38,7 @@ export PATH="$HOME/.stack/programs/x86_64-linux/ghc-7.10.3/bin/:$PATH" # Add Has
 export PATH="$HOME/.local/bin:$PATH" # Add Stack bins
 
 # Chruby
+export PATH="/home/vagrant/.gem/ruby/{{ ruby_version }}/bin/:$PATH";
 . /usr/local/share/chruby/chruby.sh 2> /dev/null
 . /usr/local/share/chruby/auto.sh 2> /dev/null
 

@@ -1,0 +1,14 @@
+- name: Fix Locales
+  become: yes
+  become_user: root
+  shell: sudo ln -s /usr/lib/locale/C.utf8 /usr/lib/locale/en_AU.utf8
+  args:
+    creates: /usr/lib/locale/en_AU.utf8/LC_NAME
+
+- name: Set SeLinux to warn
+  become: yes
+  become_user: root
+  lineinfile:
+    dest: /etc/selinux/config
+    regexp: '^SELINUX='
+    line: 'SELINUX=permissive'

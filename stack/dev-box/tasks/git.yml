@@ -1,6 +1,4 @@
 - name: Install Overcommit
-  become: yes
-  become_user: "{{ user_name }}"
   gem: name=overcommit state=latest
 
 - name: Copy Git dirs

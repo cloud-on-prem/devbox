@@ -1,5 +1,0 @@
-- name: Install Geeknote
-  become: yes
-  become_user: "{{ user_name }}"
-  script: ./dev-box/scripts/install_geeknote.sh
-
