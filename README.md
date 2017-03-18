@@ -3,7 +3,7 @@
 This is a repo that I personally use to automate my dev environemnts.
 The set up is powered by [Ansible](http://docs.ansible.com/ansible).
 
-It has support for setting up stuff on my local mac, a vagrant-powered Ubuntu vitualbox (which is my primary dev environment) and also support for setting up a dev environment in the cloud (WIP).
+It has support for setting up stuff on my local mac, a vagrant-powered Fedora vitualbox (which is my primary dev environment) and also support for setting up a dev environment in the cloud (WIP).
 
 The basic idea is that the tools and infrastructure contained in the dev environment are cleanly separated from the actual workspace (where your actual code lives).
 You should be able to safely destroy the environment/ rebuild it/upgrade it without losing any of your work.
@@ -23,7 +23,7 @@ All the scripts are designed to be re-entrant and/or idempotent and should not h
         ansible-playbook stack/mac.yml -i inventory --extra-vars="user_name=<user_name>" --ask-become-pass -K -f 3 [--tags=current]
     ```
 
-### I :heart: Ubuntu ###
+### I :heart: Fedora ###
 
 * Clone this repo
 * Download [Ansible Core](http://docs.ansible.com/ansible/intro_installation.html#getting-ansible)
