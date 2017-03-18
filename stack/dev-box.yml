@@ -9,4 +9,3 @@
     - ./dev-box/vars/software_version_vars.yml
     - ./dev-box/vars/git_vars.yml
     - ./dev-box/vars/encrypted_vars.yml
-    - ./dev-box/vars/nvm.yml
