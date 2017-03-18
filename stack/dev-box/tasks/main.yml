@@ -1,4 +1,5 @@
 ---
+  - include: ./fedora.25.fixes.yml
   - include: ./workspace.yml
   - include: ./basics.yml
   - include: ./bash.yml
@@ -6,6 +7,7 @@
   - include: ./emacs.yml
   - include: ./spacemacs.yml
   - include: ./ruby.yml
+  - include: ./nodejs.yml
   - include: ./go.yml
   - include: ./haskell.yml
   - include: ./toolbelt.yml
@@ -13,5 +15,3 @@
   - include: ./fzf.yml
   - include: ./git.yml
   - include: ./learn.yml
-  - include: ./evernote.yml
-  - include: ./cool-stuff.yml

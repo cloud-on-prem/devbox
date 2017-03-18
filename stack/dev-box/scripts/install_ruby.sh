@@ -1,3 +1,3 @@
 #!/bin/bash
 VERSION=$1
-ruby-install ruby ${VERSION} --system --no-reinstall -- --enable-shared
+sudo /usr/local/bin/ruby-install ruby ${VERSION} --system --no-reinstall -- --enable-shared

@@ -6,32 +6,14 @@
 - name: Install Latest Ruby
   become: yes
   become_user: root
-  script: ./dev-box/scripts/install_ruby.sh {{ ruby_version }} creates=~/.rubies/ruby-{{ ruby_version }}
+  script: ./dev-box/scripts/install_ruby.sh {{ ruby_version }} creates=/usr/local/bin/ruby
 
-- name: Install Bundler system wide
-  become: yes
-  become_user: root
-  gem:
-    name: bundler
-    user_install: no
-
-- name: Install Pry
-  become: yes
-  become_user: root
-  gem:
-    name: pry
-    user_install: no
-
-- name: Install Tagfish
-  become: yes
-  become_user: root
-  gem:
-    name: tagfish
-    user_install: no
-
-- name: Install Rubocop
-  become: yes
-  become_user: root
-  gem:
-    name: rubocop
-    user_install: no
+- name: Install Useful Gems system wide
+  gem: name="{{ item }}" state=latest
+  with_items:
+    - pry
+    - tagfish
+    - bundler
+    - rubocop
+    - tmuxinator
+    - mdl

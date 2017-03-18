@@ -1,17 +1,9 @@
-- name: Add Stack Haskell GPG
-  become: yes
-  become_user: root
-  apt_key: keyserver=keyserver.ubuntu.com id=575159689BEFB442
-
-- name: Add Haskell Stack Apt Source
-  become: yes
-  become_user: root
-  apt_repository: repo='deb http://download.fpcomplete.com/ubuntu wily main' state=present update_cache=yes
-
 - name: Install Stack Haskell
   become: yes
   become_user: root
-  apt: name=stack state=latest
+  shell: wget -qO- https://get.haskellstack.org/ | sh
+  args:
+    creates: /usr/local/bin/stack
 
 - name: Stack Global Setup
   command: stack setup chdir=~/ creates=~/.stack/global-project/stack.yaml

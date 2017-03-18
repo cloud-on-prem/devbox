@@ -2,7 +2,6 @@
 - hosts: dev-box
   roles:
     - dev-box
-    - nvm
   vars:
     timezone: Australia/Melbourne
     guest_machine: true

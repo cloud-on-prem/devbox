@@ -1,45 +1,36 @@
-- name: Add PPAs
-  become: yes
-  become_user: root
-  apt_repository: repo={{ item.name }} update_cache=yes
-  with_items:
-    - {name: 'ppa:neovim-ppa/unstable'}
-    - {name: 'ppa:pi-rho/dev'}
-
-- name: Upgrade Apt
-  become: yes
-  become_user: root
-  when: force_full_apt_upgrade is defined
-  apt: upgrade=full update_cache=yes install_recommends=yes
-
 - name: Install Essentials
   become: yes
   become_user: root
-  apt: name={{ item }} state=latest force=yes
+  dnf: name={{ item }} state=latest 
   with_items:
     - ntp
-    - language-pack-en
     - git
-    - build-essential
-    - python-dev
-    - python3-dev
+    - wget
+    - "@development-tools"
+    - python-devel
+    - python3-devel
     - python3-pip
-    - default-jre
-    - default-jdk
+    - java-1.8.0-openjdk
     - cmake
     - automake
-    - pkg-config
-    - libpcre3-dev
-    - zlib1g-dev
-    - liblzma-dev
-    - ruby-dev
-    - libxslt-dev
-    - libxml2-dev
-    - libffi-dev
+    - pcre2-devel
+    - zlib-devel
+    - lzma-devel
+    - ruby-devel
+    - libxslt-devel
+    - libxml2-devel
+    - libffi-devel
     - upower
     - mercurial
-    - libevent-dev # For tmux
+    - libevent-devel # For tmux
     - sshfs
+    - yum
+    - redhat-rpm-config
+
+- name: Set the correct Locale
+  become: yes
+  become_user: root
+  command: localectl set-locale LANG=en_AU.UTF-8
 
 - name: Install correct Pip
   become: yes

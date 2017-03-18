@@ -12,6 +12,18 @@
   shell: netstat -rn | grep eth0 | grep UG | awk '{ print $2 }'
   register: hostmachine_ip_raw
 
+- name: Turn off Hostchecking for Hostmachine
+  become: yes
+  become_user: "{{ user_name }}"
+  blockinfile:
+    dest: ~/.ssh/config
+    create: yes
+    block: |
+      Host "{{ hostmachine_ip_raw.stdout }}"
+        User "{{ hostmachine_user }}"
+        StrictHostKeyChecking  no
+        IdentityFile ~/.ssh/devbox
+
 - name: Set up Bashrc
   become: yes
   become_user: "{{ user_name }}"

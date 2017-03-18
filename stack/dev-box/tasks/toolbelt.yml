@@ -1,30 +1,27 @@
-- name: Set up Ag
+- name: Set up ag/jq/ctags/tree/htop/shellcheck
   become: yes
   become_user: root
-  script: ./dev-box/scripts/install_ag.sh creates=/usr/bin/ag
+  dnf: name="{{ item }}" state=latest
+  with_items:
+     - the_silver_searcher
+     - jq
+     - ctags
+     - tree
+     - htop
+     - ShellCheck
 
-- name: Set up tree
+- name: Install AWS Cli/Yamllint/Proselint/Saws
   become: yes
   become_user: root
-  apt: name=tree state=latest
-
-- name: Set up Jq
-  become: yes
-  become_user: root
-  apt: name=jq state=latest
-
-- name: Set up AWS CLI
-  become: yes
-  become_user: root
-  pip: name=awscli state=latest
+  pip: name="{{ item }}" state=latest
+  with_items:
+    - yamllint
+    - proselint
+    - saws
+    - awscli
 
 - name: Set up Bash My AWS
   git: repo=https://github.com/realestate-com-au/bash-my-aws.git dest=~/.bash-my-aws
-
-- name: Install Ctags
-  become: yes
-  become_user: root
-  apt: name=ctags state=latest
 
 - name: Install Hub
   become: yes
@@ -36,12 +33,12 @@
   become_user: root
   script: ./dev-box/scripts/install_shush.sh {{ shush_version }} creates=/usr/bin/shush
 
-- name: Install Yamllint
-  become: yes
-  become_user: root
-  pip: name=yamllint state=latest
-
 - name: Set up FPP
   become: yes
   become_user: root
   script: ./dev-box/scripts/install_fpp.sh creates=/usr/local/bin/fpp
+
+- name: Install Geeknote
+  become: yes
+  become_user: "{{ user_name }}"
+  script: ./dev-box/scripts/install_geeknote.sh creates=/usr/bin/geeknote
