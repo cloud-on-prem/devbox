@@ -48,8 +48,8 @@ function cdf {
 }
 
 # Fuzzy edit file
-function vf {
-  nvim $(fzf --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null' | awk -F':' '{print $1}')
+function ef {
+  e $(fzf --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null' | awk -F':' '{print $1}')
 }
 
 # Fuzzy Git Checkout
