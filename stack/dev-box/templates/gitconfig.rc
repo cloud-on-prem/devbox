@@ -28,7 +28,7 @@
     lab = repo lab
 [core]
 	filemode = false
-  editor = nvim
+  editor = "emacsclient -a '' -c"
   excludesfile = ~/.gitignore_global
 [init]
   templatedir = ~/.git/template-dir/
