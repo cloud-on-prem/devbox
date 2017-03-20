@@ -1,0 +1,6 @@
+---
+
+- name: Debug
+  debug:
+    var: guest_machine
+    verbosity: 1

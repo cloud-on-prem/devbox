@@ -1,4 +1,5 @@
 ---
+  # - include: ./debug.yml
   - include: ./fedora.25.fixes.yml
   - include: ./workspace.yml
   - include: ./basics.yml

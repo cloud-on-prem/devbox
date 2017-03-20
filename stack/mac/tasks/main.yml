@@ -1,4 +1,5 @@
 ---
+  # - include: ./../../dev-box/tasks/debug.yml
   - include: ./../../dev-box/tasks/workspace.yml
   - include: ./basics.yml
   - include: ./apps.yml
