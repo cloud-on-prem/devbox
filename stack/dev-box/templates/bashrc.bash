@@ -1,4 +1,5 @@
-EDITOR="emacsclient -t" # Of course
+export ALTERNATE_EDITOR=""
+export EDITOR="emacsclient -a '' -c" # Of course
 set -o vi
 
 # History

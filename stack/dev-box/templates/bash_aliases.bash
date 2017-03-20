@@ -30,4 +30,4 @@ alias fs='foreman start'
 alias wk='cd {{ workspace_dir }}'
 alias play='cd {{ workspace_dir }}/play'
 
-alias e='emacsclient -t'
+alias e="emacsclient -a '' -c"
