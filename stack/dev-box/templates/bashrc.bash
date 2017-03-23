@@ -63,4 +63,3 @@ if [ -d BASH_MY_AWS_DIR ]; then
 fi
 
 unalias tree 2> /dev/null # use real tree
-cd {{ workspace_dir }}
