@@ -9,6 +9,7 @@
      - tree
      - htop
      - ShellCheck
+     - bash-completion
 
 - name: Install AWS Cli/Yamllint/Proselint/Saws
   become: yes

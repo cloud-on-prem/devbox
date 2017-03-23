@@ -48,6 +48,14 @@ export NVM_DIR="$HOME/.nvm"
 . "$NVM_DIR/nvm.sh" 2> /dev/null
 
 # Load stuff without moaning
+
+{% if ansible_distribution == 'MacOSX' %}
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+{% endif %}
+{% if ansible_distribution == 'Fedora' %}
+[ -f /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+{% endif %}
+
 . ~/.bash_functions 2> /dev/null
 . ~/.bash_aliases 2> /dev/null
 . ~/.bin/tmuxinator.bash 2> /dev/null

@@ -32,6 +32,7 @@ values."
    dotspacemacs-configuration-layers
    '(
      themes-megapack
+     react
      python
      (spell-checking :variables =enable-flyspell-auto-completion= t)
      syntax-checking

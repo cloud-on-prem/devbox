@@ -11,10 +11,12 @@
 - name: Set up hostmachine info
   shell: netstat -rn | grep eth0 | grep UG | awk '{ print $2 }'
   register: hostmachine_ip_raw
+  when: guest_machine
 
 - name: Turn off Hostchecking for Hostmachine
   become: yes
   become_user: "{{ user_name }}"
+  when: guest_machine
   blockinfile:
     dest: ~/.ssh/config
     create: yes
