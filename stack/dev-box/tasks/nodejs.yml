@@ -29,3 +29,6 @@
     - typescript
     - babel-cli
     - tern
+    - js-beautify
+    - babel-eslint
+    - eslint-plugin-react
