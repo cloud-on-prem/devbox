@@ -10,15 +10,6 @@ function retry {
   until !!; do :; done
 }
 
-function hostrun {
-  ssh $HOSTMACHINE_USER@$HOSTMACHINE_IP -T -i ~/.ssh/devbox_rsa
-}
-
-function clip {
-  read piped;
-  echo "echo $piped | pbcopy" | hostrun
-}
-
 function true-colors {
   awk 'BEGIN{
   s="/\\/\\/\\/\\/\\"; s=s s s s s s s s s s s s s s s s s s s s s s s;
@@ -86,3 +77,15 @@ function remacs {
   emacs --daemon
   echo "Restarted Emacs"
 }
+
+{% if guest_machine %}
+# Guest Machine Specific
+function hostrun {
+  ssh $HOSTMACHINE_USER@$HOSTMACHINE_IP -T -i ~/.ssh/devbox_rsa
+}
+
+function clip {
+  read piped;
+  echo "echo $piped | pbcopy" | hostrun
+}
+{% endif %}
