@@ -43,3 +43,8 @@
   become: yes
   become_user: "{{ user_name }}"
   script: ./dev-box/scripts/install_geeknote.sh creates=/usr/bin/geeknote
+
+- name: Install Dictionaries
+  become: yes
+  become_user: root
+  copy: src=../assets/dictionaries/ dest=/usr/share/myspell/
