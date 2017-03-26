@@ -7,11 +7,21 @@ alias lss='ls -lAh'
 
 alias v='nvim'
 
+
+{% if guest_machine %}
+alias vu='echo "you are in a Vagrant box ;)"'
+alias vh='echo "you are in a Vagrant box ;)"'
+alias vs='echo "you are in a Vagrant box ;)"'
+alias vr='echo "you are in a Vagrant box ;)"'
+alias vsp='echo "you are in a Vagrant box ;)"'
+{% else %}
 alias vu='vagrant up'
 alias vh='vagrant halt'
 alias vs='vagrant ssh'
 alias vr='vagrant resume'
 alias vsp='vagrant suspend'
+{% endif %}
+
 
 alias tma='tmux a -t '
 alias tmk='tmux kill-session -t '

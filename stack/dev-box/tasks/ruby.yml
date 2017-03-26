@@ -6,7 +6,7 @@
 - name: Install Latest Ruby
   become: yes
   become_user: root
-  script: ./dev-box/scripts/install_ruby.sh {{ ruby_version }} creates=/usr/local/bin/ruby
+  script: ./dev-box/scripts/install_ruby.sh {{ ruby_version }} creates="$HOME/.gem/ruby/{{ ruby_version }}/"
 
 - name: Install Useful Gems system wide
   gem: name="{{ item }}" state=latest
