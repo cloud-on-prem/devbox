@@ -1,0 +1,11 @@
+---
+
+- name: Set up Dictionaries dir
+  become: yes
+  become_user: root
+  file: path="/Library/Spelling/" recurse=true state=directory
+
+- name: Install Dictionaries
+  become: yes
+  become_user: root
+  copy: src=../assets/dictionaries/ dest="/Library/Spelling/"

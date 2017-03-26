@@ -13,3 +13,4 @@
   - include: ./extras.yml
   - include: ./iterm.yml
   - include: ./security.yml
+  - include: ./../../dev-box/tasks/dictionaries.yml

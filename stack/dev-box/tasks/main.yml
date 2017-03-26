@@ -16,3 +16,4 @@
   - include: ./fzf.yml
   - include: ./git.yml
   - include: ./learn.yml
+  - include: ./dictionaries.yml

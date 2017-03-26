@@ -1,4 +1,4 @@
-- name: Set up ag/jq/ctags/tree/htop/shellcheck
+- name: Set up ag/jq/ctags/tree/htop/shellcheck/hunspell
   become: yes
   become_user: root
   dnf: name="{{ item }}" state=latest
@@ -10,6 +10,7 @@
      - htop
      - ShellCheck
      - bash-completion
+     - hunspell
 
 - name: Install AWS Cli/Yamllint/Proselint/Saws
   become: yes
@@ -43,8 +44,3 @@
   become: yes
   become_user: "{{ user_name }}"
   script: ./dev-box/scripts/install_geeknote.sh creates=/usr/bin/geeknote
-
-- name: Install Dictionaries
-  become: yes
-  become_user: root
-  copy: src=../assets/dictionaries/ dest=/usr/share/myspell/
