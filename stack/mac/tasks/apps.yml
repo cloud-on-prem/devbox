@@ -1,23 +1,17 @@
+---
+
 - name: Install Mas
   homebrew: name=mas state=present
 
-- name: Install Macdown
-  homebrew_cask: name=macdown state=present
-
-- name: Install Geektool
-  homebrew_cask: name=geektool state=present
-
-- name: Install Alfred
-  homebrew_cask: name=alfred state=present
-
-- name: Install Google Drive
-  homebrew_cask: name=google-drive state=present
-
-- name: Install Caffeine
-  homebrew_cask: name=caffeine state=present
-
-- name: Install LICECap
-  homebrew_cask: name=licecap state=present
+- name: Install Macdown/Geektool/Alfred/Google Drive/LICECap/Teensy
+  homebrew_cask: name="{{ item }}" state=present
+  with_items:
+    - macdown
+    - geektool
+    - alfred
+    - google-drive
+    - licecap
+    - teensy
 
 - name: Install App Store apps
   command: mas install {{ item.app_id }} creates=/Applications/{{ item.file }}
