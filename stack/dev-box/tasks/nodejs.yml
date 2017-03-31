@@ -19,6 +19,7 @@
 - name: Install useful NPM packages
   npm: name="{{ item }}" state=latest global=yes path=~/.nvm/versions/node/v{{ nodejs_version }}/bin/
   with_items:
+    - yarn
     - gulp
     - eslint
     - jsonlint
