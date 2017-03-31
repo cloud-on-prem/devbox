@@ -9,7 +9,7 @@
   - virtualbox
   - vagrant
 
-- name: Install Coreutils/Wget/Ag/Fzf/Bash Completion
+- name: Install Coreutils/Wget/Ag/Fzf/Bash Completion/Progress/Tmux/htop
   homebrew: name="{{ item }}" state=present
   with_items:
   - coreutils
@@ -17,6 +17,9 @@
   - ag
   - fzf
   - bash-completion
+  - progress
+  - tmux
+  - htop
 
 - name: Set up .config dir
   file: path=~/.config recurse=true state=directory
