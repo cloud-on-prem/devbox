@@ -5,12 +5,12 @@
 	<key>BackgroundColor</key>
 	<data>
 	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
-	ZmZmAAAAAIY=
+	ZmZmAAAAgxKWZz6G
 	</data>
 	<key>Command</key>
 	<string>cat /usr/local/current_scm_info  | sed -E 's/\\(\]|\[)//g'</string>
 	<key>DisplayID</key>
-	<integer>69524906</integer>
+	<integer>458631474</integer>
 	<key>DropShadow</key>
 	<false/>
 	<key>FailureImage</key>
@@ -107,7 +107,7 @@
 	<key>FontSize</key>
 	<real>24</real>
 	<key>GeekletFrame</key>
-	<string>{{2202.65625, 1391.265625}, {352, 45}}</string>
+	<string>{{2204, 956}, {352, 45}}</string>
 	<key>HasShadow</key>
 	<false/>
 	<key>Identifier</key>
@@ -117,6 +117,8 @@
 	<key>Name</key>
 	<string>SCM</string>
 	<key>RefreshInterval</key>
+	<integer>1</integer>
+	<key>RelativePosition</key>
 	<integer>1</integer>
 	<key>SetLocale</key>
 	<false/>
