@@ -31,39 +31,29 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     themes-megapack
-     react
-     python
+     ;; Editor support
      (spell-checking :variables =enable-flyspell-auto-completion= t)
      syntax-checking
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t)
-     markdown
-     javascript
-     yaml
-     ruby
-     haskell
-     typescript
-     html
-     shell
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
      helm
-     ;; auto-completion
-     ;; better-defaults
+     git
+     ;; Markup languages
+     markdown
+     yaml
+     html
+     ;; Common Languages
+     haskell
+     shell
+     go
+     ruby
+     python
+     javascript
+     typescript
+     react
      emacs-lisp
-     ;; git
-     ;; markdown
-     ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
+     ;; Look and Feel
+     themes-megapack
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
