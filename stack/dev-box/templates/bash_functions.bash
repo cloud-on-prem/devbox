@@ -81,7 +81,7 @@ function remacs {
 {% if guest_machine %}
 # Guest Machine Specific
 function hostrun {
-  ssh $HOSTMACHINE_USER@$HOSTMACHINE_IP -T -i ~/.ssh/devbox_rsa
+  ssh $HOSTMACHINE_USER@$HOSTMACHINE_IP -T -i ~/.ssh/devbox
 }
 
 function clip {
