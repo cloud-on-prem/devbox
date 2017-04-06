@@ -19,6 +19,9 @@ command h history
 command b bookmarks
 let mapleader = "<Space>"
 " Mappings
+map h :history<Space>
+map b :bookmarks<Space>
+map s :buffer<Space>
 map <Leader><Space> :
 map <Leader>r reloadTabUncached
 map <Leader>x :restore<Space>
