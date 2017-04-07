@@ -18,6 +18,10 @@
   - ghc-mod
   - hlint
   - HUnit
+  - apply-refact
+  - stylish-haskell
+  - hasktags
+  - hoogle
 
 - name: Correct File Permissions for .ghci
   become: yes

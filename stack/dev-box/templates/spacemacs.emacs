@@ -45,7 +45,7 @@ values."
      ;; Common Languages
      haskell
      shell
-     go
+     (go :variables go-tab-width 2)
      ruby
      python
      javascript
@@ -287,13 +287,23 @@ values."
    dotspacemacs-whitespace-cleanup nil
    ))
 
+;; Tab widths
+(defun custom-indent (n)
+  (setq tab-width n)
+  (setq c-basic-offset n)
+  (setq c-basic-offset n)
+  (setq coffee-tab-width n)
+  (setq javascript-indent-level n)
+  (setq js-indent-level n)
+  (setq js2-basic-offset n)
+  (setq web-mode-markup-indent-offset n)
+  (setq web-mode-css-indent-offset n)
+  (setq web-mode-code-indent-offset n)
+  (setq css-indent-offset n)
+  )
+
 (defun dotspacemacs/user-init ()
-  "Initialization function for user code.
-It is called immediately after `dotspacemacs/init', before layer configuration
-executes.
- This function is mostly useful for variables that need to be set
-before packages are loaded. If you are unsure, you should try in setting them in
-`dotspacemacs/user-config' first."
+  (custom-indent 2) ; indent 2 spaces width
   )
 
 (defun dotspacemacs/user-config ()
