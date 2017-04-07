@@ -25,3 +25,4 @@
     - { name: 'golint', address: 'github.com/golang/lint/golint'}
     - { name: 'errcheck', address: 'github.com/kisielk/errcheck'}
     - { name: 'gotags', address: 'github.com/jstemmer/gotags'}
+    - { name: 'gometalinter', address: 'github.com/alecthomas/gometalinter'}
