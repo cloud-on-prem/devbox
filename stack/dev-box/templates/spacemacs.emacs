@@ -324,6 +324,10 @@ you should place your code here."
                   `((".*" ,temporary-file-directory t)))
   ;; Get rid of the highlighted line
   (global-hl-line-mode -1)
+
+  ;; Key Mappings
+  ;; Quick File Open
+  (define-key evil-normal-state-map (kbd "SPC o") 'projectile-find-file)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
