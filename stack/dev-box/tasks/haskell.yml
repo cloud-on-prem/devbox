@@ -27,4 +27,3 @@
   become: yes
   become_user: "{{ user_name }}"
   file: path=~/.ghci mode="g-w"
-
