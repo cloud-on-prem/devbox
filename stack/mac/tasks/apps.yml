@@ -3,7 +3,7 @@
 - name: Install Mas
   homebrew: name=mas state=present
 
-- name: Install Macdown/Geektool/Alfred/Google Drive/LICECap/Teensy
+- name: Install Macdown/Geektool/Alfred/Google Drive/LICECap/Teensy/Chrome/Evernote/Dashlane/Dash
   homebrew_cask: name="{{ item }}" state=present
   with_items:
     - macdown
@@ -12,11 +12,16 @@
     - google-drive
     - licecap
     - teensy
+    - google-chrome
+    - evernote
+    - dashlane
+    - dash
 
 - name: Install App Store apps
-  command: mas install {{ item.app_id }} creates=/Applications/{{ item.file }}
+  command: mas install {{ item.app_id }} creates={{ item.file }}
   with_items:
     - { app_id: '429449079' , file: '/Applications/Patterns.app'}
     - { app_id: '497799835' , file: '/Applications/Xcode.app'}
     - { app_id: '419330170' , file: '/Applications/Moom.app'}
     - { app_id: '803453959' , file: '/Applications/Slack.app'}
+    - { app_id: '445189367' , file: '/Applications/PopClip.app'}

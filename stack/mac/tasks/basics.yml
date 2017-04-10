@@ -9,10 +9,16 @@
   - virtualbox
   - vagrant
 
-- name: Install Coreutils/Wget/Ag/Fzf/Bash Completion/Progress/Tmux/htop
+- name: Install Pip
+  become: yes
+  become_user: root
+  easy_install: name=pip state=latest
+
+- name: Install Coreutils/Python3/Wget/Ag/Fzf/Bash Completion/Progress/Tmux/htop
   homebrew: name="{{ item }}" state=present
   with_items:
   - coreutils
+  - python3
   - wget
   - ag
   - fzf
