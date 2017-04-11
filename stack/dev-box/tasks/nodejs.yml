@@ -10,16 +10,13 @@
   become_user: "{{ user_name }}"
   shell: source ~/.nvm/nvm.sh && nvm install {{ nodejs_version }}
   args:
-    executable: /usr/bin/bash
-    creates: ~/.nvm/versions/node/v{{ nodejs_version }}/bin/node
-
-- name: Install Nodejs
-  shell: nvm install {{ nodejs_version }}
-  args:
+    executable: $(which bash)
     creates: ~/.nvm/versions/node/v{{ nodejs_version }}/bin/node
 
 - name: Install useful NPM packages
-  npm: name="{{ item }}" state=latest global=yes path=~/.nvm/versions/node/v{{ nodejs_version }}/bin/
+  become: true
+  become_user: "{{ user_name }}"
+  npm: name="{{ item }}" state=latest global=yes path="~/.nvm/versions/node/v{{ nodejs_version }}/bin/" executable="~/.nvm/versions/node/v{{ nodejs_version}}/bin/npm"
   with_items:
     - yarn
     - gulp

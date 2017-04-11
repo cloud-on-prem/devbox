@@ -5,6 +5,7 @@
   - include: ./apps.yml
   - include: ./../../dev-box/tasks/bash.yml
   - include: ./../../dev-box/tasks/ruby.yml
+  - include: ./../../dev-box/tasks/nodejs.yml
   - include: ./vim.yml
   - include: ./../../dev-box/tasks/vim-setup.yml
   - include: ./../../dev-box/tasks/spacemacs.yml
