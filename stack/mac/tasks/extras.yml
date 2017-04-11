@@ -1,14 +1,21 @@
-- name: Install Highlight
-  homebrew: name=highlight state=latest
+---
 
-- name: Install Ctags
-  homebrew: name=ctags state=latest
-
-- name: Install FPP
-  homebrew: name=fpp state=latest
-
-- name: Install Hunspell
-  homebrew: name=hunspell state=latest
+- name: Install Highlight/Ctags/FPP/Hunspell
+  homebrew: name={{ item }} state=latest
+  with_items:
+    - highlight
+    - ctags
+    - fpp
+    - hunspell
 
 - name: Install Expiry Countdown
   template: src=./mac/templates/expiry_countdown.sh dest=/usr/local/bin/expiry-countdown mode="a+x"
+
+- name: Ensure SCM Info File exists
+  become: yes
+  become_user: root
+  file:
+    path: "/usr/local/current_scm_info"
+    owner: "{{ user_name }}"
+    state: touch
+    mode: "u+rw,g+r,o+r"
