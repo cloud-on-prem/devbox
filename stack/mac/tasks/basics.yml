@@ -14,7 +14,7 @@
   become_user: root
   easy_install: name=pip state=latest
 
-- name: Install Coreutils/Python3/Wget/Ag/Fzf/Bash Completion/Progress/Tmux/htop
+- name: Install Coreutils/Python3/Wget/Ag/Fzf/Bash Completion/Progress/Tmux/htop/Tree
   homebrew: name="{{ item }}" state=present
   with_items:
   - coreutils
@@ -26,6 +26,7 @@
   - progress
   - tmux
   - htop
+  - tree
 
 - name: Set up .config dir
   file: path=~/.config recurse=true state=directory
