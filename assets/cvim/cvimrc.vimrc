@@ -15,8 +15,8 @@ command a tabnew amazon
 command i tabnew imdb
 command w tabnew wikipedia
 command y tabnew youtube
-command h history
-command b bookmarks
+command h tabnew history
+command b tabnew bookmarks
 let mapleader = "<Space>"
 " Mappings
 map h :history<Space>
