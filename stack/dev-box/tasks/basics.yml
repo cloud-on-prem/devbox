@@ -23,6 +23,7 @@
     - upower
     - mercurial
     - libevent-devel # For tmux
+    - tmux
     - sshfs
     - yum
     - redhat-rpm-config
