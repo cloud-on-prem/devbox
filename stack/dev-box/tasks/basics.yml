@@ -27,6 +27,7 @@
     - sshfs
     - yum
     - redhat-rpm-config
+    - strace
 
 - name: Set the correct Locale
   become: yes
