@@ -14,13 +14,14 @@
   become_user: root
   easy_install: name=pip state=latest
 
-- name: Install Coreutils/Python3/Wget/Ag/Fzf/Bash Completion/Progress/Tmux/htop/Tree
+- name: Install Coreutils/Python3/Wget/Ag/RipGrep/Fzf/Bash Completion/Progress/Tmux/htop/Tree
   homebrew: name="{{ item }}" state=present
   with_items:
   - coreutils
   - python3
   - wget
   - ag
+  - ripgrep
   - fzf
   - bash-completion
   - progress
@@ -37,7 +38,6 @@
 - name: Common Config Files
   template: src=./dev-box/templates/{{ item.src }} dest={{ item.dest }}
   with_items:
-    - { src: 'ack.rc'                  , dest: '~/.ackrc' }
     - { src: 'gem.rc'                  , dest: '~/.gemrc' }
     - { src: 'gitconfig.rc'            , dest: '~/.gitconfig' }
     - { src: 'git/gitignore_global.rc' , dest: '~/.gitignore_global' }

@@ -1,9 +1,10 @@
-- name: Set up ag/jq/ctags/tree/htop/shellcheck/hunspell
+- name: Set up ag/ripgrep/jq/ctags/tree/htop/shellcheck/hunspell
   become: yes
   become_user: root
   dnf: name="{{ item }}" state=latest
   with_items:
      - the_silver_searcher
+     - ripgrep
      - jq
      - ctags
      - tree
