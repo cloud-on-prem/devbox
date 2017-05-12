@@ -88,4 +88,13 @@ function clip {
   read piped;
   echo "echo $piped | pbcopy" | hostrun
 }
+
+{% else %}
+function personal_aws {
+    KEY=$(pbpaste | head -1)
+    SECRET=$(pbpaste | tail -1)
+    export AWS_ACCESS_KEY_ID=$KEY
+    export AWS_SECRET_ACCESS_KEY=$SECRET
+    export AWS_DEFAULT_REGION=us-east-1
+}
 {% endif %}
