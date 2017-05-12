@@ -329,6 +329,12 @@ you should place your code here."
 
   ;; always open current file
   (setq neo-smart-open t)
+  ;; neo-tree hide ignored files
+  (setq-default neo-show-hidden-files nil)
+  (eval-after-load "neotree"
+    '(setq neo-hidden-regexp-list '("^\\." "node_modules"))
+    )
+
   ;; Get rid of the highlighted line
   (global-hl-line-mode -1)
 
