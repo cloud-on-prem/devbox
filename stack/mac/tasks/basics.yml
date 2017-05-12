@@ -28,6 +28,7 @@
   - tmux
   - htop
   - tree
+  - awscli
 
 - name: Set up .config dir
   file: path=~/.config recurse=true state=directory
