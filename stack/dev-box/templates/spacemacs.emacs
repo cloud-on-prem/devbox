@@ -34,7 +34,11 @@ values."
      javascript
      vimscript
      ;; Editor support
-     (spell-checking :variables =enable-flyspell-auto-completion= t)
+     (spell-checking :variables
+                     =enable-flyspell-auto-completion= t
+                     spell-checking-enable-by-default nil
+                     )
+
      (syntax-checking :variables
                       syntax-checking-use-original-bitmaps t)
      (auto-completion :variables
