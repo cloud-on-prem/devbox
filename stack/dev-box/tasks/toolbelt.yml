@@ -4,7 +4,6 @@
   dnf: name="{{ item }}" state=latest
   with_items:
      - the_silver_searcher
-     - ripgrep
      - jq
      - ctags
      - tree
@@ -12,6 +11,7 @@
      - ShellCheck
      - bash-completion
      - hunspell
+     - inotify-tools
 
 - name: Install AWS Cli/Yamllint/Proselint/Saws
   become: yes
@@ -45,3 +45,8 @@
   become: yes
   become_user: "{{ user_name }}"
   script: ./dev-box/scripts/install_geeknote.sh creates=/usr/bin/geeknote
+
+- name: Install Watchman
+  become: yes
+  become_user: "{{ user_name }}"
+  script: ./dev-box/scripts/install_watchman.sh {{ watchman_version }} creates=/usr/local/bin/watchman
