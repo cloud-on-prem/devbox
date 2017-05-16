@@ -3,6 +3,7 @@
   become_user: root
   dnf: name={{ item }} state=latest 
   with_items:
+    - gcc-c++
     - ntp
     - git
     - wget
