@@ -57,6 +57,7 @@ values."
      python
      javascript
      typescript
+     purescript
      react
      emacs-lisp
      ;; Look and Feel
