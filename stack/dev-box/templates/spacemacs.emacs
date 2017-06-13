@@ -60,6 +60,7 @@ values."
      purescript
      react
      emacs-lisp
+     docker
      ;; Look and Feel
      themes-megapack
      )
