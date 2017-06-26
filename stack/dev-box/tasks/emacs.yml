@@ -6,4 +6,4 @@
 - name: Cron for Emacs Server
   become: yes
   become_user: root
-  cron: special_time=reboot job="emacs --daemon" name="emacs_daemon" user="{{ user_name }}"
+  cron: special_time=reboot job="emacs --daemon >/dev/null 2>&1" name="emacs_daemon" user="{{ user_name }}"
