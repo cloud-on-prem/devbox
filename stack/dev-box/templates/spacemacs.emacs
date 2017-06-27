@@ -42,7 +42,15 @@ values."
      (syntax-checking :variables
                       syntax-checking-use-original-bitmaps t)
      (auto-completion :variables
-                      auto-completion-enable-help-tooltip t)
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-complete-with-key-sequence 'jk
+                      auto-completion-complete-with-key-sequence-delay 0.1
+                      auto-completion-private-snippets-directory nil
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-enable-sort-by-usage t
+                      )
      helm
      git
      ;; Markup languages
@@ -68,7 +76,10 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(editorconfig)
+   dotspacemacs-additional-packages '(
+                                      editorconfig
+                                      mocha-snippets
+                                      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
