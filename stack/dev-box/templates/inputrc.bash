@@ -9,6 +9,3 @@ set completion-ignore-case on
 
 # Keymaps for when we're in insert (i.e., typing stuff in) mode
 set keymap vi-insert
-
-# jj to escape
-"jj": "\e"
