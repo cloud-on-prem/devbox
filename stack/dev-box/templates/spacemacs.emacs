@@ -349,7 +349,7 @@ you should place your code here."
   ;; neo-tree hide ignored files
   (setq-default neo-show-hidden-files nil)
   (eval-after-load "neotree"
-    '(setq neo-hidden-regexp-list '("^\\." "node_modules"))
+    '(setq neo-hidden-regexp-list '("^\\." "node_modules" "dist"))
     )
 
   ;; Get rid of the highlighted line
