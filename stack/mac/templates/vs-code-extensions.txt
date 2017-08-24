@@ -1,0 +1,13 @@
+EditorConfig.EditorConfig
+cmstead.jsrefactor
+dbaeumer.vscode-eslint
+flowtype.flow-for-vscode
+gerane.Theme-FlatlandMonokai
+hoovercj.haskell-linter
+hoovercj.vscode-ghc-mod
+justusadam.language-haskell
+moppitz.vscode-extension-auto-import
+nwolverson.ide-purescript
+nwolverson.language-purescript
+vscodevim.vim
+vsmobile.vscode-react-native

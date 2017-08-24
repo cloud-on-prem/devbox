@@ -1,0 +1,66 @@
+{
+    "editor.fontFamily": "SauceCodePro Nerd Font",
+    "editor.fontSize": 18,
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "Monokai",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "node_modules": true,
+        "dist": true
+    },
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 2000,
+    "terminal.integrated.fontSize": 18,
+    "editor.cursorStyle": "underline-thin",
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "0"
+            ],
+            "after": [],
+            "commands": [
+                {
+            "command": "workbench.action.toggleZenMode",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "o"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.quickOpen",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "<space>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.showCommands",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "window.restoreFullscreen": true,
+    "javascript.validate.enable": false,
+    "vim.useSystemClipboard": true,
+    "editor.minimap.enabled": false
+}
