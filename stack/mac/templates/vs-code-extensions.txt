@@ -1,12 +1,15 @@
 EditorConfig.EditorConfig
+HookyQR.beautify
 cmstead.jsrefactor
 dbaeumer.vscode-eslint
 flowtype.flow-for-vscode
 gerane.Theme-FlatlandMonokai
+gogocrow.jsx-beautify
 hoovercj.haskell-linter
 hoovercj.vscode-ghc-mod
 justusadam.language-haskell
 moppitz.vscode-extension-auto-import
+msjsdiag.debugger-for-chrome
 nwolverson.ide-purescript
 nwolverson.language-purescript
 vscodevim.vim
