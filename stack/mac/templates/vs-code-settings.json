@@ -56,11 +56,25 @@
                     "args": []
                 }
             ]
+        },
+        {
+            "before": [
+                "leader",
+                ";"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.commentLine",
+                    "args": []
+                }
+            ]
         }
     ],
     "vim.leader": "<space>",
     "window.restoreFullscreen": true,
     "javascript.validate.enable": false,
     "vim.useSystemClipboard": true,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "vim.enableNeovim": true
 }
