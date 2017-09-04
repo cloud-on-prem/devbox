@@ -52,3 +52,9 @@
     - { src: 'inputrc.bash'            , dest: '~/.inputrc' }
     - { src: 'pushover.conf'           , dest: '~/.config/pushover.conf' }
     - { src: 'yamllint.yaml'           , dest: '~/.config/yamllint/config' }
+
+- name: VS Code Settings
+  template: src=./mac/templates/{{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: '../templates/vs-code-settings.json'   , dest: '~/Library/Application Support/Code/User/settings.json' }
+    - { src: '../templates/vs-code-keybindings.json', dest: '~/Library/Application Support/Code/User/keybindings.json' }
