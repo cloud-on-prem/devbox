@@ -1,9 +1,11 @@
+adamvoss.yaml
 alefragnani.project-manager
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 cmstead.jsrefactor
 dbaeumer.vscode-eslint
 deerawan.vscode-dash
+dragos.scala-lsp
 EditorConfig.EditorConfig
 flowtype.flow-for-vscode
 formulahendry.auto-close-tag
@@ -16,6 +18,7 @@ HookyQR.beautify
 hoovercj.haskell-linter
 hoovercj.vscode-ghc-mod
 humao.rest-client
+itryapitsin.Scala
 justusadam.language-haskell
 lukehoban.Go
 moppitz.vscode-extension-auto-import
