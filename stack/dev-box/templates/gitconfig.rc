@@ -28,7 +28,7 @@
     lab = repo lab
 [core]
 	filemode = false
-  editor = "emacsclient -a '' -c"
+  editor = "code --wait"
   excludesfile = ~/.gitignore_global
 [init]
   templatedir = ~/.git/template-dir/
