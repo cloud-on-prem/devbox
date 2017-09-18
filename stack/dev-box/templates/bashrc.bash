@@ -50,7 +50,9 @@ export NVM_DIR="$HOME/.nvm"
 # Load stuff without moaning
 
 {% if ansible_distribution == 'MacOSX' %}
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 {% endif %}
 {% if ansible_distribution == 'Fedora' %}
 [ -f /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion

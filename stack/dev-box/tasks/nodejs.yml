@@ -19,14 +19,11 @@
   npm: name="{{ item }}" state=latest global=yes path="~/.nvm/versions/node/v{{ nodejs_version }}/bin/" executable="~/.nvm/versions/node/v{{ nodejs_version}}/bin/npm"
   with_items:
     - yarn
-    - gulp
     - eslint
     - jsonlint
     - purescript
     - pulp
     - bower
-    - nativescript
-    - typescript
     - babel-cli
     - tern
     - js-beautify
