@@ -1,3 +1,4 @@
+adamvoss.yaml
 alefragnani.project-manager
 bungcip.better-toml
 christian-kohler.npm-intellisense
@@ -6,6 +7,7 @@ cmstead.jsrefactor
 dbaeumer.vscode-eslint
 deerawan.vscode-dash
 donjayamanne.jupyter
+dragos.scala-lsp
 EditorConfig.EditorConfig
 EQuimper.react-native-react-redux
 flowtype.flow-for-vscode
