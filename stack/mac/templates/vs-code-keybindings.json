@@ -1,6 +1,14 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
+    "key": "space p",
+    "command": "projectManager.listProjects"
+  },
+  {
+    "key": "space o",
+    "command": "workbench.action.quickOpen"
+  },
+  {
     "key": "ctrl+j",
     "command": "workbench.action.previousEditor"
   },

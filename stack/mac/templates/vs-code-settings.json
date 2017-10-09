@@ -6,12 +6,15 @@
     "vim.disableAnnoyingNeovimMessage": true,
     "files.exclude": {
         "**/.git": true,
+        "**/.git-hooks": true,
+        "**/.vagrant": true,
         "**/.svn": true,
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
         "node_modules": true,
-        "dist": true
+        "dist": true,
+        ".gitignore": true
     },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 2000,
