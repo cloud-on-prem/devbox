@@ -92,5 +92,9 @@
     "javascript.validate.enable": false,
     "vim.useSystemClipboard": true,
     "editor.minimap.enabled": false,
-    "vim.enableNeovim": true
+    "haskell.hlint.executablePath": "hlint",
+    "haskell.ghcMod.executablePath": "stack",
+    "vim.enableNeovim": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "underline"
 }
