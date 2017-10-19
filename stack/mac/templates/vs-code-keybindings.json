@@ -1,32 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
-    "key": "space p",
-    "command": "projectManager.listProjects"
-  },
-  {
-    "key": "space o",
-    "command": "workbench.action.quickOpen"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.previousEditor"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.nextEditor"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "workbench.action.focusFirstEditorGroup",
-    "when": "filesExplorerFocus"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "workbench.view.explorer",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+space",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
@@ -45,11 +19,23 @@
     "command": "workbench.action.previousEditor"
   },
   {
+    "key": "cmd+o",
+    "command": "workbench.action.files.openFileFolder"
+  },
+  {
     "key": "ctrl+m",
     "command": "workbench.actions.view.problems"
   },
   {
     "key": "ctrl+t",
     "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.terminal.focus"
   }
 ]
