@@ -46,6 +46,7 @@ export PATH="$HOME/.gem/ruby/{{ ruby_version }}/bin/:$PATH";
 # Node
 export NVM_DIR="$HOME/.nvm"
 . "$NVM_DIR/nvm.sh" 2> /dev/null
+export PATH="$HOME/.config/yarn/global/node_modules/.bin/:$PATH" # Add Yarn Global bins
 
 # Load stuff without moaning
 
