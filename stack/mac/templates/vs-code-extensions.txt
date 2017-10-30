@@ -1,5 +1,6 @@
 adamvoss.yaml
 alefragnani.project-manager
+bajdzis.vscode-database
 bungcip.better-toml
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
@@ -25,6 +26,7 @@ itryapitsin.Scala
 justusadam.language-haskell
 lukehoban.Go
 moppitz.vscode-extension-auto-import
+ms-vscode.node-debug2
 msjsdiag.debugger-for-chrome
 nwolverson.ide-purescript
 nwolverson.language-purescript
