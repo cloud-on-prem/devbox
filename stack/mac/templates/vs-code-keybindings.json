@@ -37,5 +37,13 @@
   {
     "key": "cmd+2",
     "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "cmd+right",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "cmd+left",
+    "command": "workbench.action.terminal.focusPrevious"
   }
 ]
