@@ -26,11 +26,14 @@ itryapitsin.Scala
 justusadam.language-haskell
 lukehoban.Go
 moppitz.vscode-extension-auto-import
+ms-vscode.azure-account
 ms-vscode.node-debug2
 msjsdiag.debugger-for-chrome
 nwolverson.ide-purescript
 nwolverson.language-purescript
 PeterJausovec.vscode-docker
+PKief.material-icon-theme
+rbbit.typescript-hero
 spoonscen.es6-mocha-snippets
 steve8708.Align
 thanhtrang.theme-flatland-monokai
