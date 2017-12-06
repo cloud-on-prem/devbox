@@ -45,5 +45,13 @@
   {
     "key": "cmd+left",
     "command": "workbench.action.terminal.focusPrevious"
+  },
+  {
+    "key": "ctrl+cmd+t",
+    "command": "workbench.action.terminal.new"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new"
   }
 ]

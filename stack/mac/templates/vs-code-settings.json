@@ -1,23 +1,19 @@
 {
     "editor.fontFamily": "SauceCodePro Nerd Font",
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "editor.tabSize": 2,
     "workbench.colorTheme": "Monokai",
-    "vim.disableAnnoyingNeovimMessage": true,
     "files.exclude": {
         "**/.git": true,
-        "**/.git-hooks": true,
-        "**/.vagrant": true,
         "**/.svn": true,
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
         "node_modules": true,
-        "dist": true,
-        ".gitignore": true
+        "dist": true
     },
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 2000,
+    "files.autoSaveDelay": 1500,
     "terminal.integrated.fontSize": 18,
     "editor.cursorStyle": "underline-thin",
     "vim.otherModesKeyBindingsNonRecursive": [
@@ -37,7 +33,7 @@
         {
             "before": [
                 "leader",
-                "o"
+                "p"
             ],
             "after": [],
             "commands": [
@@ -63,7 +59,7 @@
         {
             "before": [
                 "leader",
-                ";"
+                "/"
             ],
             "after": [],
             "commands": [
@@ -76,12 +72,12 @@
         {
             "before": [
                 "leader",
-                "/"
+                "t"
             ],
             "after": [],
             "commands": [
                 {
-                    "command": "editor.action.commentLine",
+                    "command": "workbench.action.tasks.test",
                     "args": []
                 }
             ]
@@ -92,9 +88,17 @@
     "javascript.validate.enable": false,
     "vim.useSystemClipboard": true,
     "editor.minimap.enabled": false,
-    "haskell.hlint.executablePath": "hlint",
-    "haskell.ghcMod.executablePath": "stack",
+    "git.confirmSync": false,
     "vim.enableNeovim": true,
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.cursorStyle": "underline"
+    "window.zoomLevel": 0,
+    "terminal.integrated.cursorStyle": "underline",
+    "terminal.integrated.scrollback": 10000,
+    "flow.pathToFlow": "$HOME/.config/yarn/global/node_modules/.bin/flow",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "workbench.panel.location": "right",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "extensions.ignoreRecommendations": true,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.iconTheme": "material-icon-theme"
 }
