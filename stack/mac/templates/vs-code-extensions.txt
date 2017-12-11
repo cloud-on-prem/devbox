@@ -1,6 +1,8 @@
 adamvoss.yaml
 alefragnani.project-manager
+allentong.dotjs
 bajdzis.vscode-database
+bierner.emojisense
 bungcip.better-toml
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
@@ -9,8 +11,11 @@ dbaeumer.vscode-eslint
 deerawan.vscode-dash
 donjayamanne.jupyter
 dragos.scala-lsp
+DSKWRK.vscode-generate-getter-setter
 EditorConfig.EditorConfig
+eg2.tslint
 EQuimper.react-native-react-redux
+esbenp.prettier-vscode
 flowtype.flow-for-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
@@ -36,8 +41,10 @@ PKief.material-icon-theme
 rbbit.typescript-hero
 spoonscen.es6-mocha-snippets
 steve8708.Align
+stringham.move-ts
 thanhtrang.theme-flatland-monokai
 timonwong.shellcheck
 Tyriar.sort-lines
 vscodevim.vim
 vsmobile.vscode-react-native
+xabikos.JavaScriptSnippets

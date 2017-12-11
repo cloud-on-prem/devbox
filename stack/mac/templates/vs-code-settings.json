@@ -10,7 +10,8 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "node_modules": true,
-        "dist": true
+        "dist": true,
+        "coverage": true
     },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1500,
@@ -100,5 +101,7 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "extensions.ignoreRecommendations": true,
     "explorer.confirmDragAndDrop": false,
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "prettier.printWidth": 120,
+    "prettier.trailingComma": "all"
 }
