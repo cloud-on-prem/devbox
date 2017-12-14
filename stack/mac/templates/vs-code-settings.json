@@ -103,5 +103,7 @@
     "explorer.confirmDragAndDrop": false,
     "workbench.iconTheme": "material-icon-theme",
     "prettier.printWidth": 120,
-    "prettier.trailingComma": "all"
+    "prettier.trailingComma": "all",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.confirmOnExit": true
 }
