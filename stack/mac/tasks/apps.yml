@@ -10,11 +10,10 @@
     - geektool
     - alfred
     - google-drive
-    - licecap
     - teensy
     - google-chrome
     - evernote
-    - dashlane
+    - 1password
     - dash
 
 - name: Install App Store apps
@@ -26,3 +25,4 @@
     - { app_id: '803453959' , file: '/Applications/Slack.app'}
     - { app_id: '445189367' , file: '/Applications/PopClip.app'}
     - { app_id: '992076693' , file: '/Applications/MindNode.app'}
+    - { app_id: '1081413713' , file: '/Applications/GIF Brewery 3.app'}
