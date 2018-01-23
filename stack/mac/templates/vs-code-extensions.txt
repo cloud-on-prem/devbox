@@ -21,6 +21,7 @@ formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
 gogocrow.jsx-beautify
+GregorBiswanger.json2ts
 henriiik.docker-linter
 HookyQR.beautify
 hoovercj.haskell-linter
@@ -29,6 +30,7 @@ hsiaosiyuan0.ternjs
 humao.rest-client
 itryapitsin.Scala
 justusadam.language-haskell
+loiane.ts-extension-pack
 lukehoban.Go
 moppitz.vscode-extension-auto-import
 ms-vscode.azure-account
@@ -38,6 +40,7 @@ nwolverson.ide-purescript
 nwolverson.language-purescript
 PeterJausovec.vscode-docker
 PKief.material-icon-theme
+pmneo.tsimporter
 rbbit.typescript-hero
 spoonscen.es6-mocha-snippets
 steve8708.Align
