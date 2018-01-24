@@ -1,4 +1,5 @@
 adamvoss.yaml
+alanz.vscode-hie-server
 alefragnani.project-manager
 bajdzis.vscode-database
 bierner.emojisense
