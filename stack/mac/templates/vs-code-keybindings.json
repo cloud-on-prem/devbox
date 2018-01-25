@@ -40,15 +40,23 @@
   },
   {
     "key": "cmd+right",
-    "command": "workbench.action.terminal.focusNext"
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
   },
   {
     "key": "cmd+left",
-    "command": "workbench.action.terminal.focusPrevious"
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
   },
   {
-    "key": "ctrl+cmd+t",
-    "command": "workbench.action.terminal.new"
+    "key": "cmd+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
   },
   {
     "key": "ctrl+shift+`",
