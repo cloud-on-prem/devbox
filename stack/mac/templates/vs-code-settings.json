@@ -122,5 +122,14 @@
         "uglifyjs"
     ],
     "workbench.editor.showTabs": true,
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "terminal.integrated.cursorBlinking": true,
+    "haskero.intero.startupParams": [
+        "--no-build",
+        "--no-load"
+    ],
+    "haskero.intero.ghciOptions": [
+        "-Wall",
+        "-fdefer-type-errors"
+    ]
 }
