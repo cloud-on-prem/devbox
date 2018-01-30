@@ -1,5 +1,4 @@
 adamvoss.yaml
-alanz.vscode-hie-server
 alefragnani.project-manager
 bajdzis.vscode-database
 bierner.emojisense
@@ -17,10 +16,14 @@ esbenp.prettier-vscode
 flowtype.flow-for-vscode
 formulahendry.code-runner
 HookyQR.beautify
+hoovercj.haskell-linter
+hoovercj.vscode-ghc-mod
 humao.rest-client
+jcanero.hoogle-vscode
 justusadam.language-haskell
 lukehoban.Go
 lunaryorn.hlint
+monofon.hindent-format
 ms-vscode.node-debug2
 msjsdiag.debugger-for-chrome
 nwolverson.ide-purescript
@@ -34,6 +37,6 @@ stringham.move-ts
 thanhtrang.theme-flatland-monokai
 timonwong.shellcheck
 Tyriar.sort-lines
-UCL.haskelly
+Vans.haskero
 vscodevim.vim
 vsmobile.vscode-react-native

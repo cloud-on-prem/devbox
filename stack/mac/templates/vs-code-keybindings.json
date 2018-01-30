@@ -59,7 +59,12 @@
     "when": "terminalFocus"
   },
   {
+    "key": "cmd+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
     "key": "ctrl+shift+`",
     "command": "-workbench.action.terminal.new"
-  }
+  },
 ]
