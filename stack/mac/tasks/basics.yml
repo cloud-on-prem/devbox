@@ -26,7 +26,6 @@
   - bash-completion
   - progress
   - tmux
-  - htop
   - tree
   - awscli
   - jq
@@ -52,6 +51,9 @@
     - { src: 'inputrc.bash'            , dest: '~/.inputrc' }
     - { src: 'pushover.conf'           , dest: '~/.config/pushover.conf' }
     - { src: 'yamllint.yaml'           , dest: '~/.config/yamllint/config' }
+
+- name: VS Code Directories
+  file: path='~/Library/Application Support/Code/User/' state=directory recurse=true
 
 - name: VS Code Settings
   template: src=./mac/templates/{{ item.src }} dest={{ item.dest }}

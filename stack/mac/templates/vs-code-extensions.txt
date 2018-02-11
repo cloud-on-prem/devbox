@@ -31,6 +31,7 @@ nwolverson.language-purescript
 PeterJausovec.vscode-docker
 PKief.material-icon-theme
 QassimFarid.ejs-language-support
+redhat.vscode-yaml
 spoonscen.es6-mocha-snippets
 streetsidesoftware.code-spell-checker
 stringham.move-ts
