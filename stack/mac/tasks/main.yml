@@ -1,6 +1,6 @@
 ---
   # - include: ./../../dev-box/tasks/debug.yml
-  - include: ./../../dev-box/tasks/workspace.yml
+  - include: ./workspace.yml
   - include: ./basics.yml
   - include: ./apps.yml
   - include: ./../../dev-box/tasks/bash.yml
