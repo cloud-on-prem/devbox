@@ -40,23 +40,15 @@
   },
   {
     "key": "cmd+right",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
+    "command": "workbench.action.terminal.focusNext"
   },
   {
     "key": "cmd+left",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
+    "command": "workbench.action.terminal.focusPrevious"
   },
   {
-    "key": "cmd+n",
-    "command": "workbench.action.terminal.new",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "cmd+w",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus"
+    "key": "ctrl+cmd+t",
+    "command": "workbench.action.terminal.new"
   },
   {
     "key": "cmd+n",
@@ -67,4 +59,9 @@
     "key": "ctrl+shift+`",
     "command": "-workbench.action.terminal.new"
   },
+  {
+    "key": "cmd+h",
+    "command": "editor.action.codeAction"
+    }
+  }
 ]
