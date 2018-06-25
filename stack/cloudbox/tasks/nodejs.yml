@@ -10,7 +10,7 @@
   become_user: "{{ user_name }}"
   shell: source ~/.nvm/nvm.sh && nvm install {{ nodejs_version }}
   args:
-    executable: $(which bash)
+    executable: /bin/bash
     creates: ~/.nvm/versions/node/v{{ nodejs_version }}/bin/node
 
 - name: Install useful NPM packages

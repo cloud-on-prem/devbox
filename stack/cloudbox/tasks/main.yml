@@ -1,12 +1,12 @@
 ---
   # - include: ./debug.yml
-  - include: ./workspace.yml
-  - include: ./basics.yml
-  - include: ./bash.yml
-  - include: ./docker.yml
-  - include: ./emacs.yml
-  - include: ./spacemacs.yml
-  - include: ./ruby.yml
+  # - include: ./workspace.yml
+  # - include: ./basics.yml
+  #  - include: ./bash.yml
+  # include: ./docker.yml
+  # include: ./emacs.yml
+  # include: ./spacemacs.yml
+  # include: ./ruby.yml
   - include: ./nodejs.yml
   - include: ./haskell.yml
   - include: ./toolbelt.yml

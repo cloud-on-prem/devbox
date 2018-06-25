@@ -1,28 +1,17 @@
 - name: Install Essentials
   become: yes
   become_user: root
-  dnf: name={{ item }} state=latest 
+  apt: name={{ item }} state=latest
   with_items:
-    - gcc-c++
     - ntp
     - git
     - wget
-    - python-devel
-    - python3-devel
     - python3-pip
-    - java-1.8.0-openjdk
+    - python-pip
     - cmake
     - automake
-    - pcre2-devel
-    - zlib-devel
-    - lzma-devel
-    - ruby-devel
-    - libxslt-devel
-    - libxml2-devel
-    - libffi-devel
     - upower
     - mercurial
-    - libevent-devel # For tmux
     - tmux
     - sshfs
     - strace
@@ -31,11 +20,6 @@
   become: yes
   become_user: root
   command: localectl set-locale LANG=en_AU.UTF-8
-
-- name: Install correct Pip
-  become: yes
-  become_user: root
-  easy_install: name=pip state=latest
 
 - name: Install Python Virtualenv
   become: yes

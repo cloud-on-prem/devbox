@@ -1,7 +1,7 @@
 - name: Install Emacs
   become: yes
   become_user: root
-  dnf: name=emacs state=latest
+  apt: name=emacs state=latest
 
 - name: Cron for Emacs Server
   become: yes
