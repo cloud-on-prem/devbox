@@ -1,2 +1,16 @@
 ---
-- include: ./cloud.yml
+  # - include: ./debug.yml
+  - include: ./workspace.yml
+  - include: ./basics.yml
+  - include: ./bash.yml
+  - include: ./docker.yml
+  - include: ./emacs.yml
+  - include: ./spacemacs.yml
+  - include: ./ruby.yml
+  - include: ./nodejs.yml
+  - include: ./haskell.yml
+  - include: ./toolbelt.yml
+  - include: ./tmux.yml
+  - include: ./fzf.yml
+  - include: ./learn.yml
+  - include: ./dictionaries.yml

@@ -1,0 +1,6 @@
+---
+
+- name: Debug
+  debug:
+    var: ansible_distribution
+    verbosity: 1

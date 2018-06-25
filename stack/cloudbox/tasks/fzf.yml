@@ -1,0 +1,5 @@
+- name: Download FZF
+  git: repo=https://github.com/junegunn/fzf.git dest=~/.fzf
+
+- name: Install FZF
+  command: ~/.fzf/install --all creates=~/.fzf/bin/fzf

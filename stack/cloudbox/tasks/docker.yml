@@ -1,0 +1,9 @@
+- name: Install Docker
+  become: yes
+  become_user: root
+  dnf: name=docker state=latest
+
+- name: Install Docker Compose
+  become: yes
+  become_user: root
+  dnf: name=docker-compose state=latest

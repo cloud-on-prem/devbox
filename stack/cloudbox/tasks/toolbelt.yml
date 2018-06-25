@@ -1,0 +1,33 @@
+- name: Set up ag/ripgrep/jq/ctags/tree/htop/shellcheck/hunspell
+  become: yes
+  become_user: root
+  dnf: name="{{ item }}" state=latest
+  with_items:
+     - the_silver_searcher
+     - jq
+     - ctags
+     - tree
+     - htop
+     - ShellCheck
+     - bash-completion
+     - hunspell
+     - inotify-tools
+
+- name: Install AWS Cli/Yamllint/Proselint/Saws
+  become: yes
+  become_user: root
+  pip: name="{{ item }}" state=latest
+  with_items:
+    - yamllint
+    - proselint
+    - awscli
+
+- name: Install Shush
+  become: yes
+  become_user: root
+  script: ./dev-box/scripts/install_shush.sh {{ shush_version }} creates=/usr/bin/shush
+
+- name: Install Watchman
+  become: yes
+  become_user: "{{ user_name }}"
+  script: ./dev-box/scripts/install_watchman.sh {{ watchman_version }} creates=/usr/local/bin/watchman

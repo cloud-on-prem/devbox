@@ -1,0 +1,29 @@
+- name: Install Stack Haskell
+  become: yes
+  become_user: root
+  shell: wget -qO- https://get.haskellstack.org/ | sh
+  args:
+    creates: /usr/local/bin/stack
+
+- name: Stack Global Setup
+  command: stack setup chdir=~/ creates=~/.stack/global-project/stack.yaml
+
+- name: Set up GHCI color
+  git: repo=https://github.com/premjg/ghci-color.git dest=~/.ghci-color
+
+- name: Set up Essential Haskell Packages
+  command: stack install {{ item }} creates=~/.local/bin/{{ item }}
+  with_items:
+  - hdevtools
+  - ghc-mod
+  - hlint
+  - HUnit
+  - apply-refact
+  - stylish-haskell
+  - hasktags
+  - hoogle
+
+- name: Correct File Permissions for .ghci
+  become: yes
+  become_user: "{{ user_name }}"
+  file: path=~/.ghci mode="g-w"

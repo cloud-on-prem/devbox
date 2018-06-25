@@ -1,0 +1,31 @@
+- name: Install NVM
+  become: true
+  become_user: "{{ user_name }}"
+  shell: wget -qO- https://raw.githubusercontent.com/creationix/nvm/v{{ nvm_version }}/install.sh | bash
+  args:
+    creates:  ~/.nvm
+
+- name: Install Nodejs
+  become: true
+  become_user: "{{ user_name }}"
+  shell: source ~/.nvm/nvm.sh && nvm install {{ nodejs_version }}
+  args:
+    executable: $(which bash)
+    creates: ~/.nvm/versions/node/v{{ nodejs_version }}/bin/node
+
+- name: Install useful NPM packages
+  become: true
+  become_user: "{{ user_name }}"
+  npm: name="{{ item }}" state=latest global=yes path="~/.nvm/versions/node/v{{ nodejs_version }}/bin/" executable="~/.nvm/versions/node/v{{ nodejs_version}}/bin/npm"
+  with_items:
+    - yarn
+    - eslint
+    - jsonlint
+    - purescript
+    - pulp
+    - bower
+    - babel-cli
+    - tern
+    - js-beautify
+    - babel-eslint
+    - eslint-plugin-react

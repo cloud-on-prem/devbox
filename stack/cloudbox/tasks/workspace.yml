@@ -1,0 +1,7 @@
+- name: Set up Workspace and Playspace
+  become: yes
+  file: path={{ workspace_dir }}/play/{{ item }} state=directory recurse=yes owner="{{ user_name }}"
+  with_items:
+    - haskell
+    - ruby
+    - javascript

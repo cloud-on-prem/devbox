@@ -1,0 +1,13 @@
+- name: Set up exercism
+  become: yes
+  become_user: root
+  script: ./dev-box/scripts/install_exercism.sh {{ exercism_version }} creates=/usr/bin/exercism
+
+- name: Add Exercism Key
+  command: exercism configure --key={{ exercism_key }}
+
+- name: Ensure Exercism directory exists
+  file: path={{ workspace_dir }}/play/exercism state=directory recurse=yes
+
+- name: Set up exercism directory
+  command: exercism configure --dir={{ workspace_dir }}/play/exercism

@@ -1,0 +1,12 @@
+- name: Install Tmux Plugin Manager
+  git: repo=https://github.com/tmux-plugins/tpm dest=~/.tmux/plugins/tpm
+
+- name: Set up Tmuxinator Dir
+  file: path=~/.tmuxinator state=directory recurse=yes
+
+- name: Set up Tmuxinator templates
+  template: src=./dev-box/templates/tmuxinator/{{ item }}.yml dest=~/.tmuxinator/{{ item }}.yml
+  with_items:
+    - haskell
+    - javascript
+    - ruby
