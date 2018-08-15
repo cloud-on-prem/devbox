@@ -1,5 +1,7 @@
+#!/bin/bash
+
 export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient -a '' -c" # Of course
+export EDITOR="code --wait" # Of course
 set -o vi
 
 # History
@@ -66,11 +68,6 @@ fi
 . ~/.context_bashrc 2> /dev/null
 . ~/.bash_prompt 2> /dev/null
 
-# Bash My Aws
-BASH_MY_AWS_DIR=~/.bash-my-aws
-if [ -d BASH_MY_AWS_DIR ]; then
-  for f in $BASH_MY_AWS_DIR/lib/*-functions; do . $f; done
-  . $BASH_MY_AWS_DIR/bash_completion.sh
-fi
+ssh-add -K ~/.ssh/devbox # load the correct ssh key
 
 unalias tree 2> /dev/null # use real tree
