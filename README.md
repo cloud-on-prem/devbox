@@ -1,6 +1,6 @@
 # Immutable Dev Environment #
 
-This is a repo that I personally use to automate my dev environemnts.
+This is a repo that I personally use to automate my dev environments.
 The set up is powered by [Ansible](http://docs.ansible.com/ansible).
 
 It has support for setting up stuff on my local mac, a vagrant-powered Fedora vitualbox (which is my primary dev environment) and also support for setting up a dev environment in the cloud (WIP).
@@ -9,7 +9,7 @@ The basic idea is that the tools and infrastructure contained in the dev environ
 You should be able to safely destroy the environment/ rebuild it/upgrade it without losing any of your work.
 All the scripts are designed to be re-entrant and/or idempotent and should not have side-effects if run multiple times.
 
-### I just want to automate my dev environemnt on Mac ###
+### I just want to automate my dev environment on Mac ###
 
 * Clone this repo
 * Edit the `inventory` file under the `[mac]` section if required
