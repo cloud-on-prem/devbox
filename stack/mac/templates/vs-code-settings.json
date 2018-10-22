@@ -1,145 +1,137 @@
 {
-	"workbench.fontAliasing": "default",
-	"editor.fontFamily": "Hasklig",
-	"editor.fontLigatures": true,
-	"editor.fontSize": 16,
-	"terminal.integrated.fontFamily": "Hasklig Nerd Font",
-	"terminal.integrated.fontSize": 18,
-	"editor.tabSize": 2,
-	"workbench.colorTheme": "Monokai",
-	"files.exclude": {
-		"**/.git": true,
-		"**/.svn": true,
-		"**/.hg": true,
-		"**/CVS": true,
-		"**/.DS_Store": true,
-		"node_modules": true,
-		"dist": true,
-		"coverage": true,
-		"bower_components": true,
-		"output": true,
-		".pulp-cache": true,
-		".psci_modules": true,
-		".vscode": true
-	},
-	"files.autoSave": "afterDelay",
-	"files.autoSaveDelay": 1500,
-	"editor.cursorStyle": "underline-thin",
-	"vim.normalModeKeyBindingsNonRecursive": [
-		{
-			"before": [
-				"leader",
-				"0"
-			],
-			"after": [],
-			"commands": [
-				{
-			"command": "workbench.action.toggleZenMode",
-					"args": []
-				}
-			]
-		},
-		{
-			"before": [
-				"leader",
-				"p"
-			],
-			"after": [],
-			"commands": [
-				{
-					"command": "workbench.action.quickOpen",
-					"args": []
-				}
-			]
-		},
-		{
-			"before": [
-				"leader",
-				"<space>"
-			],
-			"after": [],
-			"commands": [
-				{
-					"command": "workbench.action.showCommands",
-					"args": []
-				}
-			]
-		},
-		{
-			"before": [
-				"leader",
-				"/"
-			],
-			"after": [],
-			"commands": [
-				{
-					"command": "editor.action.commentLine",
-					"args": []
-				}
-			]
-		},
-		{
-			"before": [
-				"leader",
-				"t"
-			],
-			"after": [],
-			"commands": [
-				{
-					"command": "workbench.action.tasks.test",
-					"args": []
-				}
-			]
-		}
-	],
-	"vim.leader": "<space>",
-	"window.restoreFullscreen": true,
-	"javascript.validate.enable": false,
-	"vim.useSystemClipboard": true,
-	"editor.minimap.enabled": false,
-	"git.confirmSync": false,
-	"vim.enableNeovim": true,
-	"window.zoomLevel": -1,
-	"terminal.integrated.cursorStyle": "underline",
-	"terminal.integrated.scrollback": 10000,
-	"files.insertFinalNewline": true,
-	"files.trimFinalNewlines": true,
-	"workbench.editor.enablePreviewFromQuickOpen": false,
-	"extensions.ignoreRecommendations": true,
-	"explorer.confirmDragAndDrop": false,
-	"workbench.iconTheme": "material-icon-theme",
-	"prettier.printWidth": 120,
-	"prettier.trailingComma": "all",
-	"cSpell.userWords": [
-		"Combinator",
-		"Combinators",
-		"Ecommerce",
-		"Pageview",
-		"Pillai",
-		"Prem",
-		"Tagman",
-		"deployer",
-		"devops",
-		"devtool",
-		"gitlab",
-		"gmail",
-		"jsonpath",
-		"premjg",
-		"serverless",
-		"syncy",
-		"uglifyjs"
-	],
-	"workbench.editor.showTabs": true,
-	"terminal.integrated.cursorBlinking": true,
-	"haskero.intero.startupParams": [
-		"--no-build",
-		"--no-load"
-	],
-	"haskero.intero.ghciOptions": [
-		"-Wall",
-		"-fdefer-type-errors"
-	],
-	"workbench.startupEditor": "newUntitledFile",
-	"jupyter.appendResults": false,
-	"vim.neovimPath": "/usr/local/bin/nvim",
+  "editor.fontFamily": "FuraCode Nerd Font",
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Dracula At Night",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "node_modules": true,
+    "dist": true,
+    "coverage": true,
+    "output": true,
+    "bower_components": true,
+    ".pulp-cache": true
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1500,
+  "terminal.integrated.fontSize": 18,
+  "editor.cursorStyle": "underline-thin",
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "/"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.commentLine",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "0"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleZenMode",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["leader", "p"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["leader", "f"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.quickFix",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["leader", "<space>"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.showCommands",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["leader", "/"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.commentLine",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["leader", "t"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.test",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "window.restoreFullscreen": true,
+  "javascript.validate.enable": false,
+  "vim.useSystemClipboard": true,
+  "editor.minimap.enabled": false,
+  "git.confirmSync": false,
+  "vim.enableNeovim": true,
+  "window.zoomLevel": 1,
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.scrollback": 10000,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "extensions.ignoreRecommendations": true,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "all",
+  "workbench.editor.showTabs": true,
+  "editor.fontLigatures": true,
+  "terminal.integrated.cursorBlinking": true,
+  "haskero.intero.startupParams": ["--no-build", "--no-load"],
+  "haskero.intero.ghciOptions": ["-Wall", "-fdefer-type-errors"],
+  "terminal.integrated.fontFamily": "FuraCode Nerd Font",
+  "workbench.startupEditor": "newUntitledFile",
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "yaml.customTags": [
+    "!Equals sequence",
+    "!FindInMap sequence",
+    "!GetAtt sequence",
+    "!GetAZs",
+    "!ImportValue",
+    "!Join sequence",
+    "!Ref",
+    "!Select sequence",
+    "!Split sequence",
+    "!Sub"
+  ]
 }
