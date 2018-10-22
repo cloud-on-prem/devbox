@@ -6,7 +6,7 @@
 - name: Install Bash It
   become: yes
   become_user: "{{ user_name }}"
-  shell: yes | ~/.bash_it/install.sh creates=~/.bash_it/plugins/enabled/
+  shell: ~/.bash_it/install.sh --silent
 
 - name: Set up hostmachine info
   shell: netstat -rn | grep eth0 | grep UG | awk '{ print $2 }'
